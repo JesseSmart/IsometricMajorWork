@@ -9,8 +9,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     //controlls
     private string[] horizontalArray = new string[4] { "P1Horizontal", "P2Horizontal", "P3Horizontal", "P4Horizontal" };
     private string[] verticalArray = new string[4] { "P1Vertical", "P2Vertical", "P3Vertical", "P4Vertical" };
-    private string[] basicAbilityArray = new string[4] { "P1BasicAbility", "P2BasicAbility", "P3BasicAbility", "P4BasicAbility" }; //when making inheritance and stats and all, move these to them
-    private string[] movementAbilityArray = new string[4] { "P1MovementAbility", "P2MovementAbility", "P3MovementAbility", "P4MovementAbility" };
+    private string[] basicAbilityArray = new string[4] { "P1AButton", "P2AButton", "P3AButton", "P4AButton" }; //when making inheritance and stats and all, move these to them
+    private string[] movementAbilityArray = new string[4] { "P1BButton", "P2BButton", "P3BButton", "P4BButton" };
 
     private int basicAbilityKey = 0;
     public float baseMovementSpeed = 1f;
