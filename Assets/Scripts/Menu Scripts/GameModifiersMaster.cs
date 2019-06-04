@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class GameModifiersMaster : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class GameModifiersMaster : MonoBehaviour
 
     public Button btnNext;
 
+    public GameObject eventSystemObj;
+    public Button firstSelectedButton;
+    public Button onBackSelectedButton;
 
 
     // Start is called before the first frame update
@@ -65,12 +69,15 @@ public class GameModifiersMaster : MonoBehaviour
     {
         mainMenuPanel.SetActive(true);
         gameObject.SetActive(false);
+        eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(onBackSelectedButton.gameObject);
 
     }
 
     public void OnNextPressed()
     {
         playerJoinPanel.SetActive(true);
+        eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(firstSelectedButton.gameObject);
+
         gameObject.SetActive(false);
 
     }

@@ -9,77 +9,168 @@ using UnityEngine.EventSystems;
 public class CharSelectMaster : MonoBehaviour
 {
     public int playerNumber;
+
     private string[] aButtonArray = new string[4] { "P1AButton", "P2AButton", "P3AButton", "P4AButton" };
+    private string[] xButtonArray = new string[4] { "P1XButton", "P2XButton", "P3XButton", "P4XButton" };
+    private string[] bButtonArray = new string[4] { "P1BButton", "P2BButton", "P3BButton", "P4BButton" };
     private string[] horizontalArray = new string[4] { "P1Horizontal", "P2Horizontal", "P3Horizontal", "P4Horizontal" };
     private string[] verticalArray = new string[4] { "P1Vertical", "P2Vertical", "P3Vertical", "P4Vertical" };
+    private string[] leftBumperArray = new string[4] { "P1LeftBumper", "P2LeftBumper", "P3LeftBumper", "P4LeftBumper" };
+    private string[] rightBumperArray = new string[4] { "P1RightBumper", "P2RightBumper", "P3RightBumper", "P4RightBumper" };
+
+    public enum SelectState
+    {
+        WaitForJoin,
+        Selecting,
+        Selected
+    }
+
+    private SelectState[] myState = new SelectState[4];
 
     public GameObject panelCharSelect;
     public GameObject panelPressToJoin;
 
-    public Button[] charSelButtons;
-    public TextMeshProUGUI[] abilityDexcriptions;
+    //public Button[] charSelButtons;
+    public TextMeshProUGUI[] abilityDescObjs;
+    public GameObject txtObjPlayerReady;
 
-    private bool SelectingChar;
+    private bool[] selectingChar = new bool[4];
+    private bool[] charSelected = new bool[4];
 
-    private GameObject eventSystemObj;
-    public Button firstSelectedButton;
+    //public int totalPlayers;// make static?
 
-    public int totalChars;
+    public int totalChars = 1; //change as more added
+    private int[] currentChar = new int[4];
+    public Sprite[] charSelectSprites;
+    public Image myCharSelectImage;
+
+    public GameObject eventSystemObj;
+    public Button focusSelectedButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        focusSelectedButton = GetComponentInParent<PlayerJoinScreenMaster>().btnBack;
         eventSystemObj = GameObject.FindGameObjectWithTag("EventSystem");
-
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerInput(playerNumber);
+
+        
+
     }
 
     private void PlayerInput(int pNum)
     {
-        if (SelectingChar == false)
+
+        switch (myState[pNum])
         {
-            if (Input.GetButtonDown(aButtonArray[pNum]))
+            case SelectState.WaitForJoin:
+                break;
+            case SelectState.Selecting:
+                break;
+            case SelectState.Selected:
+                break;
+
+        }
+        myCharSelectImage.sprite = charSelectSprites[currentChar[pNum]];
+
+        //YOU SHOULD USE A ENUM FOR THIS
+        if (selectingChar[pNum] == false)
+        {
+            if (Input.GetButtonDown(xButtonArray[pNum]))
             {
                 panelCharSelect.SetActive(true);
-                eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(firstSelectedButton.gameObject);
                 panelPressToJoin.SetActive(false);
-
+                selectingChar[pNum] = true;
             }
+
         }
+        else if (charSelected[pNum] == false)
+        {
+            eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(null);
 
-    }
+            if (Input.GetButtonDown(leftBumperArray[pNum]))
+            {
+                if (currentChar[pNum] <= 0)
+                {
+                    currentChar[pNum] = totalChars;
 
-    public void OnChar1Select()
-    {
-        CharSelect(playerNumber, 0);
-    }
+                }
+                else
+                {
+                    currentChar[pNum]--;
+                }
+                print("Player " + pNum + ": Pressed LB");
+            }
 
-    public void OnChar2Select()
-    {
-        CharSelect(playerNumber, 1);
+            if (Input.GetButtonDown(rightBumperArray[pNum]))
+            {
+                if (currentChar[pNum] >= totalChars)
+                {
+                    currentChar[pNum] = 0;
+                }
+                else
+                {
+                    currentChar[pNum]++;
+                }
+                print("Player " + pNum + ": Pressed LB");
+            }
 
-    }
+            if (Input.GetButtonDown(aButtonArray[pNum]))
+            {
+                CharSelect(playerNumber, currentChar[pNum]);
+            }
 
-    public void OnChar3Select()
-    {
-        CharSelect(playerNumber, 2);
+            if (Input.GetButtonDown(bButtonArray[pNum]))
+            {
+                print("P" + pNum + ": Pressed B to Unjoin");
+                Unjoin(pNum);
+            }
 
-    }
+        }
+        else if (charSelected[pNum])
+        {
+            if (Input.GetButtonDown(bButtonArray[pNum]))
+            {
+                print("P" + pNum + ": Pressed B to Deselect");
 
-    public void OnChar4Select()
-    {
-        CharSelect(playerNumber, 3);
+                DeselectProcesses(pNum);
+            }
+
+        }
 
     }
 
     private void CharSelect(int pNum, int charNum)
     {
         PlayerPrefs.SetInt("CharacterPlayer" + pNum, charNum);
+        //totalPlayers += 1;
+        charSelected[pNum] = true;
+        txtObjPlayerReady.SetActive(true);
+    }
+
+    private void Unjoin(int pNum)
+    {
+        panelCharSelect.SetActive(false);
+        panelPressToJoin.SetActive(true);
+        selectingChar[pNum] = false;
+
+        if (pNum == 0)
+        {
+            eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(focusSelectedButton.gameObject);
+        }
+    }
+
+    private void DeselectProcesses(int playerNum)
+    {
+        charSelected[playerNum] = false;
+        txtObjPlayerReady.SetActive(false);
+
+        //totalPlayers -= 1;                
     }
 
 
