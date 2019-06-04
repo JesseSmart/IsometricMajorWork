@@ -16,8 +16,10 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public float baseMovementSpeed = 1f;
     private float currentSpeed;
 
+    public GameObject renderObj;
+    IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
-
+    
     // Start is called before the first frame update
     //void Start()
     //{
@@ -32,6 +34,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         currentSpeed = baseMovementSpeed;
+        isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
 
     void FixedUpdate()
@@ -51,7 +54,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         inputVector = Vector2.ClampMagnitude(inputVector, 1); //1 might have to be baseMovementSpeed instead. clamp prevents diagonal movement being faster
         Vector2 movement = inputVector * currentSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        //render
+        isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
     }
 
