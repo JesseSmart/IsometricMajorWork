@@ -17,7 +17,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
     public Button btnNext;
     public Button btnBack;
 
-    private int totalPlayers;
+    public int totalPlayers;
 
     public GameObject[] joinUIObjects;
 
@@ -40,7 +40,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
 
 
 
-            if (totalPlayers >= 2)
+        if (totalPlayers >= 2)
         {
             txtObjPressStart.SetActive(true);
 
@@ -48,6 +48,11 @@ public class PlayerJoinScreenMaster : MonoBehaviour
             {
                 StartPressed();
             }
+        }
+        else
+        {
+            txtObjPressStart.SetActive(false);
+
         }
     }
 

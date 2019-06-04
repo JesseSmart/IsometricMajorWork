@@ -25,7 +25,7 @@ public class CharSelectMaster : MonoBehaviour
         Selected
     }
 
-    private SelectState[] myState = new SelectState[4];
+    public SelectState myState;
 
     public GameObject panelCharSelect;
     public GameObject panelPressToJoin;
@@ -34,13 +34,14 @@ public class CharSelectMaster : MonoBehaviour
     public TextMeshProUGUI[] abilityDescObjs;
     public GameObject txtObjPlayerReady;
 
-    private bool[] selectingChar = new bool[4];
-    private bool[] charSelected = new bool[4];
+    //private bool[] selectingChar = new bool[4];
+    //private bool[] charSelected = new bool[4];
 
     //public int totalPlayers;// make static?
 
     public int totalChars = 1; //change as more added
-    private int[] currentChar = new int[4];
+    //private int[] currentChar = new int[4];
+    private int currentChar;
     public Sprite[] charSelectSprites;
     public Image myCharSelectImage;
 
@@ -66,18 +67,77 @@ public class CharSelectMaster : MonoBehaviour
     private void PlayerInput(int pNum)
     {
 
-        switch (myState[pNum])
+        myCharSelectImage.sprite = charSelectSprites[currentChar];
+
+        switch (myState)
         {
             case SelectState.WaitForJoin:
+
+                if (Input.GetButtonDown(xButtonArray[pNum]))
+                {
+                    panelCharSelect.SetActive(true);
+                    panelPressToJoin.SetActive(false);
+                    myState = SelectState.Selecting;
+                }
                 break;
             case SelectState.Selecting:
+                eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(null);
+
+                if (Input.GetButtonDown(leftBumperArray[pNum]))
+                {
+                    if (currentChar <= 0)
+                    {
+                        currentChar = totalChars;
+
+                    }
+                    else
+                    {
+                        currentChar--;
+                    }
+                }
+
+                if (Input.GetButtonDown(rightBumperArray[pNum]))
+                {
+                    if (currentChar>= totalChars)
+                    {
+                        currentChar = 0;
+                    }
+                    else
+                    {
+                        currentChar++;
+                    }
+                }
+
+                if (Input.GetButtonDown(aButtonArray[pNum]))
+                {
+
+                    CharSelect(playerNumber, currentChar);
+                    myState= SelectState.Selected;
+
+                }
+
+                if (Input.GetButtonDown(bButtonArray[pNum]))
+                {
+                    Unjoin(pNum);
+                    myState= SelectState.WaitForJoin;
+
+                }
+
                 break;
             case SelectState.Selected:
+
+                if (Input.GetButtonDown(bButtonArray[pNum]))
+                {
+                    DeselectProcesses(pNum);
+                    myState= SelectState.Selecting;
+
+                }
                 break;
 
         }
-        myCharSelectImage.sprite = charSelectSprites[currentChar[pNum]];
 
+        #region OLD CODE
+        /*
         //YOU SHOULD USE A ENUM FOR THIS
         if (selectingChar[pNum] == false)
         {
@@ -142,22 +202,21 @@ public class CharSelectMaster : MonoBehaviour
             }
 
         }
-
+        */
+        #endregion
     }
 
     private void CharSelect(int pNum, int charNum)
     {
         PlayerPrefs.SetInt("CharacterPlayer" + pNum, charNum);
-        //totalPlayers += 1;
-        charSelected[pNum] = true;
         txtObjPlayerReady.SetActive(true);
+        GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers++;
     }
 
     private void Unjoin(int pNum)
     {
         panelCharSelect.SetActive(false);
         panelPressToJoin.SetActive(true);
-        selectingChar[pNum] = false;
 
         if (pNum == 0)
         {
@@ -167,10 +226,8 @@ public class CharSelectMaster : MonoBehaviour
 
     private void DeselectProcesses(int playerNum)
     {
-        charSelected[playerNum] = false;
         txtObjPlayerReady.SetActive(false);
-
-        //totalPlayers -= 1;                
+        GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers--;
     }
 
 
