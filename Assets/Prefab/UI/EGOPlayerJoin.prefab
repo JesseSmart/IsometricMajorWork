@@ -265,10 +265,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.3, y: 41.399}
-  m_SizeDelta: {x: 74.3, y: 69.695}
+  m_AnchorMin: {x: 0.26571426, y: 0.5342857}
+  m_AnchorMax: {x: 0.48285717, y: 0.93142855}
+  m_AnchoredPosition: {x: 0.70000076, y: 0.39899826}
+  m_SizeDelta: {x: -1.699997, y: -0.3050003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4869197475911926053
 CanvasRenderer:
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.8396226, g: 0.83170164, b: 0.83170164, a: 1}
     m_PressedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_SelectedColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    m_SelectedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -349,7 +349,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7157020059803829667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4275151815943010778}
+        m_MethodName: OnChar2Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3018953345046841571
@@ -386,10 +397,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.3, y: -39.400013}
-  m_SizeDelta: {x: 74.3, y: 69.695}
+  m_AnchorMin: {x: 0.26571426, y: 0.082857154}
+  m_AnchorMax: {x: 0.48285717, y: 0.48285714}
+  m_AnchoredPosition: {x: 0.70000076, y: -1.400013}
+  m_SizeDelta: {x: -1.699997, y: -0.3050003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2612474071831573160
 CanvasRenderer:
@@ -451,7 +462,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.8396226, g: 0.83170164, b: 0.83170164, a: 1}
     m_PressedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_SelectedColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    m_SelectedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -470,7 +481,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4599145300950781179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4275151815943010778}
+        m_MethodName: OnChar4Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3463282719144774499
@@ -647,7 +669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &27387333283923028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -975,10 +997,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.5, y: 0}
-  m_SizeDelta: {x: 175, y: 175}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1707692508870719396
 CanvasRenderer:
@@ -1150,7 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1332,6 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5942548485648672306}
+  - component: {fileID: 4275151815943010778}
   m_Layer: 5
   m_Name: EGOPlayerJoin
   m_TagString: Untagged
@@ -1360,6 +1383,24 @@ RectTransform:
   m_AnchoredPosition: {x: -222, y: 126.2}
   m_SizeDelta: {x: 350, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4275151815943010778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7775417083174776084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b06b3fb18262d4697878a868d9487c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: 0
+  panelCharSelect: {fileID: 3823741000580062588}
+  panelPressToJoin: {fileID: 6804751031736627317}
+  charSelButtons: []
+  abilityDexcriptions: []
+  firstSelectedButton: {fileID: 5018274560120545289}
 --- !u!1 &8284407531289633032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,10 +1435,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.100006, y: -39.400013}
-  m_SizeDelta: {x: 74.3, y: 69.695}
+  m_AnchorMin: {x: 0.03714286, y: 0.07142858}
+  m_AnchorMax: {x: 0.25142857, y: 0.48285714}
+  m_AnchoredPosition: {x: 0.3999939, y: -0.40001297}
+  m_SizeDelta: {x: -0.69999695, y: -2.3050003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1050659226456694404
 CanvasRenderer:
@@ -1459,7 +1500,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.8396226, g: 0.83170164, b: 0.83170164, a: 1}
     m_PressedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_SelectedColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    m_SelectedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1478,7 +1519,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4580058906984573338}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4275151815943010778}
+        m_MethodName: OnChar3Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8823860765581195552
@@ -1589,10 +1641,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.1, y: 41.4}
-  m_SizeDelta: {x: 74.3, y: 69.695}
+  m_AnchorMin: {x: 0.03714286, y: 0.5457143}
+  m_AnchorMax: {x: 0.25142857, y: 0.93142855}
+  m_AnchoredPosition: {x: 0.3999939, y: -0.099998474}
+  m_SizeDelta: {x: -0.7000122, y: 0.6949997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8957206872224423893
 CanvasRenderer:
@@ -1654,7 +1706,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.8396226, g: 0.83170164, b: 0.83170164, a: 1}
     m_PressedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    m_SelectedColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    m_SelectedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1673,6 +1725,17 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7488507051426243722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4275151815943010778}
+        m_MethodName: OnChar1Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
