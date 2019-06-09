@@ -12,7 +12,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
     private string[] basicAbilityArray = new string[4] { "P1AButton", "P2AButton", "P3AButton", "P4AButton" }; //when making inheritance and stats and all, move these to them
     private string[] movementAbilityArray = new string[4] { "P1BButton", "P2BButton", "P3BButton", "P4BButton" };
 
-    private int basicAbilityKey = 0;
+    public int basicAbilityKey = 0;
+    public int movementAbilityKey = 2;
+    public int ultimateAbilityKey = 3;
     public float baseMovementSpeed = 1f;
     private float currentSpeed;
 
@@ -61,7 +63,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
     private void BasicTest(int playerNum)
     {
         //if (Input.GetButtonDown("joystick " + (playerNum + 1) + " button " + basicAbilityKey))
-        if (Input.GetButtonDown(basicAbilityArray[playerNum]))
+        //if (Input.GetButtonDown(basicAbilityArray[playerNum]))
+        //{
+        //    print("P" + playerNum + ": Pressed Basic Ability = " + basicAbilityKey);
+        //    currentSpeed += 5;
+        //}
+
+        if (Input.GetKeyDown("joystick " + (playerNum + 1) + " button " + basicAbilityKey))
         {
             print("P" + playerNum + ": Pressed Basic Ability = " + basicAbilityKey);
             currentSpeed += 5;
@@ -72,7 +80,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
     private void MovementAbilityTest(int playerNum)
     {
 
-        if (Input.GetButtonDown(movementAbilityArray[playerNum]))
+        //if (Input.GetButtonDown(movementAbilityArray[playerNum]))
+        //{
+        //    print("P" + playerNum + ": Pressed Movement Ability");
+        //    currentSpeed -= 5;
+        //}
+
+        if (Input.GetKeyDown("joystick " + (playerNum + 1) + " button " + movementAbilityKey))
         {
             print("P" + playerNum + ": Pressed Movement Ability");
             currentSpeed -= 5;
