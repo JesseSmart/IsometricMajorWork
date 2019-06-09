@@ -27,32 +27,38 @@ public class CharSelectMaster : MonoBehaviour
 
     public SelectState myState;
 
+    public CharacterStats[] characterStats;
+
     public GameObject panelCharSelect;
     public GameObject panelPressToJoin;
 
-    //public Button[] charSelButtons;
-    public TextMeshProUGUI[] abilityDescObjs;
+    //public TextMeshProUGUI[] abilityDescObjs;
     public GameObject txtObjPlayerReady;
 
-    //private bool[] selectingChar = new bool[4];
-    //private bool[] charSelected = new bool[4];
 
-    //public int totalPlayers;// make static?
 
     public int totalChars = 1; //change as more added
-    //private int[] currentChar = new int[4];
     private int currentChar;
-    public Sprite[] charSelectSprites;
-    public Image myCharSelectImage;
+    //public Sprite[] charSelectSprites;
 
     public GameObject eventSystemObj;
     public Button focusSelectedButton;
+
+
+    //UI Objects
+    public TextMeshProUGUI nameTextObj;
+    public Image displayImageObj;
+    public TextMeshProUGUI basicAbilityDescriptionObj;
+    public TextMeshProUGUI movementAbilityDescriptionObj;
+    public TextMeshProUGUI ultimateAbilityDescriptionObj;
+    public TextMeshProUGUI passiveAbilityDescriptionObj;
 
     // Start is called before the first frame update
     void Start()
     {
         focusSelectedButton = GetComponentInParent<PlayerJoinScreenMaster>().btnBack;
         eventSystemObj = GameObject.FindGameObjectWithTag("EventSystem");
+        totalChars = characterStats.Length;
     }
 
     // Update is called once per frame
@@ -67,7 +73,8 @@ public class CharSelectMaster : MonoBehaviour
     private void PlayerInput(int pNum)
     {
 
-        myCharSelectImage.sprite = charSelectSprites[currentChar];
+        //myCharSelectImage.sprite = charSelectSprites[currentChar];
+        SetUIFromStats(pNum, currentChar);
 
         switch (myState)
         {
@@ -87,7 +94,7 @@ public class CharSelectMaster : MonoBehaviour
                 {
                     if (currentChar <= 0)
                     {
-                        currentChar = totalChars;
+                        currentChar = totalChars - 1;
 
                     }
                     else
@@ -98,7 +105,7 @@ public class CharSelectMaster : MonoBehaviour
 
                 if (Input.GetButtonDown(rightBumperArray[pNum]))
                 {
-                    if (currentChar>= totalChars)
+                    if (currentChar>= totalChars - 1)
                     {
                         currentChar = 0;
                     }
@@ -230,5 +237,13 @@ public class CharSelectMaster : MonoBehaviour
         GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers--;
     }
 
-
+    void SetUIFromStats(int pNum, int myChar)
+    {
+        nameTextObj.text = characterStats[myChar].myName;
+        basicAbilityDescriptionObj.text = characterStats[myChar].basicAbilityDescription;
+        movementAbilityDescriptionObj.text = characterStats[myChar].movementAbilityDescription;
+        ultimateAbilityDescriptionObj.text = characterStats[myChar].ultimateAbilityDescription;
+        passiveAbilityDescriptionObj.text = characterStats[myChar].passiveAbilityDescription;
+        displayImageObj.sprite = characterStats[myChar].displayImage;
+    }
 }
