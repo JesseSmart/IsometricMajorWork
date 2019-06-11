@@ -129,6 +129,7 @@ MonoBehaviour:
   initialForce: 50
   myOwner: {fileID: 0}
   maxFlightDuration: 6
+  pullSpeed: 0.5
 --- !u!50 &2397128836815435712
 Rigidbody2D:
   serializedVersion: 4
