@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5750027382957577664}
   - component: {fileID: 5750027382957577667}
   - component: {fileID: 7664169246491198674}
+  - component: {fileID: 3043654306253714739}
   m_Layer: 0
   m_Name: Viking
-  m_TagString: Untagged
+  m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +55,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!210 &5750027382957577664
 SortingGroup:
@@ -99,6 +100,32 @@ MonoBehaviour:
   characterStats: {fileID: 11400000, guid: 33f9a180c04c5e94085e6e0c094f176c, type: 2}
   throwAxeObject: {fileID: 4807964620887704209, guid: 6e0da474b5501464b9b455419dc33814,
     type: 3}
+--- !u!61 &3043654306253714739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750027382957577677}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15}
+  m_EdgeRadius: 0
 --- !u!1 &5750027383698018153
 GameObject:
   m_ObjectHideFlags: 0

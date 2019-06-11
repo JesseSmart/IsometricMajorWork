@@ -59,7 +59,9 @@ public class VikingController : MonoBehaviour
         {
             GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
             thrownAxe.GetComponent<ThrowAxe>().myOwner = gameObject;
+            
             thrownAxe.GetComponent<ThrowAxe>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().currentDir);
+            print(gameObject.GetComponent<IsometricPlayerMovementController>().currentDir);
             //thrownAxe.GetComponent<ThrowAxe>().Throw(Vector2.up);
             print(pNum + " Player: DO MOVE");
             myClass.moveATimer = myClass.moveACooldown;
@@ -113,10 +115,9 @@ public class VikingController : MonoBehaviour
         myClass.basicATimer -= Time.deltaTime;
         myClass.moveATimer -= Time.deltaTime;
         myClass.ultATimer -= Time.deltaTime;
-
-
     }
 
+    
 
 
 }

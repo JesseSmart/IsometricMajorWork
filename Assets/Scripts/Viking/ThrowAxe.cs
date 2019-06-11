@@ -7,23 +7,45 @@ public class ThrowAxe : MonoBehaviour
 
     public Rigidbody2D rbody;
     public int initialForce;
-    public int retForce;
 
     public GameObject myOwner;
 
-    public float cantCatchDuration;
-    private float cantCatchTimer;
+    public float maxFlightDuration;
+    private float flightTimer;
+
+    public float pullSpeed;
+    private Vector2 direction;
+
+    private bool stuckToTarget;
+    private bool stuckToTerrain;
+    private GameObject myTarget;
+
+    private float pullFloat;
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-        cantCatchTimer = cantCatchDuration;
+        flightTimer = maxFlightDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ReturnToViking(myOwner);
+        flightTimer -= Time.deltaTime;
+        if (flightTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (stuckToTarget)
+        {
+            transform.position = myTarget.transform.position;
+            TargetToViking(gameObject);
+        }
+        else if (stuckToTerrain)
+        {
+            VikingToTerrain(myTarget);
+        }
     }
 
     void FixedUpdate()
@@ -34,31 +56,51 @@ public class ThrowAxe : MonoBehaviour
 
     public void Throw(Vector2 dir)
     {
-        rbody.AddForce(Vector2.up * initialForce);
+        direction = dir;
+        rbody.AddForce(dir.normalized * initialForce);
         //look into force modes like acceleration
     }
 
-    public void ReturnToViking(GameObject player)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Vector2 dir = (Vector2)player.transform.position - rbody.position;
-        dir.Normalize();
-
-        rbody.AddForce(dir * retForce);
-
-        CheckCatch(player);
-    }
-
-
-    private void CheckCatch(GameObject player)
-    {
-        cantCatchTimer -= Time.deltaTime;
-        if (cantCatchTimer <= 0)
+        if (!stuckToTarget && !stuckToTerrain)
         {
-            if (Vector2.Distance(player.transform.position, transform.position) < 0.2)
+
+            if (other.gameObject.CompareTag("PlayerCharacter") && !myOwner) 
             {
-                Destroy(gameObject, 0.4f);
+                //deal damage here
+                print("hit " + other);
+                myTarget = other.gameObject;
+                stuckToTarget = true;
             }
+            else if (!myOwner)
+            {
+                //terrain
+                //myTarget = other.gameObject;
+                //rbody.constraints = RigidbodyConstraints2D.FreezeAll; 
+                //stuckToTerrain = true;
+            }
+
+
         }
+        print("coll");
     }
-    //use fixed update
+
+
+    public void TargetToViking(GameObject target)
+    {
+        print("Player to " + target);
+        pullFloat += Time.deltaTime;
+        target.transform.position = Vector2.Lerp(target.transform.position, myOwner.transform.position, pullFloat * pullSpeed);
+
+    }
+
+    public void VikingToTerrain(GameObject target)
+    {
+        pullFloat += Time.deltaTime * 0.1f;
+
+        myOwner.transform.position = Vector2.Lerp(myOwner.transform.position, transform.position, pullFloat * pullSpeed);
+
+    }
+
 }
