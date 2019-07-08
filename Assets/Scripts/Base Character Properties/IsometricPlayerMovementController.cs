@@ -21,6 +21,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     Rigidbody2D rbody;
 
     public Vector2 currentDir;
+	public Vector2 lastDir;
     
     // Start is called before the first frame update
     //void Start()
@@ -53,6 +54,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         currentDir = inputVector;
+
+		if (currentDir != Vector2.zero)
+		{
+			lastDir = currentDir;
+		}
+
         inputVector = Vector2.ClampMagnitude(inputVector, 1); //1 might have to be baseMovementSpeed instead. clamp prevents diagonal movement being faster
         Vector2 movement = inputVector * currentSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;

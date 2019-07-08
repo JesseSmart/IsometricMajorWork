@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715565616270129759}
   - component: {fileID: 4389105954037622286}
+  - component: {fileID: 6824459745228521755}
   m_Layer: 0
   m_Name: AxeSprite
   m_TagString: Untagged
@@ -68,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c13d8261bd6f75499d5ffb3edf99ccf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8828ab803337199479ae26ea41c3f964, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,6 +80,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6824459745228521755
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505013782485764406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 666df6ab934c6cd4b987593547959701, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4807964620887704209
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +150,7 @@ MonoBehaviour:
   myOwner: {fileID: 0}
   maxFlightDuration: 6
   pullSpeed: 0.5
+  endPullDist: 0.15
 --- !u!50 &2397128836815435712
 Rigidbody2D:
   serializedVersion: 4

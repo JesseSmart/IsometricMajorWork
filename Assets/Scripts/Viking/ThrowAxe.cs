@@ -21,6 +21,7 @@ public class ThrowAxe : MonoBehaviour
     private GameObject myTarget;
 
     private float pullFloat;
+	public float endPullDist;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class ThrowAxe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		//only run if not hit
         flightTimer -= Time.deltaTime;
         if (flightTimer <= 0)
         {
@@ -40,11 +42,11 @@ public class ThrowAxe : MonoBehaviour
         if (stuckToTarget)
         {
             transform.position = myTarget.transform.position;
-            TargetToViking(gameObject);
+            TargetToViking(myTarget);
         }
-        else if (stuckToTerrain)
+		else if (stuckToTerrain)
         {
-            VikingToTerrain(myTarget);
+			VikingToTerrain();
         }
     }
 
@@ -57,7 +59,10 @@ public class ThrowAxe : MonoBehaviour
     public void Throw(Vector2 dir)
     {
         direction = dir;
-        rbody.AddForce(dir.normalized * initialForce);
+
+		rbody.AddForce(dir.normalized * initialForce);
+
+
         //look into force modes like acceleration
     }
 
@@ -65,25 +70,31 @@ public class ThrowAxe : MonoBehaviour
     {
         if (!stuckToTarget && !stuckToTerrain)
         {
-
-            if (other.gameObject.CompareTag("PlayerCharacter") && !myOwner) 
+			print("In if");
+		
+			if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner) 
             {
                 //deal damage here
                 print("hit " + other);
                 myTarget = other.gameObject;
                 stuckToTarget = true;
-            }
-            else if (!myOwner)
+				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+			}
+            else if (other.gameObject != myOwner)
             {
-                //terrain
-                //myTarget = other.gameObject;
-                //rbody.constraints = RigidbodyConstraints2D.FreezeAll; 
-                //stuckToTerrain = true;
-            }
+
+				//terrain
+				//myTarget = other.gameObject;
+				//rbody.constraints = RigidbodyConstraints2D.FreezeAll; 
+				print("Hit terrain trigger");
+				stuckToTerrain = true;
+				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+			}
 
 
-        }
-        print("coll");
+		}
+        
     }
 
 
@@ -92,15 +103,26 @@ public class ThrowAxe : MonoBehaviour
         print("Player to " + target);
         pullFloat += Time.deltaTime;
         target.transform.position = Vector2.Lerp(target.transform.position, myOwner.transform.position, pullFloat * pullSpeed);
+		CheckDist();
+	}
 
-    }
-
-    public void VikingToTerrain(GameObject target)
+    public void VikingToTerrain()
     {
-        pullFloat += Time.deltaTime * 0.1f;
+		print("Player to terrain");
+        pullFloat += Time.deltaTime;
 
         myOwner.transform.position = Vector2.Lerp(myOwner.transform.position, transform.position, pullFloat * pullSpeed);
-
+		CheckDist();
     }
+
+	void CheckDist()
+	{
+		float dist = Vector2.Distance(transform.position, myOwner.transform.position);
+
+		if (dist <= endPullDist)
+		{
+			Destroy(gameObject);
+		}
+	}
 
 }
