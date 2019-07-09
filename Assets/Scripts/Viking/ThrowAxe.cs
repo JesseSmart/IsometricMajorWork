@@ -22,16 +22,23 @@ public class ThrowAxe : MonoBehaviour
 
     private float pullFloat;
 	public float endPullDist;
+
+    private LineRenderer lineR;
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         flightTimer = maxFlightDuration;
+        lineR = GetComponent<LineRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        lineR.SetPosition(0, transform.position);
+        lineR.SetPosition(1, myOwner.transform.position);
+
 		//only run if not hit
         flightTimer -= Time.deltaTime;
         if (flightTimer <= 0)
@@ -79,6 +86,9 @@ public class ThrowAxe : MonoBehaviour
                 myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+                //Freeze player movement on hit
+                myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 			}
             else if (other.gameObject != myOwner)
             {
@@ -90,10 +100,13 @@ public class ThrowAxe : MonoBehaviour
 				stuckToTerrain = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-			}
+                //Freeze player movement on hit
+                myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+            }
 
 
-		}
+        }
         
     }
 
@@ -121,7 +134,11 @@ public class ThrowAxe : MonoBehaviour
 
 		if (dist <= endPullDist)
 		{
-			Destroy(gameObject);
+            //Add force outwards for bounce off effect
+            myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            Destroy(gameObject);
 		}
 	}
 

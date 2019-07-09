@@ -8,7 +8,7 @@ public class VikingController : MonoBehaviour
     public CharacterStats characterStats;
     private CharacterClass myClass = new CharacterClass();
 
-
+    public GameObject spinMoveObj;
     public GameObject throwAxeObject;
 
     // Start is called before the first frame update
@@ -45,11 +45,15 @@ public class VikingController : MonoBehaviour
         if (myClass.basicATimer <= 0)
         {
             print(pNum + " Player: DO BASIC");
+
+            GameObject spinObj = Instantiate(spinMoveObj, transform.position, transform.rotation);
+            spinObj.GetComponent<VikingSpinMove>().myOwner = gameObject;
+
             myClass.basicATimer = myClass.basicACooldown;
         }
         else
         {
-            //Recharging
+            print("Basic recharging");
         }
     }
 
@@ -67,7 +71,7 @@ public class VikingController : MonoBehaviour
         else
         {
             //Recharging
-            print("Basic recharging");
+            print("Movement recharging");
         }
     }
 

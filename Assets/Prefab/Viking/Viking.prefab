@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5750027382957577677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1169856, y: 0.7684705, z: -1.781981}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5750027383698018158}
@@ -81,9 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  baseMovementSpeed: 1
+  baseMovementSpeed: 5
   renderObj: {fileID: 5750027383698018153}
   currentDir: {x: 0, y: 0}
+  lastDir: {x: 0, y: 0}
 --- !u!114 &7664169246491198674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pNum: 0
   characterStats: {fileID: 11400000, guid: 33f9a180c04c5e94085e6e0c094f176c, type: 2}
+  spinMoveObj: {fileID: 5282191754134349807, guid: 6a983264dbed5764dbf8dc971fe5aa11,
+    type: 3}
   throwAxeObject: {fileID: 4807964620887704209, guid: 6e0da474b5501464b9b455419dc33814,
     type: 3}
 --- !u!61 &3043654306253714739
@@ -124,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.15}
+  m_Size: {x: 0.6, y: 0.75}
   m_EdgeRadius: 0
 --- !u!1 &5750027383698018153
 GameObject:
@@ -154,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 5750027383698018153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5750027382957577670}
   m_RootOrder: 0
