@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7211014904114213629}
   - component: {fileID: 4348940547443560857}
+  - component: {fileID: 2013108849814377366}
   m_Layer: 0
   m_Name: EGO Viking Spin Attack
   m_TagString: Untagged
@@ -119,8 +120,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5282191754134349807}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &2013108849814377366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282191754134349807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21d39a72461b2d42a9ad3dbbe07d93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myOwner: {fileID: 0}
+  spinSpeed: 500
+  spinTimer: 20

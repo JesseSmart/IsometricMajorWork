@@ -95,7 +95,7 @@ public class VikingController : MonoBehaviour
 
     private void Inputer()
     {
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0))
+        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
         {
             BasicAbility();
         }
