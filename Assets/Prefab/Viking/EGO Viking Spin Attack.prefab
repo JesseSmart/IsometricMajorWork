@@ -138,5 +138,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myOwner: {fileID: 0}
-  spinSpeed: 500
-  spinTimer: 20
+  spinSpeed: 1000
+  passedOne: 0

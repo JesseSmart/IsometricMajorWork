@@ -9,9 +9,11 @@ public class VikingSpinMove : MonoBehaviour
 
 	public float spinSpeed;
 
-	public float spinTimer;
-    // Start is called before the first frame update
-    void Start()
+	private float rotationleft = 360;
+	
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -19,12 +21,24 @@ public class VikingSpinMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		transform.Rotate(0, 0, -1 * Time.deltaTime * spinSpeed, Space.World);
-		spinTimer -= Time.deltaTime;
-		if (spinTimer <= 0)
+		transform.position = myOwner.transform.position;
+		//transform.Rotate(0, 0, -1 * Time.deltaTime * spinSpeed, Space.World);
+
+
+		float rotation = spinSpeed * Time.deltaTime;
+		if (rotationleft > rotation)
 		{
-			Destroy(gameObject);
+			rotationleft -= rotation;
 		}
+		else
+		{
+			rotation = rotationleft;
+			rotationleft = 0;
+			Destroy(gameObject);
+
+		}
+		transform.Rotate(0, 0, -rotation);
+
 
     }
 

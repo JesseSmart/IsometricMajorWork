@@ -103,6 +103,8 @@ MonoBehaviour:
     type: 3}
   throwAxeObject: {fileID: 4807964620887704209, guid: 6e0da474b5501464b9b455419dc33814,
     type: 3}
+  ultimateAxeObj: {fileID: 5282191754134349807, guid: 52e55692425265c4ab660ae86de230e6,
+    type: 3}
 --- !u!61 &3043654306253714739
 BoxCollider2D:
   m_ObjectHideFlags: 0

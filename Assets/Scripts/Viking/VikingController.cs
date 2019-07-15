@@ -10,6 +10,7 @@ public class VikingController : MonoBehaviour
 
     public GameObject spinMoveObj;
     public GameObject throwAxeObject;
+	public GameObject ultimateAxeObj;
 
     // Start is called before the first frame update
     void Start()
@@ -79,8 +80,11 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.ultATimer <= 0)
         {
-            print(pNum + " Player: DO ULT");
-            myClass.ultATimer = myClass.ultACooldown;
+
+			GameObject ultAxe = Instantiate(ultimateAxeObj, transform.position, transform.rotation);
+			ultAxe.GetComponent<VikingUltimateSpin>().myOwner = gameObject;
+
+			myClass.ultATimer = myClass.ultACooldown;
         }
         else
         {
