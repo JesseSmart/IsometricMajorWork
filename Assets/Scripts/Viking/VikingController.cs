@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VikingController : MonoBehaviour
+public class VikingController : CharacterInherit
 {
     public int pNum;
     public CharacterStats characterStats;
@@ -123,7 +123,35 @@ public class VikingController : MonoBehaviour
         myClass.ultATimer -= Time.deltaTime;
     }
 
-    
+    public void TakeDamage(float damage)
+    {
+        if (myClass.myHealth >= 0)
+        {
+            myClass.myHealth -= damage;
+        }
+        else if (myClass.myHealth < 0)
+        {
+            int rndChance = Random.Range(0, 100);
+
+            if (rndChance <= Mathf.Abs(myClass.myHealth))
+            {
+                //alive
+            }
+            else
+            {
+                //dead
+                Death();
+            }
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
+
+    }
+
+
 
 
 }

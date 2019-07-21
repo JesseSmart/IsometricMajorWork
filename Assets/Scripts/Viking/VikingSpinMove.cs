@@ -44,7 +44,7 @@ public class VikingSpinMove : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject != myOwner)
+		if (collision.gameObject.CompareTag("PlayerCharacter") && collision.gameObject != myOwner)
 		{
 			//damage
 			//knockback
