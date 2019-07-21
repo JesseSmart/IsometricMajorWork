@@ -22,7 +22,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public Vector2 currentDir;
 	public Vector2 lastDir;
-    
+
     // Start is called before the first frame update
     //void Start()
     //{

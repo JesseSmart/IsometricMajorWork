@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrowAxe : MonoBehaviour
 {
-
+    public float damage; 
     public Rigidbody2D rbody;
     public int initialForce;
 
@@ -77,12 +77,14 @@ public class ThrowAxe : MonoBehaviour
     {
         if (!stuckToTarget && !stuckToTerrain)
         {
-			print("In if");
 		
 			if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner) 
             {
                 //deal damage here
-                print("hit " + other);
+                print("Throw Damage");
+                other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
+
+                //print("hit " + other);
                 myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -95,8 +97,7 @@ public class ThrowAxe : MonoBehaviour
 
 				//terrain
 				//myTarget = other.gameObject;
-				//rbody.constraints = RigidbodyConstraints2D.FreezeAll; 
-				print("Hit terrain trigger");
+				//print("Hit terrain trigger");
 				stuckToTerrain = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 

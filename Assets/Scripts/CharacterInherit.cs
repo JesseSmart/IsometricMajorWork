@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterInherit : MonoBehaviour
 {
+
+
+
     // Start is called before the first frame update
     void Start()
     {

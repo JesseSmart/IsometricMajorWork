@@ -5,10 +5,11 @@ using UnityEngine;
 public class VikingSpinMove : MonoBehaviour
 {
     public GameObject myOwner;
-    private Rigidbody2D rbody;
-
 	public float spinSpeed;
+    public float damage;
 
+
+    private Rigidbody2D rbody;
 	private float rotationleft = 360;
 	
 
@@ -42,10 +43,12 @@ public class VikingSpinMove : MonoBehaviour
 
     }
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (collision.gameObject.CompareTag("PlayerCharacter") && collision.gameObject != myOwner)
+		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
+            print("Spin Hit");
+            other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
 			//damage
 			//knockback
 		}

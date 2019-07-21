@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VikingController : CharacterInherit
+public class VikingController : MonoBehaviour
 {
     public int pNum;
     public CharacterStats characterStats;
@@ -28,7 +28,7 @@ public class VikingController : CharacterInherit
 
     private void SetStats()
     {
-        myClass.myHealth = characterStats.health;
+        //myClass.myHealth = characterStats.health;
         myClass.basicACooldown = characterStats.basicAbilityCooldown;
         myClass.moveACooldown = characterStats.movementAbilityCooldown;
         myClass.ultACooldown = characterStats.ultimateAbilityCooldown;
@@ -123,33 +123,7 @@ public class VikingController : CharacterInherit
         myClass.ultATimer -= Time.deltaTime;
     }
 
-    public void TakeDamage(float damage)
-    {
-        if (myClass.myHealth >= 0)
-        {
-            myClass.myHealth -= damage;
-        }
-        else if (myClass.myHealth < 0)
-        {
-            int rndChance = Random.Range(0, 100);
 
-            if (rndChance <= Mathf.Abs(myClass.myHealth))
-            {
-                //alive
-            }
-            else
-            {
-                //dead
-                Death();
-            }
-        }
-    }
-
-    void Death()
-    {
-        Destroy(gameObject);
-
-    }
 
 
 
