@@ -23,6 +23,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public Vector2 currentDir;
 	public Vector2 lastDir;
 
+	public float dodgeCooldown = 2;
+	private float dodgeTimer;
+
     // Start is called before the first frame update
     //void Start()
     //{
@@ -38,11 +41,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         currentSpeed = baseMovementSpeed;
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
+		
     }
 
     void FixedUpdate()
     {
         MovementFunction(playerNumber);
+		Dodge(playerNumber);
 
     }
 
@@ -67,9 +72,18 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody.MovePosition(newPos);
     }
 
-    public void Dodge()
+    public void Dodge(float pNum)
     {
+		dodgeTimer -= Time.deltaTime;
+		if (dodgeTimer <= 0)
+		{
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 1))
+			{
+				print("Dodge");
+				dodgeTimer = dodgeCooldown;
 
+			}
+		}
     }
 
 

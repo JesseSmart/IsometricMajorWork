@@ -7,6 +7,7 @@ public class VikingUltimateSpin : MonoBehaviour
 
 	public GameObject myOwner;
 	private Rigidbody2D rbody;
+	private GameObject[] alreadyHitObjs = new GameObject[3]; //USE LIST INSTEAD
 
 	[Header("Stats")]
 	public float spinSpeed;
@@ -50,11 +51,11 @@ public class VikingUltimateSpin : MonoBehaviour
 		ChainRayCollision();
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (collision.gameObject.CompareTag("PlayerCharacter"))
+		if (other.gameObject.CompareTag("PlayerCharacter"))
 		{
-			if (collision.gameObject != myOwner.gameObject)
+			if (other.gameObject != myOwner.gameObject)
 			{
 				print("Ult Axe Hit");
 				//damage
@@ -65,17 +66,35 @@ public class VikingUltimateSpin : MonoBehaviour
 	void ChainRayCollision() //only run once per object/character (like trigger entre)
 	{
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, myOwner.transform.position);
-		if (hit.collider.gameObject != null) //error
+		if (hit.collider != null) //error
 		{
 			GameObject hitObj = hit.collider.gameObject;
 
 			if (hitObj.CompareTag("PlayerCharacter"))
 			{
+				foreach (GameObject obj in alreadyHitObjs)
+				{
+					if (hitObj = obj)
+					{
+						return;
+					}
+				}
+
 				if (hitObj != myOwner.gameObject)
 				{
 					print("CHAIN HIT");
-					//damage
-					//knockback
+					for (int i = 0; i < alreadyHitObjs.Length; i++)
+					{
+						if (alreadyHitObjs[i] == null)
+						{
+							alreadyHitObjs[i] = hitObj;
+							//damage
+							//knockback
+
+							return;
+						}
+					}
+					
 				}
 			}
 		}

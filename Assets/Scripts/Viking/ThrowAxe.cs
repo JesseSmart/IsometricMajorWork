@@ -48,9 +48,20 @@ public class ThrowAxe : MonoBehaviour
 
         if (stuckToTarget)
         {
-            transform.position = myTarget.transform.position;
-            TargetToViking(myTarget);
-        }
+			if (myTarget != null)
+			{
+				transform.position = myTarget.transform.position;
+				TargetToViking(myTarget);
+
+			}
+			else
+			{
+				myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+				myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+				Destroy(gameObject);
+
+			}
+		}
 		else if (stuckToTerrain)
         {
 			VikingToTerrain();
@@ -83,8 +94,6 @@ public class ThrowAxe : MonoBehaviour
                 //deal damage here
                 print("Throw Damage");
                 other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
-
-                //print("hit " + other);
                 myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -96,8 +105,6 @@ public class ThrowAxe : MonoBehaviour
             {
 
 				//terrain
-				//myTarget = other.gameObject;
-				//print("Hit terrain trigger");
 				stuckToTerrain = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
