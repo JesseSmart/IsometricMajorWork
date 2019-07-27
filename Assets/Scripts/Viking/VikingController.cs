@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VikingController : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class VikingController : MonoBehaviour
     public GameObject spinMoveObj;
     public GameObject throwAxeObject;
 	public GameObject ultimateAxeObj;
+
+
+    //UI
+    public Slider sldBasicA;
+    public Slider sldMovementA;
+    public Slider sldUltA;
 
     // Start is called before the first frame update
     void Start()
@@ -121,6 +128,10 @@ public class VikingController : MonoBehaviour
         myClass.basicATimer -= Time.deltaTime;
         myClass.moveATimer -= Time.deltaTime;
         myClass.ultATimer -= Time.deltaTime;
+
+        sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
+        sldMovementA.value = 1 -(myClass.moveATimer / myClass.moveACooldown);
+        sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
     }
 
 
