@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class GameModifiersMaster : MonoBehaviour
 {
 
-    public int roundTotal;
+    public int winPointTarget;
     public int roundDuration;
 
     public GameObject mainMenuPanel;
@@ -33,21 +33,21 @@ public class GameModifiersMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (roundTotal >= 0 && roundDuration >= 0)
+        if (winPointTarget >= 0 && roundDuration >= 0)
         {
             btnNext.interactable = true;
         }
 
-        if (roundTotal <= 0)
+        if (winPointTarget <= 0)
         {
-            roundTotal = 1;
-            txtRoundTotal.text = roundTotal.ToString();
+            winPointTarget = 1;
+            txtRoundTotal.text = winPointTarget.ToString();
 
         }
-        else if (roundTotal >= 10)
+        else if (winPointTarget >= 10)
         {
-            roundTotal = 9;
-            txtRoundTotal.text = roundTotal.ToString();
+            winPointTarget = 9;
+            txtRoundTotal.text = winPointTarget.ToString();
 
         }
 
@@ -85,22 +85,22 @@ public class GameModifiersMaster : MonoBehaviour
     public void OnRoundInc()
     {
         //if isnt at maximum or minimum
-        if (roundTotal > 0 && roundTotal < 10) //<-- make maximum
+        if (winPointTarget > 0 && winPointTarget < 10) //<-- make maximum
         {
-            roundTotal += 2;
-            PlayerPrefs.SetInt("RoundTotal", roundTotal);
-            txtRoundTotal.text = roundTotal.ToString();
+            winPointTarget ++;
+            PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+            txtRoundTotal.text = winPointTarget.ToString();
         }
     }
 
     public void OnRoundDec()
     {
         //if isnt at maximum or minimum
-        if (roundTotal > 0 && roundTotal < 10) //<-- make maximum
+        if (winPointTarget > 0 && winPointTarget < 10) //<-- make maximum
         {
-            roundTotal -= 2;
-            PlayerPrefs.SetInt("RoundTotal", roundTotal);
-            txtRoundTotal.text = roundTotal.ToString();
+            winPointTarget--;
+            PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+            txtRoundTotal.text = winPointTarget.ToString();
         }
 
     }

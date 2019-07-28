@@ -70,6 +70,8 @@ public class PlayerJoinScreenMaster : MonoBehaviour
         {
             PlayerPrefs.SetInt("TotalPlayers", totalPlayers);
         }
+
+        SceneManager.LoadScene("JesseTesting");
         print("LOAD SCENE");
         //load scene 
 
