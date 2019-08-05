@@ -74,7 +74,7 @@ public class VikingUltimateSpin : MonoBehaviour
 			{
 				foreach (GameObject obj in alreadyHitObjs)
 				{
-					if (hitObj = obj)
+					if (hitObj == obj)
 					{
 						return;
 					}
