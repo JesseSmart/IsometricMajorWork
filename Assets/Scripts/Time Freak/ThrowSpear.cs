@@ -5,7 +5,9 @@ using UnityEngine;
 public class ThrowSpear : MonoBehaviour
 {
 
-	public float damage;
+	public float minDamage;
+	public float maxDamage;
+
 	public Rigidbody2D rbody;
 	public int initialForce;
 
@@ -52,7 +54,7 @@ public class ThrowSpear : MonoBehaviour
 		{
 			//deal damage here
 			print("Throw Damage");
-			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
 			Destroy(gameObject);
 
 		}

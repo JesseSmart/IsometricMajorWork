@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408e174d8b9ff7c4f867924c58650c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minLightningDamage: 5
+  maxLightningDamage: 15
   myOwner: {fileID: 0}
   lifeSoFar: 0
 --- !u!50 &2397128836815435712

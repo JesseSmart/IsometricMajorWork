@@ -53,8 +53,10 @@ public class CharacterCommon : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float minDamage, float maxDamage)
     {
+		float damage = Random.Range(minDamage, maxDamage);
+
         if (myClass.myHealth >= 0)
         {
             myClass.myHealth -= damage;

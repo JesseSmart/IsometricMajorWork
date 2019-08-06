@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TeleDamageZone : MonoBehaviour
 {
-	public float damage;
+	public float minDamage;
+	public float maxDamage;
 	public float damageIntervals;
 	public float zoneDuration;
 	public GameObject myOwner;
@@ -14,23 +15,23 @@ public class TeleDamageZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+		StartCoroutine(SelfDestroy());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+		print(damageHasRun);
     }
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
+
 			if (!damageHasRun)
 			{
-				AreaDamage(other.gameObject);
+				StartCoroutine(AreaDamage(other.gameObject));
 				damageHasRun = true;
 			}
 		}
@@ -40,9 +41,11 @@ public class TeleDamageZone : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
+
 			if (!damageHasRun)
 			{
-				AreaDamage(other.gameObject);
+				//not running?
+				StartCoroutine(AreaDamage(other.gameObject));
 				damageHasRun = true;
 			}
 		}
@@ -51,10 +54,16 @@ public class TeleDamageZone : MonoBehaviour
 
 	IEnumerator AreaDamage(GameObject targetObj)
 	{
-
-		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
+		print("damage pre");
+		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
 		yield return new WaitForSeconds(1.0f);
 		damageHasRun = false;
+	}
+
+	IEnumerator SelfDestroy()
+	{
+		yield return new WaitForSeconds(zoneDuration);
+		Destroy(gameObject);
 	}
 
 

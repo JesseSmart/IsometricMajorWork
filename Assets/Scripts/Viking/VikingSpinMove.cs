@@ -6,7 +6,8 @@ public class VikingSpinMove : MonoBehaviour
 {
     public GameObject myOwner;
 	public float spinSpeed;
-    public float damage;
+    public float minDamage;
+    public float maxDamage;
 
 
     private Rigidbody2D rbody;
@@ -48,7 +49,7 @@ public class VikingSpinMove : MonoBehaviour
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
             print("Spin Hit");
-            other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
+            other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
 			//damage
 			//knockback
 		}

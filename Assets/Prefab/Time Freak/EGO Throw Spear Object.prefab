@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073187fc6147ff944b63af11b5a0e34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  minDamage: 35
+  maxDamage: 45
   rbody: {fileID: 2397128836815435712}
   initialForce: 700
   myOwner: {fileID: 0}

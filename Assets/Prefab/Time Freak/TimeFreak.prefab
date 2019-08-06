@@ -1114,6 +1114,9 @@ MonoBehaviour:
   characterStats: {fileID: 11400000, guid: 53e6671d0117f8e43a08a9398f2dfdb3, type: 2}
   throwSpearObj: {fileID: 4807964620887704209, guid: ecf2e9faa51c5724882463a1064ea2a6,
     type: 3}
+  teleDamageZoneObj: {fileID: 4807964620887704209, guid: 3315091ded50fa242ba1cfa4b31e9b2f,
+    type: 3}
+  teleRange: 5
   sldBasicA: {fileID: 6121847216494655820}
   sldMovementA: {fileID: 169760401757166896}
   sldUltA: {fileID: 1143788466076373065}

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ThrowAxe : MonoBehaviour
 {
-    public float damage; 
-    public Rigidbody2D rbody;
+	public float minDamage;
+	public float maxDamage;
+	public Rigidbody2D rbody;
     public int initialForce;
 
     public GameObject myOwner;
@@ -93,7 +94,7 @@ public class ThrowAxe : MonoBehaviour
             {
                 //deal damage here
                 print("Throw Damage");
-                other.gameObject.GetComponent<CharacterCommon>().TakeDamage(damage);
+                other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
                 myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;

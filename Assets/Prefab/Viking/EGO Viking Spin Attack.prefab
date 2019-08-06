@@ -126,7 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myOwner: {fileID: 0}
   spinSpeed: 1000
-  damage: 20
+  minDamage: 25
+  maxDamage: 35
 --- !u!61 &4965447515382582834
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class RecieverSpear : MonoBehaviour
 {
 
 	private RecieverSpear[] spears;
-	public float lightningDamage;
+	public float minLightningDamage;
+	public float maxLightningDamage;
 	public GameObject myOwner;
 	public float lifeSoFar;
 
@@ -96,7 +97,7 @@ public class RecieverSpear : MonoBehaviour
 						if (alreadyHitObjs[i] == null)
 						{
 							alreadyHitObjs[i] = hitObj;
-							hitObj.GetComponent<CharacterCommon>().TakeDamage(lightningDamage);
+							hitObj.GetComponent<CharacterCommon>().TakeDamage(minLightningDamage, maxLightningDamage);
 							print("Lightning damage");
 
 							//damage

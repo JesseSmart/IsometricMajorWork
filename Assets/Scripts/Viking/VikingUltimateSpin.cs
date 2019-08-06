@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class VikingUltimateSpin : MonoBehaviour
 {
-
+	public float minDamage;
+	public float maxDamage;
 	public GameObject myOwner;
 	private Rigidbody2D rbody;
 	private GameObject[] alreadyHitObjs = new GameObject[3]; //USE LIST INSTEAD
