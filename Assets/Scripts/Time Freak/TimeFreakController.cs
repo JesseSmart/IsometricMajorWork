@@ -12,6 +12,8 @@ public class TimeFreakController : MonoBehaviour
 
 	public GameObject throwSpearObj;
 	public GameObject teleDamageZoneObj;
+
+	private float spearSpawnOffset = 1;
 	public float teleRange;
 
 
@@ -54,7 +56,11 @@ public class TimeFreakController : MonoBehaviour
 	{
 		if (myClass.basicATimer <= 0)
 		{
-			GameObject thrownSpear = Instantiate(throwSpearObj, transform.position, transform.rotation);
+			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+
+			Vector3 fakePos = transform.position + (myDir.normalized * spearSpawnOffset);
+			// YOU CAN DO THIS (Vector3)gameObject.GetComponent<IsometricPlayerMovementController>().lastDir;
+			GameObject thrownSpear = Instantiate(throwSpearObj, fakePos, transform.rotation);
 			thrownSpear.GetComponent<ThrowSpear>().myOwner = gameObject;
 
 			thrownSpear.GetComponent<ThrowSpear>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);

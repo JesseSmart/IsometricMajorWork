@@ -7,8 +7,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public int playerNumber; //this will need to be accessed on other scripts, such as stats and what not
 
     //controlls
-    private string[] horizontalArray = new string[4] { "P1Horizontal", "P2Horizontal", "P3Horizontal", "P4Horizontal" };
-    private string[] verticalArray = new string[4] { "P1Vertical", "P2Vertical", "P3Vertical", "P4Vertical" };
+    private string[] horizontalArray = new string[4] { "Horizontal", "P2Horizontal", "P3Horizontal", "P4Horizontal" }; //CHANGE BACK TO P1 on start of first item in array to make work for controller ***
+    private string[] verticalArray = new string[4] { "Vertical", "P2Vertical", "P3Vertical", "P4Vertical" };
     private string[] basicAbilityArray = new string[4] { "P1AButton", "P2AButton", "P3AButton", "P4AButton" }; //when making inheritance and stats and all, move these to them
     private string[] movementAbilityArray = new string[4] { "P1BButton", "P2BButton", "P3BButton", "P4BButton" };
 
@@ -64,6 +64,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		{
 			lastDir = currentDir;
 		}
+
 
         inputVector = Vector2.ClampMagnitude(inputVector, 1); //1 might have to be baseMovementSpeed instead. clamp prevents diagonal movement being faster
         Vector2 movement = inputVector * currentSpeed;

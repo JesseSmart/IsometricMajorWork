@@ -111,12 +111,12 @@ public class VikingController : MonoBehaviour
             BasicAbility();
         }
 
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2))
+        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
         {
             MovementAbility();
         }
 
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3))
+        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
         {
             UltimateAbility();
         }

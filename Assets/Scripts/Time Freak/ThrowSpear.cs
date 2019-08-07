@@ -58,9 +58,10 @@ public class ThrowSpear : MonoBehaviour
 			Destroy(gameObject);
 
 		}
-		else if (other.gameObject != myOwner)
+		else if (other.gameObject != myOwner && !other.gameObject.GetComponent<OrbiterPassive>())
 		{
 			//terrain
+			print("TERRION");
 			CreateReciever();
 			Destroy(gameObject);
 
