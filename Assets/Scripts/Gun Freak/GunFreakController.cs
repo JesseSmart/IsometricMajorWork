@@ -84,7 +84,8 @@ public class GunFreakController : MonoBehaviour
 	{
 		if (myClass.ultATimer <= 0)
 		{
-
+			GameObject minigun = Instantiate(minigunObj, transform.position, transform.rotation);
+			minigun.GetComponent<MinigunShooter>().myOwner = gameObject;
 
 
 			myClass.ultATimer = myClass.ultACooldown;
@@ -112,7 +113,7 @@ public class GunFreakController : MonoBehaviour
 			MovementAbility();
 		}
 
-		if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3))
+		if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
 		{
 			UltimateAbility();
 		}

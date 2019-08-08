@@ -1050,7 +1050,8 @@ MonoBehaviour:
     type: 3}
   shotgunObj: {fileID: 6722320198979615063, guid: 086b5bfd6131d2040be7e31a8054a30e,
     type: 3}
-  minigunObj: {fileID: 0}
+  minigunObj: {fileID: 7231128451645501715, guid: efdf6cf26b1f57743b4a31c93ccdb718,
+    type: 3}
   sldBasicA: {fileID: 6121847216494655820}
   sldMovementA: {fileID: 169760401757166896}
   sldUltA: {fileID: 1143788466076373065}
