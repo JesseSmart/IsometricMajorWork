@@ -29,7 +29,7 @@ public class KickZone : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("PlayerCharacter"))
+		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
 			TargetKnockBack(other.gameObject);
 		}
@@ -43,6 +43,7 @@ public class KickZone : MonoBehaviour
 
 	void TargetKnockBack(GameObject opponent)
 	{
+		print("Knock enemy back");
 		opponent.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir * knockBackModifier);
 
 	}

@@ -68,7 +68,10 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.moveATimer <= 0)
 		{
+			Vector2 fakePos = (Vector2)transform.position + (gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * 1);
 
+			GameObject kickZone = Instantiate(kickObj, fakePos, transform.rotation);
+			kickZone.GetComponent<KickZone>().myOwner = gameObject;
 
 			myClass.moveATimer = myClass.moveACooldown;
 		}

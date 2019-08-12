@@ -1045,7 +1045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5750027382957577670
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,11 +2053,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5750027382957577670}
     m_Modifications:
-    - target: {fileID: 2232858180415706800, guid: e0352d4a565141e4bb4f3970de5af9e0,
-        type: 3}
-      propertyPath: m_Name
-      value: EGO Orbit Obj
-      objectReference: {fileID: 0}
     - target: {fileID: 2608894670800869985, guid: e0352d4a565141e4bb4f3970de5af9e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2112,6 +2107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232858180415706800, guid: e0352d4a565141e4bb4f3970de5af9e0,
+        type: 3}
+      propertyPath: m_Name
+      value: EGO Orbit Obj
       objectReference: {fileID: 0}
     - target: {fileID: 3801213439553407537, guid: e0352d4a565141e4bb4f3970de5af9e0,
         type: 3}
