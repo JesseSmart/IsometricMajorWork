@@ -23,8 +23,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public Vector2 currentDir;
 	public Vector2 lastDir;
 
+	public bool canInput = true;
+
 	public float dodgeCooldown = 2;
 	private float dodgeTimer;
+
+
 
     // Start is called before the first frame update
     //void Start()
@@ -46,8 +50,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        MovementFunction(playerNumber);
-		Dodge(playerNumber);
+		if (canInput)
+		{
+
+			MovementFunction(playerNumber);
+			Dodge(playerNumber);
+
+		}
 
     }
 
@@ -69,8 +78,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
         inputVector = Vector2.ClampMagnitude(inputVector, 1); //1 might have to be baseMovementSpeed instead. clamp prevents diagonal movement being faster
         Vector2 movement = inputVector * currentSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
+
+		
         isoRenderer.SetDirection(movement);
-        rbody.MovePosition(newPos);
+		if (newPos != currentPos)
+		{
+			rbody.MovePosition(newPos);
+		}
     }
 
     public void Dodge(float pNum)

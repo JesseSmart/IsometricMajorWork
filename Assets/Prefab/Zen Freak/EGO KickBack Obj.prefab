@@ -126,9 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 2
   circumferance: 30
-  knockBackModifier: 500
+  knockBackModifier: 20
   myOwner: {fileID: 0}
   canKnockbackDuration: 1
+  launchDuration: 1
 --- !u!60 &7054582110303845060
 PolygonCollider2D:
   m_ObjectHideFlags: 0

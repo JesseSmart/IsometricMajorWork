@@ -24,23 +24,25 @@ public class ShotgunBlast : MonoBehaviour
         
     }
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("PlayerCharacter"))
+		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
 			TargetKnockBack(other.gameObject);
 		}
 	}
 
+
+
 	void SelfKnockBack()
 	{
 		print("Knock me back");
-		myOwner.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir * -knockBackModifier,ForceMode2D.Force);
+		myOwner.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * -knockBackModifier,ForceMode2D.Force);
 	}
 
 	void TargetKnockBack(GameObject opponent)
 	{
-		opponent.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir * knockBackModifier);
+		opponent.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * knockBackModifier);
 
 	}
 

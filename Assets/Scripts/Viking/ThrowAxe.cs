@@ -93,7 +93,6 @@ public class ThrowAxe : MonoBehaviour
 			if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner) 
             {
                 //deal damage here
-                print("Throw Damage");
                 other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
                 myTarget = other.gameObject;
                 stuckToTarget = true;
@@ -122,7 +121,6 @@ public class ThrowAxe : MonoBehaviour
 
     public void TargetToViking(GameObject target)
     {
-        print("Player to " + target);
         pullFloat += Time.deltaTime;
         target.transform.position = Vector2.Lerp(target.transform.position, myOwner.transform.position, pullFloat * pullSpeed);
 		CheckDist();
@@ -130,7 +128,6 @@ public class ThrowAxe : MonoBehaviour
 
     public void VikingToTerrain()
     {
-		print("Player to terrain");
         pullFloat += Time.deltaTime;
 
         myOwner.transform.position = Vector2.Lerp(myOwner.transform.position, transform.position, pullFloat * pullSpeed);
