@@ -21,6 +21,8 @@ public class GunFreakController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+
 		SetStats();
 	}
 

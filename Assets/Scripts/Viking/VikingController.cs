@@ -22,7 +22,9 @@ public class VikingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetStats();
+		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+
+		SetStats();
     }
 
     // Update is called once per frame
