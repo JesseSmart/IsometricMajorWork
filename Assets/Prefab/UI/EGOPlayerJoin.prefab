@@ -488,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8393929375792571383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1544,6 +1544,8 @@ MonoBehaviour:
   characterStats:
   - {fileID: 11400000, guid: 33f9a180c04c5e94085e6e0c094f176c, type: 2}
   - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
+  - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
+  - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
   panelCharSelect: {fileID: 3823741000580062588}
   panelPressToJoin: {fileID: 6804751031736627317}
   txtObjPlayerReady: {fileID: 3158216813789375759}
@@ -1745,10 +1747,10 @@ RectTransform:
   m_Father: {fileID: 27387333283923028}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -92.099976, y: -3.2650146}
-  m_SizeDelta: {x: -256.82, y: -89.469986}
+  m_AnchorMin: {x: 0.085714296, y: 0.2057143}
+  m_AnchorMax: {x: 0.38857147, y: 0.7485715}
+  m_AnchoredPosition: {x: -0.099975586, y: 0.73498535}
+  m_SizeDelta: {x: -12.820007, y: -9.469986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &286308901292291339
 CanvasRenderer:
