@@ -18,7 +18,7 @@ public class RoundManager : MonoBehaviour
 		CharacterCommon[] charCom = FindObjectsOfType<CharacterCommon>();
 		if (charCom.Length <= 1)
 		{
-			SceneManager.LoadScene("Menu");
+			StartCoroutine(WaitSpawn());
 		}
     }
 
@@ -34,5 +34,12 @@ public class RoundManager : MonoBehaviour
 			character.GetComponent<IsometricPlayerMovementController>().playerNumber = i;
 			print("spawn");
 		}
+	}
+
+	IEnumerator WaitSpawn()
+	{
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("Menu");
+
 	}
 }
