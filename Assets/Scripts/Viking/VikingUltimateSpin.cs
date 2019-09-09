@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class VikingUltimateSpin : MonoBehaviour
 {
-	public float minDamage;
-	public float maxDamage;
+	public float minAxeDamage;
+	public float maxAxeDamage;
+	public float minChainDamage;
+	public float maxChainDamage;
 	public GameObject myOwner;
 	private Rigidbody2D rbody;
 	private GameObject[] alreadyHitObjs = new GameObject[3]; //USE LIST INSTEAD
@@ -54,11 +56,14 @@ public class VikingUltimateSpin : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.CompareTag("PlayerCharacter"))
+
+		if (other.gameObject.GetComponent<CharacterCommon>())
 		{
 			if (other.gameObject != myOwner.gameObject)
 			{
 				print("Ult Axe Hit");
+				other.GetComponent<CharacterCommon>().TakeDamage(minAxeDamage, maxAxeDamage);
+
 				//damage
 				//knockback
 			}
@@ -91,6 +96,9 @@ public class VikingUltimateSpin : MonoBehaviour
 							alreadyHitObjs[i] = hitObj;
 							//damage
 							//knockback
+							print("chaindmg");
+
+							hitObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minChainDamage, maxChainDamage);
 
 							return;
 						}

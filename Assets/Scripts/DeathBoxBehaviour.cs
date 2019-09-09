@@ -55,8 +55,9 @@ public class DeathBoxBehaviour : MonoBehaviour
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>())
 		{
-			Vector2 bounceDir = (Vector2)transform.position - (Vector2)other.transform.position;
-			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir * 5000); //this aint work
+			print("is char"); 
+			Vector2 bounceDir = ((Vector2)transform.position - (Vector2)other.transform.position)/ Vector2.Distance((Vector2)transform.position, (Vector2)other.transform.position);
+			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * 5000); //this aint work
 		}
 	}
 }
