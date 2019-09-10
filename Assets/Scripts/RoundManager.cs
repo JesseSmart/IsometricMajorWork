@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 public class RoundManager : MonoBehaviour
 {
 	public GameObject[] spawnPoints;
@@ -15,20 +17,24 @@ public class RoundManager : MonoBehaviour
 	private int roundWinner;
 	private bool hasEnded;
 
+	public TextMeshProUGUI countdownString;
+	private int countInd;
+
 	// Start is called before the first frame update
 	void Start()
     {
 		winTarget = PlayerPrefs.GetInt("winPointTarget");
 		roundDur = PlayerPrefs.GetInt("RoundDuration");
 		matchManager = FindObjectOfType<MatchManager>();
-		Spawn();
+		StartCoroutine(StartCountdown());
+		//Spawn();
     }
 
     // Update is called once per frame
     void Update()
 	{ 
 		CharacterCommon[] charCom = FindObjectsOfType<CharacterCommon>();
-		if (charCom.Length <= 1 && !hasEnded)
+		if (charCom.Length == 1 && !hasEnded)
 		{
 			roundWinner = FindObjectOfType<IsometricPlayerMovementController>().playerNumber;
 			StartCoroutine(LoadNext());
@@ -62,6 +68,28 @@ public class RoundManager : MonoBehaviour
 		{
 			SceneManager.LoadScene("JesseTesting");
 
+		}
+	}
+
+
+	IEnumerator StartCountdown()
+	{
+		countInd++;
+		yield return new WaitForSecondsRealtime(1f);
+		if (countInd < 3)
+		{
+			countdownString.text = (4 - countInd).ToString();
+			StartCoroutine(StartCountdown());
+		}
+		else if (countInd == 3)
+		{
+			countdownString.text = "BEGIN";
+			StartCoroutine(StartCountdown());
+		}
+		else
+		{
+			countdownString.enabled = false;
+			Spawn();
 		}
 	}
 }
