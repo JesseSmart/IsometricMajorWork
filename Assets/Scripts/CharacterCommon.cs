@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterCommon : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class CharacterCommon : MonoBehaviour
     public Slider sldDeathChance;
 
     private bool canUpdateHealth = true;
+
+	public TextMeshProUGUI pNumIndic;
     // Start is called before the first frame update
     void Start()
     {
         myClass.myHealth = characterStats.health;
+		pNumIndic.text = "P" +  (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
     }
 
     // Update is called once per frame

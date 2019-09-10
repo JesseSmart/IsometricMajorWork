@@ -76,12 +76,12 @@ public class RoundManager : MonoBehaviour
 	{
 		countInd++;
 		yield return new WaitForSecondsRealtime(1f);
-		if (countInd < 3)
+		if (countInd < 4)
 		{
 			countdownString.text = (4 - countInd).ToString();
 			StartCoroutine(StartCountdown());
 		}
-		else if (countInd == 3)
+		else if (countInd == 4)
 		{
 			countdownString.text = "BEGIN";
 			StartCoroutine(StartCountdown());
