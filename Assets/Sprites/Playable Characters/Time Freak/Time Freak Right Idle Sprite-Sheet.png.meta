@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 8c02551b91b5e1e429d6f045e67c8472
+guid: 84ee830ef7737564a8d2808e8b9511be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6482003963315861203
-    second: Time Freak South Idle Sheet 2_0
+      213: -6051211199460536409
+    second: Time Freak Right Idle Sprite-Sheet_0
   - first:
-      213: -7594452570608911701
-    second: Time Freak South Idle Sheet 2_1
+      213: -3896043613055109176
+    second: Time Freak Right Idle Sprite-Sheet_1
   - first:
-      213: -1833740141347162606
-    second: Time Freak South Idle Sheet 2_2
+      213: -920123477461741191
+    second: Time Freak Right Idle Sprite-Sheet_2
   - first:
-      213: -6503221032524072052
-    second: Time Freak South Idle Sheet 2_3
+      213: -1776522393535383860
+    second: Time Freak Right Idle Sprite-Sheet_3
   - first:
-      213: -2135799463214096522
-    second: Time Freak South Idle Sheet 2_4
+      213: -2974386853636876821
+    second: Time Freak Right Idle Sprite-Sheet_4
   - first:
-      213: 3920081971663860325
-    second: Time Freak South Idle Sheet 2_5
+      213: 391552199871678285
+    second: Time Freak Right Idle Sprite-Sheet_5
   - first:
-      213: 486988235125646718
-    second: Time Freak South Idle Sheet 2_6
+      213: 3388716276303288946
+    second: Time Freak Right Idle Sprite-Sheet_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,148 +116,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_0
+      name: Time Freak Right Idle Sprite-Sheet_0
       rect:
         serializedVersion: 2
         x: 13
-        y: 5
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aabad43d7a4879e45b10411d75f641b4
-      internalID: -6482003963315861203
+      spriteID: 4182044aa6691d5458504ce0bd84c80f
+      internalID: -6051211199460536409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_1
+      name: Time Freak Right Idle Sprite-Sheet_1
       rect:
         serializedVersion: 2
-        x: 54
-        y: 5
+        x: 57
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 286a71e4bce9d8846af422c1d3ee8533
-      internalID: -7594452570608911701
+      spriteID: 38306c67337d07846b564e34ba70f857
+      internalID: -3896043613055109176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_2
+      name: Time Freak Right Idle Sprite-Sheet_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 5
+        x: 101
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f951ad0eb8f5dd548af02f59c773800b
-      internalID: -1833740141347162606
+      spriteID: 9f37b7e6d60971e4f8790a7bf033173f
+      internalID: -920123477461741191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_3
+      name: Time Freak Right Idle Sprite-Sheet_3
       rect:
         serializedVersion: 2
-        x: 136
-        y: 5
+        x: 145
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bbfae0e73895b42bd48c29acd53e45
-      internalID: -6503221032524072052
+      spriteID: 440fcb17bad26be47b7be371d7066ef1
+      internalID: -1776522393535383860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_4
+      name: Time Freak Right Idle Sprite-Sheet_4
       rect:
         serializedVersion: 2
-        x: 177
-        y: 5
+        x: 189
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bcc8848013b6c74e868588b38441793
-      internalID: -2135799463214096522
+      spriteID: 3d11d1edbec2c1a4f82a73228c3b6091
+      internalID: -2974386853636876821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_5
+      name: Time Freak Right Idle Sprite-Sheet_5
       rect:
         serializedVersion: 2
-        x: 218
-        y: 5
+        x: 233
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bdfd18127fcfe944bf5f4c4bc6c97eb
-      internalID: 3920081971663860325
+      spriteID: 8699179c572bed34fb56c89f0f51dced
+      internalID: 391552199871678285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Time Freak South Idle Sheet 2_6
+      name: Time Freak Right Idle Sprite-Sheet_6
       rect:
         serializedVersion: 2
-        x: 259
-        y: 5
+        x: 277
+        y: 3
         width: 14
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2469ae4870fe3a44bb2589db40864ea1
-      internalID: 486988235125646718
+      spriteID: 1b6d9d2f5bdd0284c9c83c91c660a3e0
+      internalID: 3388716276303288946
       vertices: []
       indices: 
       edges: []
@@ -265,7 +265,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: da80885b0d6178641ad42f4492739128
+    spriteID: f5d8fdcc185e9744fa38f985e72bb3d6
     internalID: 0
     vertices: []
     indices: 
