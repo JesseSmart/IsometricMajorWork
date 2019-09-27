@@ -61,8 +61,11 @@ public class TimeFreakController : MonoBehaviour
 			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
 			Vector3 fakePos = transform.position + (myDir.normalized * spearSpawnOffset);
+			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
+			Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90);
+
 			// YOU CAN DO THIS (Vector3)gameObject.GetComponent<IsometricPlayerMovementController>().lastDir;
-			GameObject thrownSpear = Instantiate(throwSpearObj, fakePos, transform.rotation);
+			GameObject thrownSpear = Instantiate(throwSpearObj, fakePos, myRot);
 			thrownSpear.GetComponent<ThrowSpear>().myOwner = gameObject;
 
 			thrownSpear.GetComponent<ThrowSpear>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
