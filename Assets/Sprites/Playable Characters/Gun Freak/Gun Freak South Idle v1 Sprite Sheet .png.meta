@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: 21ad1489465573b4ca7fc88bea454354
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3904764738682833399
+    second: Gun Freak South Idle v1 Sprite Sheet _0
+  - first:
+      213: -318971153670052449
+    second: Gun Freak South Idle v1 Sprite Sheet _1
+  - first:
+      213: 6846217945577294810
+    second: Gun Freak South Idle v1 Sprite Sheet _2
+  - first:
+      213: 4808852155910386096
+    second: Gun Freak South Idle v1 Sprite Sheet _3
+  - first:
+      213: -1215553922834996227
+    second: Gun Freak South Idle v1 Sprite Sheet _4
+  - first:
+      213: 6821625234106225801
+    second: Gun Freak South Idle v1 Sprite Sheet _5
+  - first:
+      213: 7696251676849250771
+    second: Gun Freak South Idle v1 Sprite Sheet _6
+  - first:
+      213: 8700697588727541000
+    second: Gun Freak South Idle v1 Sprite Sheet _7
+  - first:
+      213: 3361466438368151473
+    second: Gun Freak South Idle v1 Sprite Sheet _8
+  - first:
+      213: -6804606633186004111
+    second: Gun Freak South Idle v1 Sprite Sheet _9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dbd69f36c90f246918537a3c519632
+      internalID: 3904764738682833399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 3
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b822be0b30c2144acc37a4e15baf71
+      internalID: -318971153670052449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4e1b6ea1617cc42acb60133ef1e22d
+      internalID: 6846217945577294810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 3
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f023c0ddf76109642ba7bccd06389f41
+      internalID: 4808852155910386096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 3
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ad977575518df49bc43547c775f436
+      internalID: -1215553922834996227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 3
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8319e49f470bfb14591b50efdd331cad
+      internalID: 6821625234106225801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _6
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 3
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec51175ce5781949949349d7b4bd278
+      internalID: 7696251676849250771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 3
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a5faaa75ff91a409047df0337e64a2
+      internalID: 8700697588727541000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 3
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6bd6f4afeb5f44b8a980d8949af405
+      internalID: 3361466438368151473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun Freak South Idle v1 Sprite Sheet _9
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 3
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9290ce5217687a54786ab1c8d48c6386
+      internalID: -6804606633186004111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b66b90cc85d115e4a9f2fdb00ff872f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
