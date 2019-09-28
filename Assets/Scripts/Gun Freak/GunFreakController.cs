@@ -18,6 +18,8 @@ public class GunFreakController : MonoBehaviour
 	public Slider sldMovementA;
 	public Slider sldUltA;
 
+	private float shotgunOffset = 1;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -70,7 +72,13 @@ public class GunFreakController : MonoBehaviour
 	{
 		if (myClass.moveATimer <= 0)
 		{
-			GameObject shotBlast = Instantiate(shotgunObj, transform.position, transform.rotation);
+			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+
+			Vector3 fakePos = transform.position + (myDir.normalized * shotgunOffset);
+			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
+			Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90);
+
+			GameObject shotBlast = Instantiate(shotgunObj, fakePos, myRot);
 			shotBlast.GetComponent<ShotgunBlast>().myOwner = gameObject;
 
 			myClass.moveATimer = myClass.moveACooldown;

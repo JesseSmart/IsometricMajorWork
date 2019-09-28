@@ -18,6 +18,10 @@ public class ZenFreakController : MonoBehaviour
 	public Slider sldMovementA;
 	public Slider sldUltA;
 
+
+	private float stunOffset;
+	private float kickOffset;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -52,9 +56,13 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.basicATimer <= 0)
 		{
-			Vector2 fakePos = (Vector2)transform.position + (gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * 1);
+			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
-			GameObject stunZone = Instantiate(stunPunchObj, fakePos, transform.rotation);
+			Vector3 fakePos = transform.position + (myDir.normalized * stunOffset);
+			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
+			Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90);
+
+			GameObject stunZone = Instantiate(stunPunchObj, fakePos, myRot);
 			stunZone.GetComponent<StunPunch>().myOwner = gameObject;
 
 			myClass.basicATimer = myClass.basicACooldown;
@@ -69,9 +77,13 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.moveATimer <= 0)
 		{
-			Vector2 fakePos = (Vector2)transform.position + (gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * 1);
+			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
-			GameObject kickZone = Instantiate(kickObj, fakePos, transform.rotation);
+			Vector3 fakePos = transform.position + (myDir.normalized * kickOffset);
+			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
+			Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90);
+
+			GameObject kickZone = Instantiate(kickObj, fakePos, myRot);
 			kickZone.GetComponent<KickZone>().myOwner = gameObject;
 
 			myClass.moveATimer = myClass.moveACooldown;
