@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 8406cc13b6c42614eba69d6c27bba927
+guid: 275394a07835254479cecd81312c664f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3460629268189522440
-    second: Axe Freak South Idle Sprite Sheet _0
+      213: 3785475990641103265
+    second: Axe Freak South Running Sprite Sheet_0
   - first:
-      213: -4574528640489360801
-    second: Axe Freak South Idle Sprite Sheet _1
+      213: -2717819369686245374
+    second: Axe Freak South Running Sprite Sheet_1
   - first:
-      213: 1096826139079558720
-    second: Axe Freak South Idle Sprite Sheet _2
+      213: -7357757404657730659
+    second: Axe Freak South Running Sprite Sheet_2
   - first:
-      213: -7770907236836718004
-    second: Axe Freak South Idle Sprite Sheet _3
+      213: 1139729068562056382
+    second: Axe Freak South Running Sprite Sheet_3
   - first:
-      213: -3976522624837592119
-    second: Axe Freak South Idle Sprite Sheet _4
-  - first:
-      213: 1025996035102054720
-    second: Axe Freak South Idle Sprite Sheet _5
-  - first:
-      213: -1481498454935831697
-    second: Axe Freak South Idle Sprite Sheet _6
-  - first:
-      213: 9212772488735362618
-    second: Axe Freak South Idle Sprite Sheet _7
-  - first:
-      213: -3506884918622266300
-    second: Axe Freak South Idle Sprite Sheet _8
+      213: 5275213906069670403
+    second: Axe Freak South Running Sprite Sheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,190 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _0
+      name: Axe Freak South Running Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
+        x: 2
+        y: 0
         width: 21
-        height: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b203def79e928142ba0eb0059413681
-      internalID: 3460629268189522440
+      spriteID: 1c4986b1e8e92d446bd8a555c6b63001
+      internalID: 3785475990641103265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _1
+      name: Axe Freak South Running Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 1
+        x: 26
+        y: 0
         width: 21
-        height: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29450f92d738f83429c963d31caff782
-      internalID: -4574528640489360801
+      spriteID: cdedca61f04567a4db89bbca20f7ec5f
+      internalID: -2717819369686245374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _2
+      name: Axe Freak South Running Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 1
+        x: 50
+        y: 0
         width: 21
-        height: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3316b63fd2b22ba40b8a34c7c6efdf24
-      internalID: 1096826139079558720
+      spriteID: 699911c5bb94e364fb4b92c39c71ad84
+      internalID: -7357757404657730659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _3
+      name: Axe Freak South Running Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 1
+        x: 73
+        y: 0
         width: 21
-        height: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc56f6d0df2fdab40ac2158eb003de63
-      internalID: -7770907236836718004
+      spriteID: 72add4d7918ef3b4eb0f9f5574191689
+      internalID: 1139729068562056382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _4
+      name: Axe Freak South Running Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 304
-        y: 1
+        x: 97
+        y: 0
         width: 21
-        height: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb23794fbc38f4c44b5f114eacfb3348
-      internalID: -3976522624837592119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _5
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 1
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3250ee564b8efb48ad709e21e861222
-      internalID: 1025996035102054720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _6
-      rect:
-        serializedVersion: 2
-        x: 456
-        y: 1
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b9b89e9b0d7c874c8836d53745e2a72
-      internalID: -1481498454935831697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _7
-      rect:
-        serializedVersion: 2
-        x: 532
-        y: 1
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4601b2751f824a24fb01e401eee19611
-      internalID: 9212772488735362618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Axe Freak South Idle Sprite Sheet _8
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 1
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b39136e601dece9459e0d7580d26b9c6
-      internalID: -3506884918622266300
+      spriteID: 5d1584ea661e5bd4bbcb7e1dfc9b2391
+      internalID: 5275213906069670403
       vertices: []
       indices: 
       edges: []
@@ -313,7 +217,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ce656b5b116f1ee43b92cb9ac3a246c3
+    spriteID: 53599d23d2b5e0545ad2c90df1f357aa
     internalID: 0
     vertices: []
     indices: 
