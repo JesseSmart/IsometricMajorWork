@@ -54,6 +54,8 @@ public class RoundManager : MonoBehaviour
 			character.GetComponent<IsometricPlayerMovementController>().playerNumber = i;
 			print("spawn");
 		}
+
+		FindObjectOfType<CameraController>().PlayersHaveSpawned();
 	}
 
 	IEnumerator LoadNext()

@@ -95,7 +95,7 @@ public class CharacterCommon : MonoBehaviour
     void Death()
     {
         Destroy(gameObject, 1f);
-
+		FindObjectOfType<CameraController>().PlayerDeath(transform);
     }
 
     private IEnumerator disbableUIDelay(GameObject obj)

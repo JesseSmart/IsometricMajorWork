@@ -51,13 +51,17 @@ public class DeathBoxBehaviour : MonoBehaviour
 		}
     }
 
-	private void OnCollisionEnter2D(Collision2D other)
+
+
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>())
 		{
-			print("is char"); 
-			Vector2 bounceDir = ((Vector2)transform.position - (Vector2)other.transform.position)/ Vector2.Distance((Vector2)transform.position, (Vector2)other.transform.position);
-			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * 5000); //this aint work
+			print("is char");
+			Vector2 bounceDir = ((Vector2)transform.position - (Vector2)other.transform.position) / Vector2.Distance((Vector2)transform.position, (Vector2)other.transform.position);
+			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * -500); //this aint work
 		}
 	}
+
+
 }
