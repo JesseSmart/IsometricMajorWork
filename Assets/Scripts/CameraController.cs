@@ -19,6 +19,13 @@ public class CameraController : MonoBehaviour
 
 	private float distAway;
 	private Camera cam;
+
+	//BrinkZoom
+	private bool brinkOveriding;
+	private float zoomAmount = 1.5f;
+	private float brinkMoveSmoothMultiplier = 3;
+	private float brinkZoomSmoothMultiplier = 3;
+	private float brinkZoomDuration = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +40,13 @@ public class CameraController : MonoBehaviour
 			return;
 		}
 
-		Move();
-		Zoom();
+		if (!brinkOveriding)
+		{
+			Move();
+			Zoom();
 
+
+		}
 
 	}
 
@@ -107,6 +118,55 @@ public class CameraController : MonoBehaviour
 		//{
 		//	targets.Add(players[i].gameObject.transform);
 		//}
+	}
+
+	public void CamShake(float dur, float mag)
+	{
+		StartCoroutine(Shake(dur, mag));
+	}
+
+	IEnumerator Shake(float duration, float magnitude)
+	{
+
+		float elapsed = 0;
+
+		while (elapsed < duration)
+		{
+			float x = transform.localPosition.x + Random.Range(-1f, 1f) * magnitude;
+			float y = transform.localPosition.y + Random.Range(-1f, 1f) * magnitude;
+
+			transform.localPosition = new Vector3(x, y, distAway); 
+			elapsed += Time.deltaTime;
+
+			yield return null;
+		}
+	}
+
+	public void BrinkZoom(Transform interestPoint)
+	{
+		StartCoroutine(BrinkHitZoom(interestPoint, brinkZoomDuration));
+	}
+
+	IEnumerator BrinkHitZoom(Transform point, float duration)
+	{
+		brinkOveriding = true;
+		//Time.timeScale = 0.05f;
+		float elapsed = 0;
+
+		while (elapsed < duration)
+		{
+
+			cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomAmount, Time.deltaTime * brinkZoomSmoothMultiplier); //varieable it
+			transform.position = Vector3.SmoothDamp(transform.position, point.position, ref velocity, smoothTime * brinkMoveSmoothMultiplier);
+			transform.position = new Vector3(transform.position.x, transform.position.y, distAway);
+
+
+			elapsed += Time.deltaTime;
+			yield return null;
+		}
+		brinkOveriding = false;
+		//Time.timeScale = 1;
+
 	}
 
 }

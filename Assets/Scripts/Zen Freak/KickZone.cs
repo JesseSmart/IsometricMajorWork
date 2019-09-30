@@ -11,6 +11,9 @@ public class KickZone : MonoBehaviour
 	public float canKnockbackDuration;
 	private bool canKnockback = true;
 	public float launchDuration;
+
+	public float minDamage;
+	public float maxDamage;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -36,8 +39,12 @@ public class KickZone : MonoBehaviour
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
 			TargetKnockBack(other.gameObject);
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+
 		}
 	}
+
+
 
 	void SelfKnockBack()
 	{

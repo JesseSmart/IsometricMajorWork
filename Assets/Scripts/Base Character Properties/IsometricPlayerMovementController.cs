@@ -28,7 +28,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	public float dodgeCooldown = 2;
 	private float dodgeTimer;
 
-
+	private float frictionMod = 5f;
+	private Vector2 fricVel;
 
     // Start is called before the first frame update
     //void Start()
@@ -55,7 +56,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 			MovementFunction(playerNumber);
 			Dodge(playerNumber);
-
+			ForceFriction();
 		}
 
     }
@@ -101,7 +102,10 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		}
     }
 
-
+	void ForceFriction()
+	{
+		rbody.velocity = Vector2.SmoothDamp(rbody.velocity, Vector2.zero, ref fricVel, Time.deltaTime * frictionMod);
+	}
 
 
 }

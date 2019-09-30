@@ -130,6 +130,8 @@ MonoBehaviour:
   myOwner: {fileID: 0}
   canKnockbackDuration: 1
   launchDuration: 1
+  minDamage: 20
+  maxDamage: 30
 --- !u!60 &7054582110303845060
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class ShotgunBlast : MonoBehaviour
 	public float duration;
 	public GameObject myOwner;
 
+	public float minDamage;
+	public float maxDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,11 @@ public class ShotgunBlast : MonoBehaviour
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
 			TargetKnockBack(other.gameObject);
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+
 		}
 	}
+
 
 
 

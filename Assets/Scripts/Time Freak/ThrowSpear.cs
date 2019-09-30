@@ -55,10 +55,11 @@ public class ThrowSpear : MonoBehaviour
 			//deal damage here
 			print("Throw Damage");
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+			FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
 			Destroy(gameObject);
 
 		}
-		else if (other.gameObject != myOwner && !other.gameObject.GetComponent<OrbiterPassive>())
+		else if (other.gameObject != myOwner && !other.gameObject.GetComponent<OrbiterPassive>() && !other.gameObject.GetComponent<ThrowSpear>() && !gameObject.GetComponent<RecieverSpear>())
 		{
 			//terrain
 			print("TERRION");

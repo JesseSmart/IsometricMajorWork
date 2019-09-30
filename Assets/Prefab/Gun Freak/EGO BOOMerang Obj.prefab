@@ -131,6 +131,8 @@ MonoBehaviour:
   outwardFlightDuration: 0.7
   myOwner: {fileID: 0}
   cantCatchDuration: 0.3
+  minDamage: 15
+  maxDamage: 30
 --- !u!50 &703804509088835028
 Rigidbody2D:
   serializedVersion: 4

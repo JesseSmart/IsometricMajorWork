@@ -75,9 +75,9 @@ public class CharacterCommon : MonoBehaviour
 
             //sldDeathChance.gameObject.SetActive(true);
             sldDeathChance.value = rndChance / 100f;            
+			FindObjectOfType<CameraController>().BrinkZoom(transform);
             StartCoroutine(disbableUIDelay(sldDeathChance.gameObject));
-
-            if (rndChance >= Mathf.Abs(myClass.myHealth))
+			if (rndChance >= Mathf.Abs(myClass.myHealth))
             {
                 //alive
                 print("Alive");

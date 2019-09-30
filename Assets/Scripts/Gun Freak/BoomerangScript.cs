@@ -16,6 +16,9 @@ public class BoomerangScript : MonoBehaviour
 	
     public float cantCatchDuration;
     private float cantCatchTimer;
+
+	public float minDamage;
+	public float maxDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,4 +70,16 @@ public class BoomerangScript : MonoBehaviour
             }
         }
     }
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
+		{
+			//deal damage here
+			print("Throw Damage");
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+			Destroy(gameObject);
+
+		}
+	}
 }

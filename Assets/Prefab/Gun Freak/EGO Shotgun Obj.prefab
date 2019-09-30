@@ -129,6 +129,8 @@ MonoBehaviour:
   knockBackModifier: 500
   duration: 1
   myOwner: {fileID: 0}
+  minDamage: 30
+  maxDamage: 40
 --- !u!60 &8726691434757488922
 PolygonCollider2D:
   m_ObjectHideFlags: 0
