@@ -17,7 +17,7 @@ MonoBehaviour:
   movementAbilityDescription: Knockback kick
   ultimateAbilityDescription: Suction Tornado
   passiveAbilityDescription: Dodge twicce as often
-  displayImage: {fileID: -2051813440349246488, guid: 58baa1f52374b57499752fe8777ab7e0,
+  displayImage: {fileID: -3307297472456973367, guid: b2472ec7e11072d4ca52ad491d7d2e2a,
     type: 3}
   health: 100
   basicAbilityCooldown: 3

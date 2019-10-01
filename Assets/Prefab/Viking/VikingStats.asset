@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5185322a39497340abbc54a67324d63, type: 3}
   m_Name: VikingStats
   m_EditorClassIdentifier: 
-  myName: Viking
+  myName: Axe Freak
   basicAbilityDescription: Local spin attack.
   movementAbilityDescription: Grappling axe throw.
   ultimateAbilityDescription: Large sweeping axe spin.
   passiveAbilityDescription: Gets angry.
-  displayImage: {fileID: -2051813440349246488, guid: 58baa1f52374b57499752fe8777ab7e0,
+  displayImage: {fileID: 5455981769389410376, guid: bc7ef3fd8d2f39741badd54aa235571f,
     type: 3}
   health: 100
   basicAbilityCooldown: 4

@@ -53,14 +53,23 @@ public class DeathBoxBehaviour : MonoBehaviour
 
 
 
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerStay2D(Collider2D other)
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>())
 		{
 			print("is char");
 			Vector2 bounceDir = ((Vector2)transform.position - (Vector2)other.transform.position) / Vector2.Distance((Vector2)transform.position, (Vector2)other.transform.position);
-			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * -500); //this aint work
+			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * -1000); //this aint work
+			StartCoroutine(PauseControl(other.gameObject, 0.2f)); //MIGHT CAUSE ERRORS
 		}
+	}
+
+	IEnumerator PauseControl(GameObject effected, float dur)
+	{
+		effected.GetComponent<IsometricPlayerMovementController>().enabled = false;
+		yield return new WaitForSeconds(dur);
+		effected.GetComponent<IsometricPlayerMovementController>().enabled = true;
+
 	}
 
 

@@ -1543,9 +1543,9 @@ MonoBehaviour:
   myState: 0
   characterStats:
   - {fileID: 11400000, guid: 33f9a180c04c5e94085e6e0c094f176c, type: 2}
-  - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
-  - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
-  - {fileID: 11400000, guid: 5384ef1f6ce37144d86baf8f02efd0a9, type: 2}
+  - {fileID: 11400000, guid: 53e6671d0117f8e43a08a9398f2dfdb3, type: 2}
+  - {fileID: 11400000, guid: 19210c2055935ca4e8bf7c7574a77481, type: 2}
+  - {fileID: 11400000, guid: 471cd45432491c44e8981392e5943cea, type: 2}
   panelCharSelect: {fileID: 3823741000580062588}
   panelPressToJoin: {fileID: 6804751031736627317}
   txtObjPlayerReady: {fileID: 3158216813789375759}
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 7705132414056334589, guid: efc18e4da0324ca4ca927f6a0046fd58,
     type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

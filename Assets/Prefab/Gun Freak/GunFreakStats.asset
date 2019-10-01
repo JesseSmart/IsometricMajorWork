@@ -17,7 +17,7 @@ MonoBehaviour:
   movementAbilityDescription: Knockback shotgun
   ultimateAbilityDescription: Corssmap minigun
   passiveAbilityDescription: Killing resets cooldowns on basic and movement abilities
-  displayImage: {fileID: -2051813440349246488, guid: 58baa1f52374b57499752fe8777ab7e0,
+  displayImage: {fileID: 3904764738682833399, guid: 21ad1489465573b4ca7fc88bea454354,
     type: 3}
   health: 100
   basicAbilityCooldown: 4.5
