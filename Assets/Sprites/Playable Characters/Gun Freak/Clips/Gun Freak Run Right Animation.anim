@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Axe Freak Right Idle Animatiom
+  m_Name: Gun Freak Run Right Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,28 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 6003845889576860145, guid: 0051b49afd7eb7842939c5d08910a0d3,
+      value: {fileID: 4441956841830537090, guid: 4acc54ccc1cb9b14a9960a1558f38163,
         type: 3}
     - time: 0.1
-      value: {fileID: -3691653241988149361, guid: 0051b49afd7eb7842939c5d08910a0d3,
+      value: {fileID: 5175070380197918896, guid: 4acc54ccc1cb9b14a9960a1558f38163,
         type: 3}
     - time: 0.2
-      value: {fileID: -1492106070090838366, guid: 0051b49afd7eb7842939c5d08910a0d3,
+      value: {fileID: 4155250839863336258, guid: 4acc54ccc1cb9b14a9960a1558f38163,
         type: 3}
     - time: 0.3
-      value: {fileID: -3053421458715904346, guid: 0051b49afd7eb7842939c5d08910a0d3,
-        type: 3}
-    - time: 0.4
-      value: {fileID: 1007473417816688994, guid: 0051b49afd7eb7842939c5d08910a0d3,
-        type: 3}
-    - time: 0.5
-      value: {fileID: 6374430213930859618, guid: 0051b49afd7eb7842939c5d08910a0d3,
-        type: 3}
-    - time: 0.6
-      value: {fileID: 6401984015524975282, guid: 0051b49afd7eb7842939c5d08910a0d3,
-        type: 3}
-    - time: 0.7
-      value: {fileID: 408161853533262705, guid: 0051b49afd7eb7842939c5d08910a0d3,
+      value: {fileID: -2308710244290391726, guid: 4acc54ccc1cb9b14a9960a1558f38163,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -62,20 +50,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 6003845889576860145, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: -3691653241988149361, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: -1492106070090838366, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: -3053421458715904346, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: 1007473417816688994, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: 6374430213930859618, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: 6401984015524975282, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
-    - {fileID: 408161853533262705, guid: 0051b49afd7eb7842939c5d08910a0d3, type: 3}
+    - {fileID: 4441956841830537090, guid: 4acc54ccc1cb9b14a9960a1558f38163, type: 3}
+    - {fileID: 5175070380197918896, guid: 4acc54ccc1cb9b14a9960a1558f38163, type: 3}
+    - {fileID: 4155250839863336258, guid: 4acc54ccc1cb9b14a9960a1558f38163, type: 3}
+    - {fileID: -2308710244290391726, guid: 4acc54ccc1cb9b14a9960a1558f38163, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
