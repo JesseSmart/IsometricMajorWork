@@ -76,7 +76,8 @@ MonoBehaviour:
   stunPunchObj: {fileID: 8516571532959292499, guid: 167cdbc7c4ed1594cbac22e809917148,
     type: 3}
   kickObj: {fileID: 8774397963757910864, guid: 6ea7db00f6168784aa0eb7b6f9ea3cc2, type: 3}
-  windPullObj: {fileID: 0}
+  tempestObj: {fileID: 7362482950681108270, guid: 67d2bc5099d8717499ab5d323f151806,
+    type: 3}
   sldBasicA: {fileID: 4368028243407784029}
   sldMovementA: {fileID: 7651735885175106593}
   sldUltA: {fileID: 7472875430538289496}

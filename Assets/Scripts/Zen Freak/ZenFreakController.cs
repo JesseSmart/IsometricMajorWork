@@ -11,7 +11,7 @@ public class ZenFreakController : MonoBehaviour
 
 	public GameObject stunPunchObj;
 	public GameObject kickObj;
-	public GameObject windPullObj;
+	public GameObject tempestObj;
 
 	//UI
 	public Slider sldBasicA;
@@ -99,7 +99,8 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.ultATimer <= 0)
 		{
-
+			GameObject spinStick = Instantiate(tempestObj, transform.position, transform.rotation);
+			spinStick.GetComponent<Tempest>().myOwner = gameObject;
 
 			myClass.ultATimer = myClass.ultACooldown;
 		}
