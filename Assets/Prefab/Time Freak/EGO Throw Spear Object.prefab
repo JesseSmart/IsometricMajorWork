@@ -153,7 +153,7 @@ MonoBehaviour:
   myOwner: {fileID: 0}
   recievingSpearObj: {fileID: 4807964620887704209, guid: 523d289132f702249b24170e3c3f2c7b,
     type: 3}
-  maxFlightDuration: 3
+  maxFlightDuration: 0.5
 --- !u!50 &2397128836815435712
 Rigidbody2D:
   serializedVersion: 4

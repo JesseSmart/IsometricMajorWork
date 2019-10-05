@@ -151,7 +151,7 @@ MonoBehaviour:
   rbody: {fileID: 2397128836815435712}
   initialForce: 500
   myOwner: {fileID: 0}
-  maxFlightDuration: 3
+  maxFlightDuration: 1
   pullSpeed: 0.5
   endPullDist: 0.5
 --- !u!50 &2397128836815435712
