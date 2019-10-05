@@ -15,6 +15,10 @@ public class MinigunShooter : MonoBehaviour
 
 	private bool canFire;
 	private Vector2 lastDir;
+
+	private float minigunOffset = 1;
+
+	private Vector2 vel;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,32 +32,27 @@ public class MinigunShooter : MonoBehaviour
     {
 		transform.position = myOwner.transform.position;
 
-		//Vector2 currentPos = transform.position;
-		//float horizontalInput = Input.GetAxis(horizontalArray[myOwner.GetComponent<IsometricPlayerMovementController>().playerNumber]);
-		//float verticalInput = Input.GetAxis(verticalArray[myOwner.GetComponent<IsometricPlayerMovementController>().playerNumber]);
 
-		//Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-		////currentDir = inputVector;
-
-		//if (inputVector != Vector2.zero)
-		//{
-		//	lastDir = inputVector;
-		//}
 		Vector2 tempVec = ((Vector2)transform.position + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized);
-		//Vector2 rotVec = new Vector3(tempVec.x, tempVec.y, 0);
-		//transform.LookAt(rotVec.normalized);
+
 		transform.up = tempVec - (Vector2)transform.position;
 
+		//try make slow turn
+		//Vector2 tempVec = Vector2.SmoothDamp((Vector2)transform.position, ((Vector2)transform.position + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized), ref vel, 10f);
+		//transform.up = Vector2.Lerp((Vector2)transform.up, tempVec - (Vector2)transform.position, Time.deltaTime * 0.2f);
 
-		//transform.LookAt((Vector2)transform.position + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized);
 	}
 
 	IEnumerator FireBullet()
 	{
 		yield return new WaitForSeconds(fireRate);
-		float rnd = Random.Range(-1.0f,1.0f);
-		Vector3 newPos = new Vector3(transform.position.x + rnd, transform.position.y, 0);
-		GameObject bullet = Instantiate(bulletObj, newPos, transform.rotation);
+		Vector3 myDir = new Vector3(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.x, myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+
+		Vector3 fakePos = transform.position + (myDir.normalized * minigunOffset);
+		float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
+		Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90 + Random.Range(-10, 10));
+
+		GameObject bullet = Instantiate(bulletObj, fakePos, myRot);
 		bullet.GetComponent<BulletMinigun>().myOwner = myOwner;
 		if (canFire)
 		{
@@ -74,4 +73,6 @@ public class MinigunShooter : MonoBehaviour
 		myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
 	}
+
+
 }

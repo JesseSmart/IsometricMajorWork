@@ -57,7 +57,7 @@ public class CharacterCommon : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float minDamage, float maxDamage)
+    public void TakeDamage(float minDamage, float maxDamage, GameObject dealerOwner)
     {
 		float damage = Random.Range(minDamage, maxDamage);
 
@@ -87,14 +87,22 @@ public class CharacterCommon : MonoBehaviour
             else
             {
                 //dead
-                Death();
+                Death(dealerOwner);
             }
         }
+
+
+
     }
 
-    void Death()
+    void Death(GameObject killer)
     {
-        Destroy(gameObject, 1f);
+		if (killer.GetComponent<GunFreakController>())
+		{
+			killer.GetComponent<GunFreakController>().PassiveAbility();
+		}
+
+		Destroy(gameObject, 1f);
 		FindObjectOfType<CameraController>().PlayerDeath(transform);
     }
 

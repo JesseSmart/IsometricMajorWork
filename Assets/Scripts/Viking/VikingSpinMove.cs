@@ -49,7 +49,7 @@ public class VikingSpinMove : MonoBehaviour
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
             print("Spin Hit");
-            other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+            other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 			//damage
 			//knockback
 		}

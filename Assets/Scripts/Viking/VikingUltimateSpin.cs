@@ -26,7 +26,7 @@ public class VikingUltimateSpin : MonoBehaviour
     {
 		transform.position = new Vector3(myOwner.transform.position.x, myOwner.transform.position.y + axeRange, myOwner.transform.position.z);
 		lineR = GetComponent<LineRenderer>();
-
+		transform.SetParent(myOwner.transform, true);
 	}
 
 	// Update is called once per frame
@@ -62,7 +62,7 @@ public class VikingUltimateSpin : MonoBehaviour
 			if (other.gameObject != myOwner.gameObject)
 			{
 				print("Ult Axe Hit");
-				other.GetComponent<CharacterCommon>().TakeDamage(minAxeDamage, maxAxeDamage);
+				other.GetComponent<CharacterCommon>().TakeDamage(minAxeDamage, maxAxeDamage, myOwner);
 
 				//damage
 				//knockback
@@ -98,7 +98,7 @@ public class VikingUltimateSpin : MonoBehaviour
 							//knockback
 							print("chaindmg");
 
-							hitObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minChainDamage, maxChainDamage);
+							hitObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minChainDamage, maxChainDamage, myOwner);
 
 							return;
 						}

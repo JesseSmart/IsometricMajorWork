@@ -26,7 +26,7 @@ public class BulletMinigun : MonoBehaviour
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>() && other.gameObject != myOwner && !other.gameObject.GetComponent<BulletMinigun>())
 		{
-			other.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+			other.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 			Destroy(gameObject);
 		}
 	}

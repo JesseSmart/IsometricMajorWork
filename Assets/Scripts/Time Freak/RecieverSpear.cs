@@ -97,7 +97,7 @@ public class RecieverSpear : MonoBehaviour
 						if (alreadyHitObjs[i] == null)
 						{
 							alreadyHitObjs[i] = hitObj;
-							hitObj.GetComponent<CharacterCommon>().TakeDamage(minLightningDamage, maxLightningDamage);
+							hitObj.GetComponent<CharacterCommon>().TakeDamage(minLightningDamage, maxLightningDamage, myOwner);
 							print("Lightning damage");
 
 							//damage

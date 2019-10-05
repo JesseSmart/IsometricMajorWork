@@ -36,7 +36,7 @@ public class StunPunch : MonoBehaviour
 	IEnumerator ApplyStun(GameObject target)
 	{
 		target.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-		target.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+		target.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 		yield return new WaitForSeconds(stunDuration);
 		target.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 		target.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;

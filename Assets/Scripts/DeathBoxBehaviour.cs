@@ -61,6 +61,8 @@ public class DeathBoxBehaviour : MonoBehaviour
 			Vector2 bounceDir = ((Vector2)transform.position - (Vector2)other.transform.position) / Vector2.Distance((Vector2)transform.position, (Vector2)other.transform.position);
 			other.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceDir.normalized * -1000); //this aint work
 			StartCoroutine(PauseControl(other.gameObject, 0.2f)); //MIGHT CAUSE ERRORS
+			other.GetComponent<CharacterCommon>().TakeDamage(5, 10, null);
+			
 		}
 	}
 
@@ -71,6 +73,8 @@ public class DeathBoxBehaviour : MonoBehaviour
 		effected.GetComponent<IsometricPlayerMovementController>().enabled = true;
 
 	}
+
+
 
 
 }

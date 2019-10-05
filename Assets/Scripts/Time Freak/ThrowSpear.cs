@@ -54,7 +54,7 @@ public class ThrowSpear : MonoBehaviour
 		{
 			//deal damage here
 			print("Throw Damage");
-			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 			FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
 			Destroy(gameObject);
 

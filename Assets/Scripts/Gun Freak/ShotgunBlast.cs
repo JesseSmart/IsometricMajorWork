@@ -31,7 +31,7 @@ public class ShotgunBlast : MonoBehaviour
 		if (other.gameObject.CompareTag("PlayerCharacter") && other.gameObject != myOwner)
 		{
 			TargetKnockBack(other.gameObject);
-			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 
 		}
 	}

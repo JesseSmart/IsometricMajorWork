@@ -106,9 +106,10 @@ public class GunFreakController : MonoBehaviour
 		}
 	}
 
-	private void PassiveAbility()
+	public void PassiveAbility()
 	{
-
+		myClass.basicATimer = 0;
+		myClass.moveATimer = 0;
 	}
 
 	private void Inputer()

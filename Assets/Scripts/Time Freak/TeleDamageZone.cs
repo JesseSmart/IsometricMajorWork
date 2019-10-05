@@ -55,7 +55,7 @@ public class TeleDamageZone : MonoBehaviour
 	IEnumerator AreaDamage(GameObject targetObj)
 	{
 		print("damage pre");
-		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage);
+		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 		yield return new WaitForSeconds(1.0f);
 		damageHasRun = false;
 	}
