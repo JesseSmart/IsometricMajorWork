@@ -19,10 +19,15 @@ public class VikingController : MonoBehaviour
     public Slider sldMovementA;
     public Slider sldUltA;
 
-    // Start is called before the first frame update
-    void Start()
+	Animator anim;
+
+
+	// Start is called before the first frame update
+	void Start()
     {
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+		anim = GetComponentInChildren<Animator>();
+		
 
 		SetStats();
     }
@@ -54,6 +59,8 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.basicATimer <= 0)
         {
+			anim.Play("Basic Ab");
+			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
             print(pNum + " Player: DO BASIC");
 
             GameObject spinObj = Instantiate(spinMoveObj, transform.position, transform.rotation);
@@ -71,7 +78,9 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.moveATimer <= 0)
         {
-            GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
+			anim.Play("Move Ab");
+			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+			GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
             thrownAxe.GetComponent<ThrowAxe>().myOwner = gameObject;
             
             thrownAxe.GetComponent<ThrowAxe>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
@@ -89,6 +98,8 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.ultATimer <= 0)
         {
+			anim.Play("Ult Ab");
+			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
 
 			GameObject ultAxe = Instantiate(ultimateAxeObj, transform.position, transform.rotation);
 			ultAxe.GetComponent<VikingUltimateSpin>().myOwner = gameObject;

@@ -24,12 +24,15 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	public Vector2 lastDir;
 
 	public bool canInput = true;
+	private bool canAnimate = true;
+
 
 	public float dodgeCooldown = 2;
 	private float dodgeTimer;
 
 	private float frictionMod = 5f;
 	private Vector2 fricVel;
+
 
     // Start is called before the first frame update
     //void Start()
@@ -56,8 +59,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 			MovementFunction(playerNumber);
 			Dodge(playerNumber);
-			ForceFriction();
 		}
+		ForceFriction();
 
     }
 
@@ -80,11 +83,14 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector2 movement = inputVector * currentSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
 
-		
-        isoRenderer.SetDirection(movement);
-		if (newPos != currentPos)
+		if (canAnimate)
 		{
-			rbody.MovePosition(newPos);
+			isoRenderer.SetDirection(movement);
+			if (newPos != currentPos)
+			{
+				rbody.MovePosition(newPos);
+			}
+
 		}
     }
 
@@ -108,4 +114,15 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	}
 
 
+	public void DisableAnims(float duration)
+	{
+		StartCoroutine(PauseAnims(duration));
+	}
+
+	IEnumerator PauseAnims(float dur)
+	{
+		canAnimate = false;
+		yield return new WaitForSeconds(dur);
+		canAnimate = true;
+	}
 }
