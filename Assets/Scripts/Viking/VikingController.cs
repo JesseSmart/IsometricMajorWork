@@ -59,9 +59,9 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.basicATimer <= 0)
         {
-			anim.Play("Basic Ab");
-			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
-            print(pNum + " Player: DO BASIC");
+			PlayClip("Basic Ab");
+
+			print(pNum + " Player: DO BASIC");
 
             GameObject spinObj = Instantiate(spinMoveObj, transform.position, transform.rotation);
             spinObj.GetComponent<VikingSpinMove>().myOwner = gameObject;
@@ -78,8 +78,9 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.moveATimer <= 0)
         {
-			anim.Play("Move Ab");
-			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+			PlayClip("Move Ab");
+			
+
 			GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
             thrownAxe.GetComponent<ThrowAxe>().myOwner = gameObject;
             
@@ -98,8 +99,8 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.ultATimer <= 0)
         {
-			anim.Play("Ult Ab");
-			GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+			PlayClip("Ult Ab");
+
 
 			GameObject ultAxe = Instantiate(ultimateAxeObj, transform.position, transform.rotation);
 			ultAxe.GetComponent<VikingUltimateSpin>().myOwner = gameObject;
@@ -148,7 +149,11 @@ public class VikingController : MonoBehaviour
     }
 
 
-
+	void PlayClip(string clipName)
+	{
+		anim.Play(clipName);
+		GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+	}
 
 
 

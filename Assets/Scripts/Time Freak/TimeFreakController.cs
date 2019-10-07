@@ -23,10 +23,14 @@ public class TimeFreakController : MonoBehaviour
 	public Slider sldMovementA;
 	public Slider sldUltA;
 
+
+	Animator anim;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+		anim = GetComponentInChildren<Animator>();
 
 		SetStats();
 	}
@@ -58,6 +62,8 @@ public class TimeFreakController : MonoBehaviour
 	{
 		if (myClass.basicATimer <= 0)
 		{
+			
+
 			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
 			Vector3 fakePos = transform.position + (myDir.normalized * spearSpawnOffset);
@@ -84,7 +90,8 @@ public class TimeFreakController : MonoBehaviour
 		if (myClass.moveATimer <= 0)
 		{
 			//FOR FUTRUE: Check collisions at desired pos (trig, multi raycast, square cast?) as well as raycastall. If collision with terrain (i.e unable to tele, use furthest raycastall)
-
+			Vector3 TelePosResult = transform.position;
+			PlayClip("Tele In");
 			Vector3 tempPos = transform.position;
 			#region Teleportation Raycasting
 			//Raycast
@@ -99,7 +106,8 @@ public class TimeFreakController : MonoBehaviour
 					{
 						print("Interupted tele");
 
-						transform.position = hits[i].transform.position;
+						//transform.position = hits[i].transform.position;
+						TelePosResult = hits[i].transform.position;
 						teleComplete = true;
 					}
 				}
@@ -112,9 +120,12 @@ public class TimeFreakController : MonoBehaviour
 				print("No hit tele");
 
 				Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
-				transform.position = transform.position + (tempVec.normalized * teleRange); 
+				//transform.position = transform.position + (tempVec.normalized * teleRange); 
+				TelePosResult = transform.position + (tempVec.normalized * teleRange); 
 				teleComplete = true;
 			}
+
+			StartCoroutine(TeleDelay(0.2f, TelePosResult));
 			#endregion
 
 			GameObject teleDmgZone = Instantiate(teleDamageZoneObj, tempPos, transform.rotation);
@@ -191,6 +202,16 @@ public class TimeFreakController : MonoBehaviour
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 	}
 
+	IEnumerator TeleDelay(float dur, Vector3 telePos)
+	{
+		yield return new WaitForSeconds(dur);
+		transform.position = telePos;
+	}
 
+	void PlayClip(string clipName)
+	{
+		anim.Play(clipName);
+		GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+	}
 
 }
