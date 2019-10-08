@@ -25,6 +25,7 @@ public class MinigunShooter : MonoBehaviour
 		canFire = true;
 		StartCoroutine(FireBullet());
 		StartCoroutine(DurationTimer());
+		//myOwner.GetComponent<IsometricPlayerMovementController>().DisableMove(duration);
     }
 
     // Update is called once per frame

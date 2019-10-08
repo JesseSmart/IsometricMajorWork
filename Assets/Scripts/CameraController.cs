@@ -80,7 +80,7 @@ public class CameraController : MonoBehaviour
 
 		}
 
-		return bounds.size.x;
+		return Mathf.Sqrt((bounds.size.x * bounds.size.x) + (bounds.size.y * bounds.size.y));
 	}
 
 	Vector3 GetCenterPoint()

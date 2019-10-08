@@ -19,13 +19,17 @@ public class ZenFreakController : MonoBehaviour
 	public Slider sldUltA;
 
 
-	private float stunOffset;
-	private float kickOffset;
+	private float stunOffset = 1;
+	private float kickOffset = 1;
+
+	Animator anim;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+		anim = GetComponentInChildren<Animator>();
+
 		SetStats();
 	}
 
@@ -56,6 +60,7 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.basicATimer <= 0)
 		{
+
 			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
 			Vector3 fakePos = transform.position + (myDir.normalized * stunOffset);
@@ -64,7 +69,7 @@ public class ZenFreakController : MonoBehaviour
 
 			GameObject stunZone = Instantiate(stunPunchObj, fakePos, myRot);
 			stunZone.GetComponent<StunPunch>().myOwner = gameObject;
-
+			GetComponent<IsometricPlayerMovementController>().DisableMove(stunZone.GetComponent<StunPunch>().canStunDuration);
 			myClass.basicATimer = myClass.basicACooldown;
 		}
 		else
@@ -85,6 +90,7 @@ public class ZenFreakController : MonoBehaviour
 
 			GameObject kickZone = Instantiate(kickObj, fakePos, myRot);
 			kickZone.GetComponent<KickZone>().myOwner = gameObject;
+			GetComponent<IsometricPlayerMovementController>().DisableMove(kickZone.GetComponent<KickZone>().canKnockbackDuration);
 
 			myClass.moveATimer = myClass.moveACooldown;
 		}
@@ -99,8 +105,18 @@ public class ZenFreakController : MonoBehaviour
 	{
 		if (myClass.ultATimer <= 0)
 		{
+
+
+
 			GameObject spinStick = Instantiate(tempestObj, transform.position, transform.rotation);
 			spinStick.GetComponent<Tempest>().myOwner = gameObject;
+
+
+			PlayClip("Ab Ult");
+			float animDur = anim.GetCurrentAnimatorClipInfo(0).Length;
+			int repeat = Mathf.RoundToInt(spinStick.GetComponent<Tempest>().zoneDuration / animDur);
+			StartCoroutine(UltSpinRepeat(repeat, animDur, 0));
+;
 
 			myClass.ultATimer = myClass.ultACooldown;
 		}
@@ -143,5 +159,30 @@ public class ZenFreakController : MonoBehaviour
 		sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		sldMovementA.value = 1 - (myClass.moveATimer / myClass.moveACooldown);
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
+	}
+
+	void PlayClip(string clipName)
+	{
+		anim.Play(clipName);
+		GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+	}
+
+	IEnumerator UltSpinRepeat(int repAmount, float dur, int temp)
+	{
+		
+		
+
+		yield return new WaitForSeconds(dur);
+		PlayClip("Ab Ult");
+		if (temp < repAmount - 1)
+		{
+			temp++;
+			StartCoroutine(UltSpinRepeat(repAmount, dur, temp));
+
+		}
+		else
+		{
+
+		}
 	}
 }

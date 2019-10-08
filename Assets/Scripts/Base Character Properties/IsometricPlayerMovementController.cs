@@ -87,11 +87,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		if (canAnimate)
 		{
 			isoRenderer.SetDirection(movement);
-			if (newPos != currentPos)
-			{
-				rbody.MovePosition(newPos);
-			}
 
+		}
+		if (newPos != currentPos)
+		{
+			rbody.MovePosition(newPos);
 		}
     }
 

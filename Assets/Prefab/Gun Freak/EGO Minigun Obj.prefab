@@ -46,5 +46,5 @@ MonoBehaviour:
   myOwner: {fileID: 0}
   bulletObj: {fileID: 7937224718776853481, guid: 8999678a919ad974d97c41666567bf32,
     type: 3}
-  fireRate: 0.03
-  duration: 5
+  fireRate: 0.05
+  duration: 4

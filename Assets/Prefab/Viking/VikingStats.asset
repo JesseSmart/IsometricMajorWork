@@ -20,7 +20,7 @@ MonoBehaviour:
   displayImage: {fileID: 5455981769389410376, guid: bc7ef3fd8d2f39741badd54aa235571f,
     type: 3}
   health: 100
-  basicAbilityCooldown: 4
-  movementAbilityCooldown: 4
+  basicAbilityCooldown: 2
+  movementAbilityCooldown: 2
   ultimateAbilityCooldown: 10
   dodgeCooldown: 2.5

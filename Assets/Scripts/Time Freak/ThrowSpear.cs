@@ -72,7 +72,7 @@ public class ThrowSpear : MonoBehaviour
 	void CreateReciever()
 	{
 		//Instantiate(recievingSpearObj, transform.position, transform.rotation);
-		GameObject recieverObj = Instantiate(recievingSpearObj, transform.position, transform.rotation);
+		GameObject recieverObj = Instantiate(recievingSpearObj, transform.position, Quaternion.identity);
 		recieverObj.GetComponent<RecieverSpear>().myOwner = myOwner;
 	}
 }
