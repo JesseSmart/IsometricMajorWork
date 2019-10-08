@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 8890b2241cc4de04695ae1f9a4e89257
+guid: d1fc6e73511342845bf8a88dd5f3a0f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3997072141254217751
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_0
+      213: -1039606509828228783
+    second: Zen Freak STUN PUNCH SOUTH 2_0
   - first:
-      213: 6318801883424014164
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_1
+      213: -489206715125691017
+    second: Zen Freak STUN PUNCH SOUTH 2_1
   - first:
-      213: -2492231522074746575
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_2
+      213: 5978032689578578335
+    second: Zen Freak STUN PUNCH SOUTH 2_2
   - first:
-      213: -4776044100914619946
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_3
+      213: 6177566092540937562
+    second: Zen Freak STUN PUNCH SOUTH 2_3
   - first:
-      213: 8248973982580636511
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_4
+      213: 5481165585432339066
+    second: Zen Freak STUN PUNCH SOUTH 2_4
+  - first:
+      213: 5648875837941324658
+    second: Zen Freak STUN PUNCH SOUTH 2_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,27 +98,16 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_0
+      name: Zen Freak STUN PUNCH SOUTH 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
+        width: 44
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +116,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e361dd07a7e3784c95368256118c1a3
-      internalID: 3997072141254217751
+      spriteID: 1d0c0477add06d848ab9b797a052d730
+      internalID: -1039606509828228783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_1
+      name: Zen Freak STUN PUNCH SOUTH 2_1
       rect:
         serializedVersion: 2
-        x: 46
+        x: 44
         y: 0
-        width: 46
+        width: 44
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524b2e9f337f8514d965976b572ec97b
-      internalID: 6318801883424014164
+      spriteID: cc7e796e5267e114ba0e61baf572d2bd
+      internalID: -489206715125691017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_2
+      name: Zen Freak STUN PUNCH SOUTH 2_2
       rect:
         serializedVersion: 2
-        x: 92
+        x: 88
         y: 0
-        width: 46
+        width: 44
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2236c1d70ac72b4fbd387cf1373d1ae
-      internalID: -2492231522074746575
+      spriteID: c80235f4a191a3644b9c774e1fd440b3
+      internalID: 5978032689578578335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_3
+      name: Zen Freak STUN PUNCH SOUTH 2_3
       rect:
         serializedVersion: 2
-        x: 138
+        x: 132
         y: 0
-        width: 46
+        width: 44
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48ebf2f9e6b9fd4c8689f8fe6c59868
-      internalID: -4776044100914619946
+      spriteID: e3e8afdd4e0fc9d47b17758b4374ac93
+      internalID: 6177566092540937562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_4
+      name: Zen Freak STUN PUNCH SOUTH 2_4
       rect:
         serializedVersion: 2
-        x: 184
+        x: 176
         y: 0
-        width: 46
+        width: 44
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fcdcc87dbcc0224fb0be285979a8aff
-      internalID: 8248973982580636511
+      spriteID: 0410eed4794d3df4795213099e5d3b7d
+      internalID: 5481165585432339066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak STUN PUNCH SOUTH 2_5
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e33f9eafed63f47b94a1ffbb68df0d
+      internalID: 5648875837941324658
       vertices: []
       indices: 
       edges: []
@@ -217,7 +230,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 58fe6141325f010419d5a927818993f1
+    spriteID: 7201a2bdc901df0439de3bbe7aea6311
     internalID: 0
     vertices: []
     indices: 
