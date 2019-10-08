@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 8890b2241cc4de04695ae1f9a4e89257
+guid: 6ab658a176e124d41b0789f0bacdef8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3997072141254217751
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_0
+      213: 1941016257581678536
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_0
   - first:
-      213: 6318801883424014164
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_1
+      213: 2983219034707730906
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_1
   - first:
-      213: -2492231522074746575
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_2
+      213: -8847819441881254410
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_2
   - first:
-      213: -4776044100914619946
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_3
+      213: 8775106546714391650
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_3
   - first:
-      213: 8248973982580636511
-    second: Zen Freak LEFT Idle Weapon Sprite Sheet-export_4
+      213: -5957339140678777405
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_4
+  - first:
+      213: -3761075251219617903
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_5
+  - first:
+      213: -1050489389934067486
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_6
+  - first:
+      213: 1201456994296127742
+    second: Zen Freak RIGHT Attack Sprite Sheet v2_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,22 +104,11 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_0
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +122,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e361dd07a7e3784c95368256118c1a3
-      internalID: 3997072141254217751
+      spriteID: 23f107998b76e9f428a1176603079c20
+      internalID: 1941016257581678536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_1
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_1
       rect:
         serializedVersion: 2
         x: 46
@@ -145,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524b2e9f337f8514d965976b572ec97b
-      internalID: 6318801883424014164
+      spriteID: 68054facaaf03e8488b587182c6ca9de
+      internalID: 2983219034707730906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_2
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_2
       rect:
         serializedVersion: 2
         x: 92
@@ -166,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2236c1d70ac72b4fbd387cf1373d1ae
-      internalID: -2492231522074746575
+      spriteID: 6df34c4ebc5264c47a977dbd4e93d571
+      internalID: -8847819441881254410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_3
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_3
       rect:
         serializedVersion: 2
         x: 138
@@ -187,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48ebf2f9e6b9fd4c8689f8fe6c59868
-      internalID: -4776044100914619946
+      spriteID: 2a26c0ba511b5ca4a861e9059deab6af
+      internalID: 8775106546714391650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak LEFT Idle Weapon Sprite Sheet-export_4
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_4
       rect:
         serializedVersion: 2
         x: 184
@@ -208,8 +206,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fcdcc87dbcc0224fb0be285979a8aff
-      internalID: 8248973982580636511
+      spriteID: bbd2010cd984be241ac1673db5d0b7d0
+      internalID: -5957339140678777405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_5
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df933ae65cf960449293e2baf47ec74
+      internalID: -3761075251219617903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_6
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7539c95a28915e46a227f375ce88c55
+      internalID: -1050489389934067486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak RIGHT Attack Sprite Sheet v2_7
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003fa5d25ac3dc64d964e6d627b0e047
+      internalID: 1201456994296127742
       vertices: []
       indices: 
       edges: []
@@ -217,7 +278,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 58fe6141325f010419d5a927818993f1
+    spriteID: 36c215d7b7d657d4e843aaf169801468
     internalID: 0
     vertices: []
     indices: 
