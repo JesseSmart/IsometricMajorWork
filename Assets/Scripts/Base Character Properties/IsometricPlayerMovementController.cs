@@ -29,6 +29,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 	private float dodgeCooldown = 1;
 	private float dodgeTimer;
+	private float dodgeRange = 3;
 
 	private float frictionMod = 5f;
 	private Vector2 fricVel;
@@ -105,18 +106,17 @@ public class IsometricPlayerMovementController : MonoBehaviour
 				//Raycast
 				Vector3 dodgeResult = Vector3.zero;
 				Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
-				RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.position + (tempVec.normalized * 4));
+				RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, lastDir, dodgeRange);
 				bool teleComplete = false;
 
-				if (!teleComplete)
+				if (!teleComplete && hits.Length > 1)
 				{
-					print(hit.collider.gameObject.name);
-					if (!hit.collider.gameObject.GetComponent<CharacterCommon>())
+					print(hits[1].collider.gameObject.name);
+					if (!hits[1].collider.gameObject.GetComponent<CharacterCommon>())
 					{
 						print("Interupted tele");
 
-						//transform.position = hits[i].transform.position;
-						dodgeResult = hit.transform.position;
+						dodgeResult = hits[1].transform.position;
 						teleComplete = true;
 					}
 				}
@@ -125,12 +125,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 				if (!teleComplete)
 				{
-					print("No hit tele");
+					//print("No hit tele");
 
-					dodgeResult = transform.position + (tempVec.normalized * 4);
+					dodgeResult = transform.position + (tempVec.normalized * dodgeRange);
 					teleComplete = true;
 				}
-				print(transform.position - dodgeResult);
+				//print(transform.position - dodgeResult);
 				//transform.position = dodgeResult;
 				StartCoroutine(DodgeTo(dodgeResult));
 
@@ -174,13 +174,14 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	{
 		float dist = Vector3.Distance(transform.position, pos);
 		canInput = false;
-		while (dist < 0.5);
+		while (dist > 0.5)
 		{
 			dist = Vector3.Distance(transform.position, pos);
-			
-			transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * 10);
+			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 10);
 			yield return new WaitForEndOfFrame();
 		}
 		canInput = true;
+		yield return null;
+		
 	}
 }
