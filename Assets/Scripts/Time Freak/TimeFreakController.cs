@@ -125,7 +125,7 @@ public class TimeFreakController : MonoBehaviour
 				teleComplete = true;
 			}
 
-			StartCoroutine(TeleDelay(0.2f, TelePosResult));
+			StartCoroutine(TeleDelay(0.55f, TelePosResult));
 			#endregion
 
 			GameObject teleDmgZone = Instantiate(teleDamageZoneObj, tempPos, transform.rotation);

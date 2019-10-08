@@ -27,7 +27,7 @@ public class GameModifiersMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //set duration to what is on screen
     }
 
     // Update is called once per frame

@@ -27,7 +27,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	private bool canAnimate = true;
 
 
-	public float dodgeCooldown = 2;
+	private float dodgeCooldown = 1;
 	private float dodgeTimer;
 
 	private float frictionMod = 5f;
@@ -102,6 +102,38 @@ public class IsometricPlayerMovementController : MonoBehaviour
 			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 1))
 			{
 				print("Dodge");
+				//Raycast
+				Vector3 dodgeResult = Vector3.zero;
+				Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+				RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.position + (tempVec.normalized * 4));
+				bool teleComplete = false;
+
+				if (!teleComplete)
+				{
+					print(hit.collider.gameObject.name);
+					if (!hit.collider.gameObject.GetComponent<CharacterCommon>())
+					{
+						print("Interupted tele");
+
+						//transform.position = hits[i].transform.position;
+						dodgeResult = hit.transform.position;
+						teleComplete = true;
+					}
+				}
+
+				
+
+				if (!teleComplete)
+				{
+					print("No hit tele");
+
+					dodgeResult = transform.position + (tempVec.normalized * 4);
+					teleComplete = true;
+				}
+				print(transform.position - dodgeResult);
+				//transform.position = dodgeResult;
+				StartCoroutine(DodgeTo(dodgeResult));
+
 				dodgeTimer = dodgeCooldown;
 
 			}
@@ -124,5 +156,31 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		canAnimate = false;
 		yield return new WaitForSeconds(dur);
 		canAnimate = true;
+	}
+
+	public void DisableMove(float duration)
+	{
+		StartCoroutine(PauseMove(duration));
+	}
+
+	IEnumerator PauseMove(float dur)
+	{
+		canInput = false;
+		yield return new WaitForSeconds(dur);
+		canInput = true;
+	}
+
+	IEnumerator DodgeTo(Vector3 pos)
+	{
+		float dist = Vector3.Distance(transform.position, pos);
+		canInput = false;
+		while (dist < 0.5);
+		{
+			dist = Vector3.Distance(transform.position, pos);
+			
+			transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * 10);
+			yield return new WaitForEndOfFrame();
+		}
+		canInput = true;
 	}
 }

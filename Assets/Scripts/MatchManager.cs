@@ -6,7 +6,8 @@ public class MatchManager : MonoBehaviour
 {
 
 
-	public int[] playerScores;
+	public int[] playerScores = new int[4];
+	
 
     // Start is called before the first frame update
     void Start()

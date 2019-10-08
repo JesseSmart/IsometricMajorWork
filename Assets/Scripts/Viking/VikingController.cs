@@ -78,7 +78,7 @@ public class VikingController : MonoBehaviour
     {
         if (myClass.moveATimer <= 0)
         {
-			PlayClip("Move Ab");
+			//PlayClip("Move Ab");
 			
 
 			GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
