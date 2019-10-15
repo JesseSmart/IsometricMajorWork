@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: b35fb7733c9de6544ae9075b8706948b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8290422076579499028
+    second: Zen Freak Kick LEFT V2_0
+  - first:
+      213: 7987502406876053582
+    second: Zen Freak Kick LEFT V2_1
+  - first:
+      213: 6550252989703846518
+    second: Zen Freak Kick LEFT V2_2
+  - first:
+      213: 2400245934904082238
+    second: Zen Freak Kick LEFT V2_3
+  - first:
+      213: 8611525581982393235
+    second: Zen Freak Kick LEFT V2_4
+  - first:
+      213: 1299115569043792895
+    second: Zen Freak Kick LEFT V2_5
+  - first:
+      213: 5805430216446652972
+    second: Zen Freak Kick LEFT V2_6
+  - first:
+      213: 8482531983533306280
+    second: Zen Freak Kick LEFT V2_7
+  - first:
+      213: 7189247330982901989
+    second: Zen Freak Kick LEFT V2_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,7 +120,196 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48ac1743f757b3468875b9affc15f66
+      internalID: 8290422076579499028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f1bc9450ba3144aa950d14d6758e8a
+      internalID: 7987502406876053582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f07060908ecced489457f4f64211e26
+      internalID: 6550252989703846518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f37dd123f697e46957eeba35ceb957
+      internalID: 2400245934904082238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4775e24e9c13b64aac2338229b7cd31
+      internalID: 8611525581982393235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4068bc5eee783fe43af21c0213343ba2
+      internalID: 1299115569043792895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_6
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919948d7b195543418bf0725ca1b490e
+      internalID: 5805430216446652972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48da1494fffb65458c0aab001b681ab
+      internalID: 8482531983533306280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak Kick LEFT V2_8
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a9655c1ce61fe409f0e2f671bffadf
+      internalID: 7189247330982901989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

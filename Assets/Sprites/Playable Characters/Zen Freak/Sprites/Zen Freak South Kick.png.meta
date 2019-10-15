@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: fb89c2ac68364ce45a36ef631876c7e1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7040444800802960743
+    second: Zen Freak South Kick_0
+  - first:
+      213: 523098394501569922
+    second: Zen Freak South Kick_1
+  - first:
+      213: 812687561427005621
+    second: Zen Freak South Kick_2
+  - first:
+      213: -6926548570756563560
+    second: Zen Freak South Kick_3
+  - first:
+      213: -2604241091381474050
+    second: Zen Freak South Kick_4
+  - first:
+      213: -8190606931453385169
+    second: Zen Freak South Kick_5
+  - first:
+      213: -5607002579800498704
+    second: Zen Freak South Kick_6
+  - first:
+      213: -5543464554985487774
+    second: Zen Freak South Kick_7
+  - first:
+      213: -1654681696095786267
+    second: Zen Freak South Kick_8
+  - first:
+      213: -3328826010635817394
+    second: Zen Freak South Kick_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,7 +123,196 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Zen Freak South Kick_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84229b9043f564b479b800db7dca8e79
+      internalID: 7040444800802960743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51f8c23623d0f44aa768af209d860d1
+      internalID: 523098394501569922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8310976c2f44ed7449050ec657331436
+      internalID: 812687561427005621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e920c804bce19048b68e33ecb09294a
+      internalID: -6926548570756563560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0ed23a16e18754abbe48471cfea159
+      internalID: -2604241091381474050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555422219deef3a46a911208d1c4bf44
+      internalID: -8190606931453385169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_6
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e80449a2ea5ac1449984232e8da36d8
+      internalID: -5607002579800498704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8d2dedefee4994cbd7a44e9b606d9b
+      internalID: -5543464554985487774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zen Freak South Kick_8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 0
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888bc843dd80df84283f2c53a01f905a
+      internalID: -1654681696095786267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
