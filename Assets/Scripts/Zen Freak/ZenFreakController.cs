@@ -31,6 +31,7 @@ public class ZenFreakController : MonoBehaviour
 		anim = GetComponentInChildren<Animator>();
 
 		SetStats();
+		GetComponent<IsometricPlayerMovementController>().dodgeCooldown *= 0.5f;
 	}
 
 	// Update is called once per frame

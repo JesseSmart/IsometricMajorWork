@@ -7,7 +7,7 @@ using TMPro;
 public class CharacterCommon : MonoBehaviour
 {
     public CharacterStats characterStats;
-    private CharacterClass myClass = new CharacterClass();
+    public CharacterClass myClass = new CharacterClass();
 
     public Slider sldHealth;
     public Slider sldBrinkHealth;

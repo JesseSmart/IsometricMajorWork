@@ -115,7 +115,10 @@ public class VikingController : MonoBehaviour
 
     private void PassiveAbility()
     {
-
+		if (GetComponent<CharacterCommon>().myClass.myHealth < 0)
+		{
+			GetComponent<IsometricPlayerMovementController>().currentSpeed *= 2;
+		}
     }
 
     private void Inputer()

@@ -14,7 +14,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 
     public float baseMovementSpeed = 1f;
-    private float currentSpeed;
+    public float currentSpeed;
 
     public GameObject renderObj;
     IsometricCharacterRenderer isoRenderer;
@@ -27,7 +27,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	private bool canAnimate = true;
 
 
-	private float dodgeCooldown = 1;
+	public float dodgeCooldown = 1;
 	private float dodgeTimer;
 	private float dodgeRange = 3;
 
