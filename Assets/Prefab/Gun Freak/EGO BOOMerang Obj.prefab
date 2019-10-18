@@ -133,6 +133,9 @@ MonoBehaviour:
   cantCatchDuration: 0.3
   minDamage: 15
   maxDamage: 30
+  bulletObj: {fileID: 3543492067901550226, guid: 0d51bda01a90a4540878db494199f4f0,
+    type: 3}
+  recoilForce: 400
 --- !u!50 &703804509088835028
 Rigidbody2D:
   serializedVersion: 4

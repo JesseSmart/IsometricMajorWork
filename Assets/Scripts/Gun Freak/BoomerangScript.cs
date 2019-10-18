@@ -8,6 +8,7 @@ public class BoomerangScript : MonoBehaviour
 
     public int initialForce;
     public int retForce;
+	private float spinSpeed = 360;
 
 	public float outwardFlightDuration;
 	private bool isReturning;
@@ -19,6 +20,10 @@ public class BoomerangScript : MonoBehaviour
 
 	public float minDamage;
 	public float maxDamage;
+
+	public GameObject bulletObj;
+	private bool hasFired;
+	public float recoilForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +45,20 @@ public class BoomerangScript : MonoBehaviour
 				isReturning = true;
 			}
 		}
-    }
+
+		transform.Rotate(Vector3.forward, Time.deltaTime * spinSpeed);
+
+		if (Input.GetKeyDown("joystick " + (myOwner.gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1) + " button " + 0) && !hasFired)
+		{
+			hasFired = true;
+
+			GameObject bullet = Instantiate(bulletObj, transform.position, transform.rotation);
+			bullet.GetComponent<BulletBoomerang>().myOwner = myOwner;
+
+			rbody.AddForce(Vector2.down * recoilForce, ForceMode2D.Force);
+		}
+
+	}
 
     public void ReturnToOwner(GameObject player)
     {
