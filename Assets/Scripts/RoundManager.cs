@@ -12,7 +12,7 @@ public class RoundManager : MonoBehaviour
 	private MatchManager matchManager;
 
 	private int roundDur;
-	private int winTarget;
+	//private int winTarget;
 
 	private int roundWinner;
 	private bool hasEnded;
@@ -23,12 +23,17 @@ public class RoundManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		winTarget = PlayerPrefs.GetInt("winPointTarget");
+		//winTarget = PlayerPrefs.GetInt("winPointTarget");
 		roundDur = PlayerPrefs.GetInt("RoundDuration");
+
+
 		matchManager = FindObjectOfType<MatchManager>();
 		StartCoroutine(StartCountdown());
+
+		matchManager.targetRounds = PlayerPrefs.GetInt("winPointTarget");
+		matchManager.currentRound++; 
 		//Spawn();
-    }
+	}
 
     // Update is called once per frame
     void Update()
@@ -62,13 +67,14 @@ public class RoundManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2f);
 		matchManager.playerScores[roundWinner]++;
-		if (matchManager.playerScores[roundWinner] >= winTarget)
+		if (matchManager.playerScores[roundWinner] > matchManager.targetRounds)
 		{
-			SceneManager.LoadScene("Menu");
+			//SceneManager.LoadScene("Menu");
+			print("LOADERRORRR");
 		}
 		else
 		{
-			SceneManager.LoadScene("JesseTesting");
+			SceneManager.LoadScene("MidScoresScreen");
 
 		}
 	}

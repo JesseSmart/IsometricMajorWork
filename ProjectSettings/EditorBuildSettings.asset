@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JesseTesting.unity
     guid: c72cb1f380146d84797cafc188cce07a
+  - enabled: 1
+    path: Assets/Scenes/MidScoresScreen.unity
+    guid: ff2aa19e5634d2a4a98464c5424f463b
   m_configObjects: {}

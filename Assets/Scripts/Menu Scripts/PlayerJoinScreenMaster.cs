@@ -69,6 +69,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
         if (totalPlayers >= 2)
         {
             PlayerPrefs.SetInt("TotalPlayers", totalPlayers);
+			FindObjectOfType<MatchManager>().totalPlayers = totalPlayers;
         }
 
         SceneManager.LoadScene("JesseTesting");
