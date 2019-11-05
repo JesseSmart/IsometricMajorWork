@@ -11,7 +11,7 @@ public class VikingUltimateSpin : MonoBehaviour
 	public GameObject myOwner;
 	private Rigidbody2D rbody;
 	private GameObject[] alreadyHitObjs = new GameObject[3]; //USE LIST INSTEAD
-
+	public float duration;
 	[Header("Stats")]
 	public float spinSpeed;
 	public int axeRange;
@@ -25,14 +25,21 @@ public class VikingUltimateSpin : MonoBehaviour
 	void Start()
     {
 		transform.position = new Vector3(myOwner.transform.position.x, myOwner.transform.position.y + axeRange, myOwner.transform.position.z);
-		lineR = GetComponent<LineRenderer>();
+		//lineR = GetComponent<LineRenderer>();
 		transform.SetParent(myOwner.transform, true);
+		transform.RotateAround(myOwner.transform.position, Vector3.forward, 180);
+		Time.timeScale = 0.4f;
+		Destroy(gameObject, duration);
 	}
 
 	// Update is called once per frame
 	void Update()
     {
+		//transform.Rotate(0, 0, -1 * Time.deltaTime * spinSpeed, Space.World);
+		float rotation = spinSpeed * Time.deltaTime;
 
+		transform.RotateAround(myOwner.transform.position, Vector3.forward, -rotation);
+		/**
 		float rotation = spinSpeed * Time.deltaTime;
 		if (rotationleft > rotation)
 		{
@@ -47,9 +54,10 @@ public class VikingUltimateSpin : MonoBehaviour
 		}
 
 		transform.RotateAround(myOwner.transform.position, Vector3.forward, -rotation);
+		**/
 
-		lineR.SetPosition(0, transform.position);
-		lineR.SetPosition(1, myOwner.transform.position);
+		//lineR.SetPosition(0, transform.position);
+		//lineR.SetPosition(1, myOwner.transform.position);
 
 		ChainRayCollision();
 	}
