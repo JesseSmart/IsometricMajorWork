@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 0
   baseMovementSpeed: 5
+  currentSpeed: 0
   renderObj: {fileID: 5750027383698018153}
   currentDir: {x: 0, y: 0}
   lastDir: {x: 0, y: 0}
@@ -128,6 +129,7 @@ MonoBehaviour:
   sldBrinkHealth: {fileID: 8208358950000037903}
   sldDeathChance: {fileID: 4739420598531972259}
   pNumIndic: {fileID: 3745975741349185058}
+  mySpriteRend: {fileID: 5750027383698018159}
 --- !u!61 &3043654306253714739
 BoxCollider2D:
   m_ObjectHideFlags: 0

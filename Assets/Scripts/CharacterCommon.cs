@@ -16,10 +16,16 @@ public class CharacterCommon : MonoBehaviour
     private bool canUpdateHealth = true;
 
 	public TextMeshProUGUI pNumIndic;
+
+	private float invinsDur = 1;
+	private bool isInvincible;
+
+	public SpriteRenderer mySpriteRend;
     // Start is called before the first frame update
     void Start()
     {
-        myClass.myHealth = characterStats.health;
+
+		myClass.myHealth = characterStats.health;
 		pNumIndic.text = "P" +  (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
     }
 
@@ -27,6 +33,11 @@ public class CharacterCommon : MonoBehaviour
     void Update()
     {
         UISetter();
+
+		if (isInvincible)
+		{
+			FlashEffect();
+		}
     }
 
     void UISetter()
@@ -60,36 +71,43 @@ public class CharacterCommon : MonoBehaviour
     public void TakeDamage(float minDamage, float maxDamage, GameObject dealerOwner)
     {
 		float damage = Random.Range(minDamage, maxDamage);
-
-        if (myClass.myHealth >= 0)
-        {
-            myClass.myHealth -= damage;
-
-
-        }
-        else if (myClass.myHealth < 0)
-        {
+		if (!isInvincible)
+		{
+			if (myClass.myHealth >= 0)
+			{
+				myClass.myHealth -= damage;
 
 
-            int rndChance = Random.Range(0, 100);
+			}
+			else if (myClass.myHealth < 0)
+			{
 
-            //sldDeathChance.gameObject.SetActive(true);
-            sldDeathChance.value = rndChance / 100f;            
-			//FindObjectOfType<CameraController>().BrinkZoom(transform);
-            StartCoroutine(disbableUIDelay(sldDeathChance.gameObject));
-			if (rndChance >= Mathf.Abs(myClass.myHealth))
-            {
-                //alive
-                print("Alive");
-                myClass.myHealth -= damage;
 
-            }
-            else
-            {
-                //dead
-                Death(dealerOwner);
-            }
-        }
+				int rndChance = Random.Range(0, 100);
+
+				//sldDeathChance.gameObject.SetActive(true);
+				sldDeathChance.value = rndChance / 100f;
+				//FindObjectOfType<CameraController>().BrinkZoom(transform);
+				StartCoroutine(disbableUIDelay(sldDeathChance.gameObject));
+				if (rndChance >= Mathf.Abs(myClass.myHealth))
+				{
+					//alive
+					print("Alive");
+					myClass.myHealth -= damage;
+
+				}
+				else
+				{
+					//dead
+					Death(dealerOwner);
+				}
+
+			}
+
+			StartCoroutine(InvinsibilityFrames(invinsDur));
+
+
+		}
 
 
 
@@ -115,5 +133,22 @@ public class CharacterCommon : MonoBehaviour
         obj.SetActive(false);
         
     }
+
+	private IEnumerator InvinsibilityFrames(float dur)
+	{
+		float nowTime = Time.deltaTime;
+		isInvincible = true;
+		yield return new WaitForSeconds(dur);
+		isInvincible = false;
+		mySpriteRend.color = Color.white;
+	}
+
+	private void FlashEffect()
+	{
+		//print("FLASH... ahahhhhhhhh");
+		//print(Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
+		mySpriteRend.color = Color.Lerp(Color.white, Color.red, Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
+		print(mySpriteRend);
+	}
 
 }
