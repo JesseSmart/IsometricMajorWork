@@ -9,6 +9,7 @@ public class VikingSpinMove : MonoBehaviour
     public float minDamage;
     public float maxDamage;
 
+	public float duration;
 
     private Rigidbody2D rbody;
 	private float rotationleft = 360;
@@ -17,14 +18,19 @@ public class VikingSpinMove : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        
-    }
+		
+		transform.Rotate(0, 0, -180, Space.World);
+		Destroy(gameObject, duration);
+	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
 		transform.position = myOwner.transform.position;
-		//transform.Rotate(0, 0, -1 * Time.deltaTime * spinSpeed, Space.World);
+		transform.Rotate(0, 0, -1 * Time.deltaTime * spinSpeed, Space.World);
+		
+		
+		/**
 
 
 		float rotation = spinSpeed * Time.deltaTime;
@@ -40,7 +46,7 @@ public class VikingSpinMove : MonoBehaviour
 
 		}
 		transform.Rotate(0, 0, -rotation);
-
+	**/
 
     }
 
@@ -54,4 +60,5 @@ public class VikingSpinMove : MonoBehaviour
 			//knockback
 		}
 	}
+	
 }
