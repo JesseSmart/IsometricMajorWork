@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: fd9d6ca88edb1324ea51ce022b6ffda9
+guid: 3699ba0091a2ff04abaea08a089376df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4675346130714806127
-    second: Gun Freak Knockback South Facing_0
+      213: 7687891590625134335
+    second: Gun Freak Shotgun Knockback North_0
   - first:
-      213: -2281716070583620025
-    second: Gun Freak Knockback South Facing_1
+      213: -1610667974762807358
+    second: Gun Freak Shotgun Knockback North_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -90,13 +90,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Freak Knockback South Facing_0
+      name: Gun Freak Shotgun Knockback North_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 35
-        height: 55
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,20 +104,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ac50358eaa36f340886ed8c30b90308
-      internalID: -4675346130714806127
+      spriteID: f6beb2c42da86584dbaf836ab67bb321
+      internalID: 7687891590625134335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Freak Knockback South Facing_1
+      name: Gun Freak Shotgun Knockback North_1
       rect:
         serializedVersion: 2
         x: 35
         y: 0
         width: 35
-        height: 55
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 673c7faf9dc960642bbb802cc20d9025
-      internalID: -2281716070583620025
+      spriteID: 45e64df131a4957418ea9ec0e62035a3
+      internalID: -1610667974762807358
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b937abb67a68c7f4192a86bd1d9de44e
+    spriteID: 282b0c65c2fd996458516e506f1cadb2
     internalID: 0
     vertices: []
     indices: 
