@@ -28,7 +28,6 @@ public class VikingUltimateSpin : MonoBehaviour
 		//lineR = GetComponent<LineRenderer>();
 		transform.SetParent(myOwner.transform, true);
 		transform.RotateAround(myOwner.transform.position, Vector3.forward, 180);
-		Time.timeScale = 0.4f;
 		Destroy(gameObject, duration);
 	}
 

@@ -30,6 +30,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	public float dodgeCooldown = 1;
 	private float dodgeTimer;
 	private float dodgeRange = 3;
+	private float invinsDur = 0.5f;
 
 	private float frictionMod = 5f;
 	private Vector2 fricVel;
@@ -102,6 +103,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		{
 			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 1))
 			{
+				gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
+				gameObject.GetComponent<CharacterCommon>().RunInvins(invinsDur);
 				print("Dodge");
 				//Raycast
 				Vector3 dodgeResult = Vector3.zero;

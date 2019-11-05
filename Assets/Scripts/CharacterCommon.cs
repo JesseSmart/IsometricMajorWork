@@ -21,6 +21,7 @@ public class CharacterCommon : MonoBehaviour
 	private bool isInvincible;
 
 	public SpriteRenderer mySpriteRend;
+	public Color flashCol = Color.red;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,7 @@ public class CharacterCommon : MonoBehaviour
 
 		if (isInvincible)
 		{
-			FlashEffect();
+			FlashEffect(flashCol);
 		}
     }
 
@@ -103,9 +104,9 @@ public class CharacterCommon : MonoBehaviour
 				}
 
 			}
+			flashCol = Color.red;
 
-			StartCoroutine(InvinsibilityFrames(invinsDur));
-
+			RunInvins(invinsDur);
 
 		}
 
@@ -134,6 +135,12 @@ public class CharacterCommon : MonoBehaviour
         
     }
 
+	public void RunInvins(float dur)
+	{
+		StartCoroutine(InvinsibilityFrames(dur));
+
+	}
+
 	private IEnumerator InvinsibilityFrames(float dur)
 	{
 		float nowTime = Time.deltaTime;
@@ -143,11 +150,11 @@ public class CharacterCommon : MonoBehaviour
 		mySpriteRend.color = Color.white;
 	}
 
-	private void FlashEffect()
+	private void FlashEffect(Color flashColor)
 	{
 		//print("FLASH... ahahhhhhhhh");
 		//print(Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
-		mySpriteRend.color = Color.Lerp(Color.white, Color.red, Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
+		mySpriteRend.color = Color.Lerp(Color.white, flashColor, Mathf.Abs(Mathf.Cos(Time.time * 5 * Mathf.PI)));
 		print(mySpriteRend);
 	}
 
