@@ -13,6 +13,10 @@ public class VikingController : MonoBehaviour
     public GameObject throwAxeObject;
 	public GameObject ultimateAxeObj;
 
+	private bool passiveHasRun;
+
+	private bool canCast = true;
+	private float castPauseDur = 0.4f;
 
     //UI
     public Slider sldBasicA;
@@ -20,6 +24,8 @@ public class VikingController : MonoBehaviour
     public Slider sldUltA;
 
 	Animator anim;
+
+
 
 
 	// Start is called before the first frame update
@@ -37,7 +43,10 @@ public class VikingController : MonoBehaviour
     {
         Cooldowns();
         Inputer();
-
+		if (!passiveHasRun)
+		{
+			PassiveAbility();
+		}
     }
 
     private void SetStats()
@@ -118,25 +127,34 @@ public class VikingController : MonoBehaviour
 		if (GetComponent<CharacterCommon>().myClass.myHealth < 0)
 		{
 			GetComponent<IsometricPlayerMovementController>().currentSpeed *= 2;
+			passiveHasRun = true;
 		}
     }
 
     private void Inputer()
     {
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
-        {
-            BasicAbility();
-        }
+		if (canCast)
+		{
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
+			{
+				BasicAbility();
+				StartCoroutine(castDelay(castPauseDur));
+			}
 
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
-        {
-            MovementAbility();
-        }
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
+			{
+				MovementAbility();
+				StartCoroutine(castDelay(castPauseDur));
 
-        if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
-        {
-            UltimateAbility();
-        }
+			}
+
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
+			{
+				UltimateAbility();
+				StartCoroutine(castDelay(castPauseDur));
+
+			}
+		}
 
     }
 
@@ -158,6 +176,11 @@ public class VikingController : MonoBehaviour
 		GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
 	}
 
-
+	IEnumerator castDelay(float dur)
+	{
+		canCast = false;
+		yield return new WaitForSeconds(dur);
+		canCast = true;
+	}
 
 }

@@ -13,6 +13,9 @@ public class GunFreakController : MonoBehaviour
 	public GameObject shotgunObj;
 	public GameObject minigunObj;
 
+	private bool canCast = true;
+	private float castPauseDur = 0.4f;
+
 	//UI
 	public Slider sldBasicA;
 	public Slider sldMovementA;
@@ -114,19 +117,27 @@ public class GunFreakController : MonoBehaviour
 
 	private void Inputer()
 	{
-		if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
+		if (canCast)
 		{
-			BasicAbility();
-		}
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
+			{
+				BasicAbility();
+				StartCoroutine(castDelay(castPauseDur));
+			}
 
-		if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
-		{
-			MovementAbility();
-		}
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
+			{
+				MovementAbility();
+				StartCoroutine(castDelay(castPauseDur));
 
-		if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
-		{
-			UltimateAbility();
+			}
+
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
+			{
+				UltimateAbility();
+				StartCoroutine(castDelay(castPauseDur));
+
+			}
 		}
 
 	}
@@ -142,4 +153,11 @@ public class GunFreakController : MonoBehaviour
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 	}
 
+
+	IEnumerator castDelay(float dur)
+	{
+		canCast = false;
+		yield return new WaitForSeconds(dur);
+		canCast = true;
+	}
 }
