@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8075494636258105943}
   - component: {fileID: 7500228286298389729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2078810349395267523}
   - component: {fileID: 5600581885822989342}
   - component: {fileID: 9097224106038202854}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Viking Ultimate Spin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -169,4 +169,16 @@ public class CameraController : MonoBehaviour
 
 	}
 
+	public void FrameFreeze()
+	{
+		StartCoroutine(TimeStopJuice());
+	}
+
+	IEnumerator TimeStopJuice()
+	{
+		Time.timeScale = 0;
+		yield return new WaitForSecondsRealtime(0.1f);
+		Time.timeScale = 1;
+	}
+
 }

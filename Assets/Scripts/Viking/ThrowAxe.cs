@@ -94,7 +94,8 @@ public class ThrowAxe : MonoBehaviour
             {
                 //deal damage here
                 other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
-                myTarget = other.gameObject;
+				FindObjectOfType<CameraController>().FrameFreeze();
+				myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 

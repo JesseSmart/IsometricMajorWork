@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2128175491581410658}
   - component: {fileID: 3139846030841810853}
   - component: {fileID: 6431471074500434220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Bullet Boomerang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8354242457431945685}
   - component: {fileID: 8130755152173912310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

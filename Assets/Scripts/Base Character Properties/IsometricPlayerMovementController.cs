@@ -64,9 +64,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		}
 		ForceFriction();
 
-    }
+		//dodge cooldown
+		dodgeTimer -= Time.deltaTime;
 
-    private void MovementFunction(int playerNum)
+	}
+
+	private void MovementFunction(int playerNum)
     {
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis(horizontalArray[playerNum]);
@@ -98,7 +101,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public void Dodge(float pNum)
     {
-		dodgeTimer -= Time.deltaTime;
 		if (dodgeTimer <= 0)
 		{
 			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 1))

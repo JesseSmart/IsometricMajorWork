@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1715565616270129759}
   - component: {fileID: 4389105954037622286}
   - component: {fileID: 6824459745228521755}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AxeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 7354369706066541326}
   - component: {fileID: 1222546540436089680}
   - component: {fileID: 8198525642285593503}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AxeSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 8955535367804740068}
   - component: {fileID: -253901807980401168}
   - component: {fileID: 8390822540210295258}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Teleport Damage Zone Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

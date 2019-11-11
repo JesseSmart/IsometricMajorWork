@@ -32,6 +32,7 @@ public class ShotgunBlast : MonoBehaviour
 		{
 			TargetKnockBack(other.gameObject);
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			FindObjectOfType<CameraController>().FrameFreeze();
 
 		}
 	}
@@ -48,7 +49,7 @@ public class ShotgunBlast : MonoBehaviour
 	void TargetKnockBack(GameObject opponent)
 	{
 		opponent.GetComponent<Rigidbody2D>().AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * knockBackModifier);
-
+		FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
 	}
 
 }

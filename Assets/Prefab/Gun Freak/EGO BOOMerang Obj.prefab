@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5908542801837220104}
   - component: {fileID: 7887303750778798403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 6895032431438645541}
   - component: {fileID: 703804509088835028}
   - component: {fileID: 6056274711046589510}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO BOOMerang Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

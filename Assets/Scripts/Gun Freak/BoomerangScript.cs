@@ -96,8 +96,7 @@ public class BoomerangScript : MonoBehaviour
 			//deal damage here
 			print("Throw Damage");
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
-			Destroy(gameObject);
-
+			FindObjectOfType<CameraController>().FrameFreeze();
 		}
 	}
 }

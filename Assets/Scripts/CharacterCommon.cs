@@ -145,9 +145,11 @@ public class CharacterCommon : MonoBehaviour
 	{
 		float nowTime = Time.deltaTime;
 		isInvincible = true;
+		gameObject.layer = 8;
 		yield return new WaitForSeconds(dur);
 		isInvincible = false;
 		mySpriteRend.color = Color.white;
+		gameObject.layer = 9;
 	}
 
 	private void FlashEffect(Color flashColor)

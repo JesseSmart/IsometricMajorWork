@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354060021307746776}
   - component: {fileID: 1856213600377422663}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3546761772341302831}
   - component: {fileID: -7556249529606166813}
   - component: {fileID: 3268704444662756910}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO MiniBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

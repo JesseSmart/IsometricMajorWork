@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130920397285766608}
   - component: {fileID: 3948803557371674666}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Minigun Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,5 +46,5 @@ MonoBehaviour:
   myOwner: {fileID: 0}
   bulletObj: {fileID: 7937224718776853481, guid: 8999678a919ad974d97c41666567bf32,
     type: 3}
-  fireRate: 0.05
+  fireRate: 0.1
   duration: 4

@@ -70,6 +70,7 @@ public class VikingUltimateSpin : MonoBehaviour
 			{
 				print("Ult Axe Hit");
 				other.GetComponent<CharacterCommon>().TakeDamage(minAxeDamage, maxAxeDamage, myOwner);
+				FindObjectOfType<CameraController>().FrameFreeze();
 
 				//damage
 				//knockback
@@ -115,4 +116,6 @@ public class VikingUltimateSpin : MonoBehaviour
 			}
 		}
 	}
+
+
 }

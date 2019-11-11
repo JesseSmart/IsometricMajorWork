@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1715565616270129759}
   - component: {fileID: 4389105954037622286}
   - component: {fileID: 6824459745228521755}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AxeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 176538749244123542}
   - component: {fileID: 2397128836815435712}
   - component: {fileID: 4335670917608227907}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Throw Spear Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106332101570454630}
   - component: {fileID: 8519186123395733695}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AxeSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

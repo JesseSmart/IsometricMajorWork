@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3668636925133010959}
   - component: {fileID: 3402102541464687560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9124322866806816976}
   - component: {fileID: 6525996785814612675}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1318393751414943167}
   - component: {fileID: 4656191435467911213}
   - component: {fileID: 846808196058408491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Stun Punch Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

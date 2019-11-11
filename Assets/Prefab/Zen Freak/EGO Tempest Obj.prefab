@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7362482949861723014}
   - component: {fileID: 7362482949861723015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tempest Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7362482950681108265}
   - component: {fileID: 7362482950681108271}
   - component: {fileID: 9178875846923798944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Tempest Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,8 +12,8 @@ public class BulletMinigun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		FindObjectOfType<CameraController>().CamShake(0.05f, 0.02f);
+	}
 
     // Update is called once per frame
     void Update()
@@ -27,6 +27,7 @@ public class BulletMinigun : MonoBehaviour
 		if (other.gameObject.GetComponent<CharacterCommon>() && other.gameObject != myOwner && !other.gameObject.GetComponent<BulletMinigun>())
 		{
 			other.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			FindObjectOfType<CameraController>().FrameFreeze();
 			Destroy(gameObject);
 		}
 	}

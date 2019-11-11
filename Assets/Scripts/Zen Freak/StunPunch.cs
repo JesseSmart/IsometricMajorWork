@@ -29,6 +29,11 @@ public class StunPunch : MonoBehaviour
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>() && other.gameObject != myOwner && canStun)
 		{
+			other.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			FindObjectOfType<CameraController>().FrameFreeze();
+
+			FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
+
 			StartCoroutine(ApplyStun(other.gameObject));
 		}
 	}

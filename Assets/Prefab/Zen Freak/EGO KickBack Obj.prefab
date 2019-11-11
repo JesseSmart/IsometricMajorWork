@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823481209076661821}
   - component: {fileID: 1485802876928200620}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3964634151747668718}
   - component: {fileID: 6224748861048864154}
   - component: {fileID: 7054582110303845060}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO KickBack Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

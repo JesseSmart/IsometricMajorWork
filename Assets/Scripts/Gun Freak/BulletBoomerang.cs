@@ -12,8 +12,8 @@ public class BulletBoomerang : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
+	}
 
     // Update is called once per frame
     void Update()
@@ -26,6 +26,8 @@ public class BulletBoomerang : MonoBehaviour
 		if (other.gameObject.GetComponent<CharacterCommon>() && other.gameObject != myOwner && !other.gameObject.GetComponent<BoomerangScript>())
 		{
 			other.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			FindObjectOfType<CameraController>().FrameFreeze();
+			FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
 			Destroy(gameObject);
 		}
 	}

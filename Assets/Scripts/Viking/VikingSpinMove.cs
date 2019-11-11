@@ -56,9 +56,12 @@ public class VikingSpinMove : MonoBehaviour
 		{
             print("Spin Hit");
             other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			FindObjectOfType<CameraController>().FrameFreeze();
 			//damage
 			//knockback
 		}
 	}
+
+
 	
 }

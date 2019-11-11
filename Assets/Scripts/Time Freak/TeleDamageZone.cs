@@ -56,6 +56,7 @@ public class TeleDamageZone : MonoBehaviour
 	{
 		print("damage pre");
 		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+		//FindObjectOfType<CameraController>().FrameFreeze();
 		yield return new WaitForSeconds(damageIntervals);
 		damageHasRun = false;
 	}

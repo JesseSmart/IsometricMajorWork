@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8075494636258105943}
   - component: {fileID: 7500228286298389729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7211014904114213629}
   - component: {fileID: 2013108849814377366}
   - component: {fileID: 4965447515382582834}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Viking Spin Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

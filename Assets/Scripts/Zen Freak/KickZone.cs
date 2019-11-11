@@ -56,6 +56,8 @@ public class KickZone : MonoBehaviour
 	{
 		print("Knock enemy back = " + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * knockBackModifier);
 		StartCoroutine(KnockBack(opponent, 1));
+		FindObjectOfType<CameraController>().FrameFreeze();
+
 	}
 
 	IEnumerator CanKnockTimer()

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4838496644738318826}
   - component: {fileID: 3861716801003945299}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: orbiterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8373082555462118399}
   - component: {fileID: 3821001716647112459}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: orbiterSprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2608894670800869985}
   - component: {fileID: 7395416428739127874}
   - component: {fileID: 3801213439553407537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Orbit Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

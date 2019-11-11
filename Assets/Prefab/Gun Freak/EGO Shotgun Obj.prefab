@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5488034743198855327}
   - component: {fileID: 8121846103223845160}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6894596647591086085}
   - component: {fileID: 2861537244234170560}
   - component: {fileID: 8726691434757488922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EGO Shotgun Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
