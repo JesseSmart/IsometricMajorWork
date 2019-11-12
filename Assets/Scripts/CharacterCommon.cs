@@ -157,7 +157,7 @@ public class CharacterCommon : MonoBehaviour
 		//print("FLASH... ahahhhhhhhh");
 		//print(Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
 		mySpriteRend.color = Color.Lerp(Color.white, flashColor, Mathf.Abs(Mathf.Cos(Time.time * 5 * Mathf.PI)));
-		print(mySpriteRend);
+		//print(mySpriteRend);
 	}
 
 }

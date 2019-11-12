@@ -170,6 +170,7 @@ public class VikingController : MonoBehaviour
     }
 
 
+
 	void PlayClip(string clipName)
 	{
 		anim.Play(clipName);

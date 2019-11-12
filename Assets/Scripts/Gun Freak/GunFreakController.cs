@@ -23,10 +23,14 @@ public class GunFreakController : MonoBehaviour
 
 	private float shotgunOffset = 1;
 
+	Animator anim;
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+				anim = GetComponentInChildren<Animator>();
 
 		SetStats();
 	}
@@ -36,7 +40,7 @@ public class GunFreakController : MonoBehaviour
 	{
 		Cooldowns();
 		Inputer();
-
+		//print(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
 	}
 
 	private void SetStats()
@@ -83,6 +87,42 @@ public class GunFreakController : MonoBehaviour
 
 			GameObject shotBlast = Instantiate(shotgunObj, fakePos, myRot);
 			shotBlast.GetComponent<ShotgunBlast>().myOwner = gameObject;
+
+			if (myDir.x >= 0)
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+
+				}
+				else
+				{
+					print("RIGHT");
+
+				}
+			}
+			else
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+
+				}
+				else
+				{
+					print("LEFT");
+
+				}
+			}
 
 			myClass.moveATimer = myClass.moveACooldown;
 		}
@@ -153,6 +193,13 @@ public class GunFreakController : MonoBehaviour
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 	}
 
+
+
+	void PlayClip(string clipName)
+	{
+		anim.Play(clipName);
+		GetComponent<IsometricPlayerMovementController>().DisableAnims(anim.GetCurrentAnimatorClipInfo(0).Length);
+	}
 
 	IEnumerator castDelay(float dur)
 	{
