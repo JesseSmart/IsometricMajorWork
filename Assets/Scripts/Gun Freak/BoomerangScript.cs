@@ -24,6 +24,8 @@ public class BoomerangScript : MonoBehaviour
 	public GameObject bulletObj;
 	private bool hasFired;
 	public float recoilForce;
+
+	private bool isReturningHasRun;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +42,11 @@ public class BoomerangScript : MonoBehaviour
 		else
 		{
 			outwardFlightDuration -= Time.deltaTime;
-			if (outwardFlightDuration <= 0)
+			if (outwardFlightDuration <= 0 && !isReturningHasRun)
 			{
 				isReturning = true;
+				rbody.velocity = Vector2.zero;
+				isReturningHasRun = true;
 			}
 		}
 
@@ -56,6 +60,7 @@ public class BoomerangScript : MonoBehaviour
 			bullet.GetComponent<BulletBoomerang>().myOwner = myOwner;
 
 			rbody.AddForce(Vector2.down * recoilForce, ForceMode2D.Force);
+			isReturning = true;
 		}
 
 	}
@@ -66,6 +71,9 @@ public class BoomerangScript : MonoBehaviour
 		float dist = Vector2.Distance(transform.position, myOwner.transform.position);
 		rbody.AddForce(dir.normalized * (retForce * (1 / Mathf.Sqrt(Mathf.Sqrt(dist)))));
 		
+		
+
+
 		//rbody.velocity *= 0;
 		//transform.position = Vector3.Slerp(transform.position, myOwner.transform.position, Time.deltaTime * 1/dist);
 		CheckCatch(player);
@@ -82,7 +90,7 @@ public class BoomerangScript : MonoBehaviour
         cantCatchTimer -= Time.deltaTime;
         if (cantCatchTimer <= 0)
         {
-            if (Vector2.Distance(player.transform.position, transform.position) < 1)
+            if (Vector2.Distance(player.transform.position, transform.position) < 1.5f)
             {
                 Destroy(gameObject);
             }
@@ -96,7 +104,7 @@ public class BoomerangScript : MonoBehaviour
 			//deal damage here
 			print("Throw Damage");
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
-			FindObjectOfType<CameraController>().FrameFreeze();
+			//FindObjectOfType<CameraController>().FrameFreeze();
 		}
 	}
 }

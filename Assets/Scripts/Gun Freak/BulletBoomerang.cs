@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletBoomerang : MonoBehaviour
 {
 	public GameObject myOwner;
-	private float speed = 10;
+	private float speed = 15;
 
 	public float minDamage;
 	public float maxDamage;
