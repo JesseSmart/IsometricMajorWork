@@ -44,7 +44,7 @@ public class DeathBoxBehaviour : MonoBehaviour
     {
 
 
-		if (master.roundTimer / master.duration > 0.5f)
+		if (master.roundTimer / master.duration > 0.6f)
 		{
 			transform.localPosition = Vector3.Slerp(master.gameObject.transform.position, startPos , master.roundTimer / master.duration);
 
@@ -53,7 +53,7 @@ public class DeathBoxBehaviour : MonoBehaviour
 
 
 
-	private void OnTriggerStay2D(Collider2D other)
+	private void OnCollisionStay2D(Collider2D other)
 	{
 		if (other.gameObject.GetComponent<CharacterCommon>())
 		{

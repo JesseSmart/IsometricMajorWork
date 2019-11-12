@@ -30,6 +30,7 @@ public class BoomerangScript : MonoBehaviour
     void Start()
     {
 		cantCatchTimer = cantCatchDuration;
+		Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame
@@ -90,7 +91,7 @@ public class BoomerangScript : MonoBehaviour
         cantCatchTimer -= Time.deltaTime;
         if (cantCatchTimer <= 0)
         {
-            if (Vector2.Distance(player.transform.position, transform.position) < 1.5f)
+            if (Vector2.Distance(player.transform.position, transform.position) < 1f)
             {
                 Destroy(gameObject);
             }
