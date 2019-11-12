@@ -1,0 +1,1672 @@
+fileFormatVersion: 2
+guid: 7a42d810df9d31148a20cf1c208a15b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1304877706805989842
+    second: Complete Level Tile Sheet 1_0
+  - first:
+      213: 4084484557253194581
+    second: Complete Level Tile Sheet 1_1
+  - first:
+      213: -1543119510738465187
+    second: Complete Level Tile Sheet 1_2
+  - first:
+      213: 2902806087075108822
+    second: Complete Level Tile Sheet 1_3
+  - first:
+      213: -367661716762037024
+    second: Complete Level Tile Sheet 1_4
+  - first:
+      213: -3991189804686381820
+    second: Complete Level Tile Sheet 1_5
+  - first:
+      213: -4084606139260680988
+    second: Complete Level Tile Sheet 1_6
+  - first:
+      213: 643421256714610159
+    second: Complete Level Tile Sheet 1_7
+  - first:
+      213: -9164390425803291094
+    second: Complete Level Tile Sheet 1_8
+  - first:
+      213: 6732989873748468218
+    second: Complete Level Tile Sheet 1_9
+  - first:
+      213: -8065436975872783022
+    second: Complete Level Tile Sheet 1_10
+  - first:
+      213: -9211560548596303788
+    second: Complete Level Tile Sheet 1_11
+  - first:
+      213: -6983316900566951900
+    second: Complete Level Tile Sheet 1_12
+  - first:
+      213: -4847700546269024482
+    second: Complete Level Tile Sheet 1_13
+  - first:
+      213: 7662184550247478596
+    second: Complete Level Tile Sheet 1_14
+  - first:
+      213: 5951719062691543554
+    second: Complete Level Tile Sheet 1_15
+  - first:
+      213: -1223567285030593216
+    second: Complete Level Tile Sheet 1_16
+  - first:
+      213: 2726366014291311181
+    second: Complete Level Tile Sheet 1_17
+  - first:
+      213: 6056989170711360209
+    second: Complete Level Tile Sheet 1_18
+  - first:
+      213: 2260073008731961505
+    second: Complete Level Tile Sheet 1_19
+  - first:
+      213: 6916433537341227787
+    second: Complete Level Tile Sheet 1_20
+  - first:
+      213: 2369632347377212904
+    second: Complete Level Tile Sheet 1_21
+  - first:
+      213: -796971860641886306
+    second: Complete Level Tile Sheet 1_22
+  - first:
+      213: -2418731994410189897
+    second: Complete Level Tile Sheet 1_23
+  - first:
+      213: 1691589296269364156
+    second: Complete Level Tile Sheet 1_24
+  - first:
+      213: 3900097607925991473
+    second: Complete Level Tile Sheet 1_25
+  - first:
+      213: -8662074571261322200
+    second: Complete Level Tile Sheet 1_26
+  - first:
+      213: -2331730593048600682
+    second: Complete Level Tile Sheet 1_27
+  - first:
+      213: -5172080362356740889
+    second: Complete Level Tile Sheet 1_28
+  - first:
+      213: 3010905424821645473
+    second: Complete Level Tile Sheet 1_29
+  - first:
+      213: -2545088968765033794
+    second: Complete Level Tile Sheet 1_30
+  - first:
+      213: 4443859337995604388
+    second: Complete Level Tile Sheet 1_31
+  - first:
+      213: 2855724793046235934
+    second: Complete Level Tile Sheet 1_32
+  - first:
+      213: 3569726727440656257
+    second: Complete Level Tile Sheet 1_33
+  - first:
+      213: 2662167423194176838
+    second: Complete Level Tile Sheet 1_34
+  - first:
+      213: 2062152181346216554
+    second: Complete Level Tile Sheet 1_35
+  - first:
+      213: 3435486794803323690
+    second: Complete Level Tile Sheet 1_36
+  - first:
+      213: 6494465361315586407
+    second: Complete Level Tile Sheet 1_37
+  - first:
+      213: 6121802869586426871
+    second: Complete Level Tile Sheet 1_38
+  - first:
+      213: 7709351457255125507
+    second: Complete Level Tile Sheet 1_39
+  - first:
+      213: 4101783423448055411
+    second: Complete Level Tile Sheet 1_40
+  - first:
+      213: -4255432875473885681
+    second: Complete Level Tile Sheet 1_41
+  - first:
+      213: 1245585007206378127
+    second: Complete Level Tile Sheet 1_42
+  - first:
+      213: 5576112554572660499
+    second: Complete Level Tile Sheet 1_43
+  - first:
+      213: 641815250006608163
+    second: Complete Level Tile Sheet 1_44
+  - first:
+      213: -139293749302896330
+    second: Complete Level Tile Sheet 1_45
+  - first:
+      213: -1623480235304455601
+    second: Complete Level Tile Sheet 1_46
+  - first:
+      213: -6875198316360442720
+    second: Complete Level Tile Sheet 1_47
+  - first:
+      213: 2663776699383351518
+    second: Complete Level Tile Sheet 1_48
+  - first:
+      213: -8631979280544515237
+    second: Complete Level Tile Sheet 1_49
+  - first:
+      213: -6498412213823955966
+    second: Complete Level Tile Sheet 1_50
+  - first:
+      213: -6414671223125179044
+    second: Complete Level Tile Sheet 1_51
+  - first:
+      213: -5229593044853200435
+    second: Complete Level Tile Sheet 1_52
+  - first:
+      213: 7582182607376468841
+    second: Complete Level Tile Sheet 1_53
+  - first:
+      213: 5294482445028422768
+    second: Complete Level Tile Sheet 1_54
+  - first:
+      213: -5426026029746870315
+    second: Complete Level Tile Sheet 1_55
+  - first:
+      213: -2101945374643302988
+    second: Complete Level Tile Sheet 1_56
+  - first:
+      213: 7520442239128683908
+    second: Complete Level Tile Sheet 1_57
+  - first:
+      213: 6816567094811466622
+    second: Complete Level Tile Sheet 1_58
+  - first:
+      213: 1863658257604991750
+    second: Complete Level Tile Sheet 1_59
+  - first:
+      213: -2445147495400138633
+    second: Complete Level Tile Sheet 1_60
+  - first:
+      213: -3969592253192792445
+    second: Complete Level Tile Sheet 1_61
+  - first:
+      213: 5690692703056876500
+    second: Complete Level Tile Sheet 1_62
+  - first:
+      213: 1329692541185141416
+    second: Complete Level Tile Sheet 1_63
+  - first:
+      213: -8241631237355215055
+    second: Complete Level Tile Sheet 1_64
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 31
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 512
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865e5cb780f19044c93e403da91aeb8b
+      internalID: -1304877706805989842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 512
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a048429dd8c8645a8895f576018100
+      internalID: 4084484557253194581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 512
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebad9ebf2e28cad46bfa25b578ad4522
+      internalID: -1543119510738465187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 512
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed165ca6a7360d342bc620c7412888bf
+      internalID: 2902806087075108822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 513
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4a01c665c314a4cba6b58717c7f24c
+      internalID: -367661716762037024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 513
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271e019dde98754499d6adb33fbbeaca
+      internalID: -3991189804686381820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 513
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba95d6b75ae66f44b6e9587c3b89184
+      internalID: -4084606139260680988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 513
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3bb773504cf7c43b8ad4364e805160
+      internalID: 643421256714610159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 482
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c3dd035608cb043a5fb547d28108b9
+      internalID: -9164390425803291094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 482
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4450b1bda8483b94f963fda4e531a52e
+      internalID: 6732989873748468218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 482
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab39ebf847c37544fb428f146bc9abec
+      internalID: -8065436975872783022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 483
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c595e96828f776439de76b20aaf270d
+      internalID: -9211560548596303788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 483
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b32681568bee640b1827eadd8e3b55
+      internalID: -6983316900566951900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 483
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5eb8f4f54ba764d94b70a3297eb796
+      internalID: -4847700546269024482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 483
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a807b4a10b3b144c876e91e6c52cfc3
+      internalID: 7662184550247478596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 451
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e21fd3663b26b645b73bfc6d1ebeec8
+      internalID: 5951719062691543554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 449
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1af09e2133481d488632bf200c068fe
+      internalID: -1223567285030593216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 450
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839725c08d747084daa869c5807baa46
+      internalID: 2726366014291311181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 450
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00bf81c993db41469197d8f98c44c28
+      internalID: 6056989170711360209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 453
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897ceb37dc9f342408b1641d51c72bc0
+      internalID: 2260073008731961505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 415
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3b1016dce0e084a853ccdfc9182735
+      internalID: 6916433537341227787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 415
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7030de669120be43b648aeb4922fb3f
+      internalID: 2369632347377212904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 415
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786a6484a94d4e34eaf33cf985970793
+      internalID: -796971860641886306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 415
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db82d240c13d78b45b901a285cabdba9
+      internalID: -2418731994410189897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 415
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae171ce81c14a24c96e2a8d2b2b6790
+      internalID: 1691589296269364156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 415
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cdc70d584c390428a07fd85f087ee9
+      internalID: 3900097607925991473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 380
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a7e730f3d527a4a941e95b3329a653
+      internalID: -8662074571261322200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 380
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4d6a874412daa4994e917a82f241cb
+      internalID: -2331730593048600682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 380
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f7f491c72e6d84cacbc5f610ffa561
+      internalID: -5172080362356740889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 380
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c265f593e7719d4786668e07fa560d1
+      internalID: 3010905424821645473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 385
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c165e57f90ac54e9049a357e25de58
+      internalID: -2545088968765033794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_31
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 385
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebb0d71e8978eb42a4dad452ee086c2
+      internalID: 4443859337995604388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 347
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f888b49d198683e4d8c15d13ad027556
+      internalID: 2855724793046235934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 347
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb96e41951ed034398b40522dfe0458
+      internalID: 3569726727440656257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_34
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 347
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cf63acc4bea1b43aa6e76411c54162
+      internalID: 2662167423194176838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_35
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 347
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ca09765b4269e4c83d8847fe2ea7de
+      internalID: 2062152181346216554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_36
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 352
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8898ca81e32e9f6449d926dca624741a
+      internalID: 3435486794803323690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_37
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 352
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ec77f6c9e7cb743ba8bd05e46c7237
+      internalID: 6494465361315586407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_38
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 311
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73636d4f17dda3d45b001a8df6475abc
+      internalID: 6121802869586426871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_39
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 311
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087153c70536f1642b6e99e37e4cc114
+      internalID: 7709351457255125507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_40
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 311
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4971da09e8770443be677f33f009d03
+      internalID: 4101783423448055411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_41
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 311
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3422c4b7caafa224da81863ff60fa240
+      internalID: -4255432875473885681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_42
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 314
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e71fe9e4d032f4f935dd19524fc243
+      internalID: 1245585007206378127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_43
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 314
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7c5eea011a666448c6b40294796591
+      internalID: 5576112554572660499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_44
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 275
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a882b465b3a5c7c4b8490ff78882e6fe
+      internalID: 641815250006608163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_45
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 274
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaa57935fc3a964cadb166c9e202b97
+      internalID: -139293749302896330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_46
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 274
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35a20a62b8782f4ab12e609ed633e88
+      internalID: -1623480235304455601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_47
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 274
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be97bc2c66d58e74ba16af1aa2e3acf7
+      internalID: -6875198316360442720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_48
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 274
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaf068b96cefe74ebc159185f0a12e0
+      internalID: 2663776699383351518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_49
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 274
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2d2b10023fe59439f35db2e56a6d72
+      internalID: -8631979280544515237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_50
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 241
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743b7a96f9342c24ba1bec61e4a0a391
+      internalID: -6498412213823955966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 241
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296aa7f8e34aebe4384bcbf4f27579c9
+      internalID: -6414671223125179044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_52
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 241
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391cc5de6b9846e4086a4e4901bc4159
+      internalID: -5229593044853200435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 241
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8e9a6354369d14589b059ff65d4984
+      internalID: 7582182607376468841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_54
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 240
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbff0dfc56351144abfae0e6a47e974
+      internalID: 5294482445028422768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_55
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 240
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7db76812ee2ab44ae02bf2f5e547df
+      internalID: -5426026029746870315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_56
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 209
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbf8328b0b7c8b48b7270e1349144b2
+      internalID: -2101945374643302988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_57
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 209
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6e0c56ffc39684e82883480b7e3219
+      internalID: 7520442239128683908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_58
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 209
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fb0d67c22b640459234c0a73556a05
+      internalID: 6816567094811466622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_59
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 208
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fa3cfdac1390c4ca4dcb0a90f5dcd1
+      internalID: 1863658257604991750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_60
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 208
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbab43c3e5f14345ad0d7461113c88c
+      internalID: -2445147495400138633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_61
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 179
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cb45600e1ac6442b61f53c595c070f
+      internalID: -3969592253192792445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_62
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 179
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a64844f335d32f42b29e0d463c7c35b
+      internalID: 5690692703056876500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_63
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 179
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b28656861c25f40a74d9d67f239264
+      internalID: 1329692541185141416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete Level Tile Sheet 1_64
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 177
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f01f677d825614c9870b7250c941a5
+      internalID: -8241631237355215055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b4a20272dd0b60846bd3f24305e97e29
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
