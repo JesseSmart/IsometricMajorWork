@@ -25,14 +25,26 @@ public class ThrowAxe : MonoBehaviour
 	public float endPullDist;
 
     private LineRenderer lineR;
+
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip acHitTerrain;
+	//public AudioClip acHitTarget;
+	public AudioClip acChainYank;
+
+
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         flightTimer = maxFlightDuration;
         lineR = GetComponent<LineRenderer>();
-        
-    }
+		audio = GetComponent<AudioSource>();
+
+		audio.clip = acChainYank;
+		audio.loop = true;
+		audio.Play();
+	}
 
     // Update is called once per frame
     void Update()
@@ -42,7 +54,7 @@ public class ThrowAxe : MonoBehaviour
 
 		//only run if not hit
         flightTimer -= Time.deltaTime;
-        if (flightTimer <= 0)
+        if (flightTimer <= 0) //add a check to make sure the player is not currently flying ( && axeHasHit == false) or the existing stuckToXYZ
         {
             Destroy(gameObject);
         }
@@ -98,9 +110,13 @@ public class ThrowAxe : MonoBehaviour
 				myTarget = other.gameObject;
                 stuckToTarget = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
-
                 //Freeze player movement on hit
                 myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+				//audio.PlayOneShot(acHitTarget);
+				//audio.clip = acChainYank;
+				//audio.PlayDelayed(acHitTarget.length);
+				//audio.loop = true;
 			}
             else if (other.gameObject != myOwner)
             {
@@ -109,10 +125,15 @@ public class ThrowAxe : MonoBehaviour
 				stuckToTerrain = true;
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-                //Freeze player movement on hit
-                myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+				//Freeze player movement on hit
+				myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 
-            }
+				audio.PlayOneShot(acHitTerrain);
+				audio.clip = acChainYank;
+				audio.PlayDelayed(acHitTerrain.length);
+				audio.loop = true;
+
+			}
 
 
         }
@@ -141,11 +162,15 @@ public class ThrowAxe : MonoBehaviour
 
 		if (dist <= endPullDist)
 		{
-            //Add force outwards for bounce off effect
-            myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+			//Add force outwards for bounce off effect
+			myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+			myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
-            Destroy(gameObject);
+			Destroy(gameObject);
+		}
+		else
+		{
+		
 		}
 	}
 

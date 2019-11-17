@@ -13,12 +13,16 @@ public class VikingSpinMove : MonoBehaviour
 
     private Rigidbody2D rbody;
 	private float rotationleft = 360;
+
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip acAxeHit;
 	
 
 	// Start is called before the first frame update
 	void Start()
     {
-		
+		audio = GetComponent<AudioSource>();
 		transform.Rotate(0, 0, -180, Space.World);
 		Destroy(gameObject, duration);
 	}
@@ -57,6 +61,7 @@ public class VikingSpinMove : MonoBehaviour
             print("Spin Hit");
             other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 			FindObjectOfType<CameraController>().FrameFreeze();
+			audio.PlayOneShot(acAxeHit);
 			//damage
 			//knockback
 		}

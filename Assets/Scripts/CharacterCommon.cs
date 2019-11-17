@@ -22,10 +22,14 @@ public class CharacterCommon : MonoBehaviour
 
 	public SpriteRenderer mySpriteRend;
 	public Color flashCol = Color.red;
+
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip[] acHurtAudios;
     // Start is called before the first frame update
     void Start()
     {
-
+		audio = GetComponent<AudioSource>();
 		myClass.myHealth = characterStats.health;
 		pNumIndic.text = "P" +  (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
     }
@@ -77,7 +81,7 @@ public class CharacterCommon : MonoBehaviour
 			if (myClass.myHealth >= 0)
 			{
 				myClass.myHealth -= damage;
-
+				HurtAudio();
 
 			}
 			else if (myClass.myHealth < 0)
@@ -95,12 +99,14 @@ public class CharacterCommon : MonoBehaviour
 					//alive
 					print("Alive");
 					myClass.myHealth -= damage;
+					HurtAudio();
 
 				}
 				else
 				{
 					//dead
 					Death(dealerOwner);
+					//Death Audio
 				}
 
 			}
@@ -158,6 +164,11 @@ public class CharacterCommon : MonoBehaviour
 		//print(Mathf.Abs(Mathf.Cos(Time.time * 3 * Mathf.PI)));
 		mySpriteRend.color = Color.Lerp(Color.white, flashColor, Mathf.Abs(Mathf.Cos(Time.time * 5 * Mathf.PI)));
 		//print(mySpriteRend);
+	}
+
+	void HurtAudio()
+	{
+		audio.PlayOneShot(acHurtAudios[Random.Range(0, acHurtAudios.Length)]);
 	}
 
 }

@@ -25,7 +25,22 @@ public class VikingController : MonoBehaviour
 
 	Animator anim;
 
-
+	//AUDIO
+	private AudioSource audio;
+	// Ability Use
+	public AudioClip acAxeSpin;
+	//public AudioClip acAxeThrow;
+	//public AudioClip acAxeUlt;
+		//Cooldown Ready
+	public AudioClip acBasicReady;
+	public AudioClip acMovementReady;
+	public AudioClip acUltimateReady;
+	public AudioClip acBrinkYell;
+			//Cooldown Ready Audio Play Bools
+	private bool basicAudPlayable = false;
+	private bool movementAudPlayable = false;
+	private bool ultimateAudPlayable = false;
+	
 
 
 	// Start is called before the first frame update
@@ -33,7 +48,7 @@ public class VikingController : MonoBehaviour
     {
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		anim = GetComponentInChildren<Animator>();
-		
+		audio = GetComponent<AudioSource>();
 
 		SetStats();
     }
@@ -69,12 +84,13 @@ public class VikingController : MonoBehaviour
         if (myClass.basicATimer <= 0)
         {
 			PlayClip("Basic Ab");
-
+			audio.PlayOneShot(acAxeSpin);
 			print(pNum + " Player: DO BASIC");
 
             GameObject spinObj = Instantiate(spinMoveObj, transform.position, transform.rotation);
             spinObj.GetComponent<VikingSpinMove>().myOwner = gameObject;
 
+			basicAudPlayable = true;
             myClass.basicATimer = myClass.basicACooldown;
         }
         else
@@ -95,6 +111,8 @@ public class VikingController : MonoBehaviour
             
             thrownAxe.GetComponent<ThrowAxe>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
             print(gameObject.GetComponent<IsometricPlayerMovementController>().currentDir);
+
+			movementAudPlayable = true;
             myClass.moveATimer = myClass.moveACooldown;
         }
         else
@@ -114,6 +132,7 @@ public class VikingController : MonoBehaviour
 			GameObject ultAxe = Instantiate(ultimateAxeObj, transform.position, transform.rotation);
 			ultAxe.GetComponent<VikingUltimateSpin>().myOwner = gameObject;
 
+			ultimateAudPlayable = true;
 			myClass.ultATimer = myClass.ultACooldown;
         }
         else
@@ -127,6 +146,7 @@ public class VikingController : MonoBehaviour
 		if (GetComponent<CharacterCommon>().myClass.myHealth < 0)
 		{
 			GetComponent<IsometricPlayerMovementController>().currentSpeed *= 2;
+			audio.PlayOneShot(acBrinkYell);
 			passiveHasRun = true;
 		}
     }
@@ -167,7 +187,25 @@ public class VikingController : MonoBehaviour
         sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
         sldMovementA.value = 1 -(myClass.moveATimer / myClass.moveACooldown);
         sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
-    }
+
+		if (myClass.basicATimer <= 0 && basicAudPlayable)
+		{
+			audio.PlayOneShot(acBasicReady);
+			basicAudPlayable = false;
+		}
+
+		if (myClass.moveATimer <= 0 && movementAudPlayable)
+		{
+			audio.PlayOneShot(acMovementReady);
+			movementAudPlayable = false;
+		}
+
+		if (myClass.ultATimer <= 0 && ultimateAudPlayable)
+		{
+			audio.PlayOneShot(acUltimateReady);
+			ultimateAudPlayable = false;
+		}
+	}
 
 
 

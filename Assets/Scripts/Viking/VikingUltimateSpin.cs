@@ -20,10 +20,14 @@ public class VikingUltimateSpin : MonoBehaviour
 
 	private LineRenderer lineR;
 
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip acAxeHit;
 
 	// Start is called before the first frame update
 	void Start()
     {
+		audio = GetComponent<AudioSource>();
 		transform.position = new Vector3(myOwner.transform.position.x, myOwner.transform.position.y + axeRange, myOwner.transform.position.z);
 		//lineR = GetComponent<LineRenderer>();
 		transform.SetParent(myOwner.transform, true);
@@ -71,6 +75,7 @@ public class VikingUltimateSpin : MonoBehaviour
 				print("Ult Axe Hit");
 				other.GetComponent<CharacterCommon>().TakeDamage(minAxeDamage, maxAxeDamage, myOwner);
 				FindObjectOfType<CameraController>().FrameFreeze();
+				audio.PlayOneShot(acAxeHit);
 
 				//damage
 				//knockback
