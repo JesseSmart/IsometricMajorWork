@@ -19,9 +19,16 @@ public class MinigunShooter : MonoBehaviour
 	private float minigunOffset = 1;
 
 	private Vector2 vel;
+
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip acFiring;
+	public AudioClip acSpinUp;
+
     // Start is called before the first frame update
     void Start()
     {
+		audio = GetComponent<AudioSource>();
 		canFire = true;
 		StartCoroutine(FireBullet());
 		StartCoroutine(DurationTimer());

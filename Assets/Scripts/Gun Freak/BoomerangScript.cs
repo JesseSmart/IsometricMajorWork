@@ -26,11 +26,20 @@ public class BoomerangScript : MonoBehaviour
 	public float recoilForce;
 
 	private bool isReturningHasRun;
+
+	//AUDIO
+	private AudioSource audio;
+	public AudioClip acShoot;
+	public AudioClip acBoomerangHit;
+	public AudioClip acFlying;
     // Start is called before the first frame update
     void Start()
     {
 		cantCatchTimer = cantCatchDuration;
 		Destroy(gameObject, 3f);
+
+		audio = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -105,6 +114,7 @@ public class BoomerangScript : MonoBehaviour
 			//deal damage here
 			print("Throw Damage");
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
+			audio.PlayOneShot(acBoomerangHit);
 			//FindObjectOfType<CameraController>().FrameFreeze();
 		}
 	}

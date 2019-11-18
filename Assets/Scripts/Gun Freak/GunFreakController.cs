@@ -25,12 +25,29 @@ public class GunFreakController : MonoBehaviour
 
 	Animator anim;
 
+	//AUDIO
+	private AudioSource audio;
+	// Ability Use
+	//public AudioClip acAxeSpin;
+	//public AudioClip acAxeThrow;
+	//public AudioClip acAxeUlt;
+	//Cooldown Ready
+	public AudioClip acBasicReady;
+	public AudioClip acMovementReady;
+	public AudioClip acUltimateReady;
+	public AudioClip acPassiveKill;
+	//Cooldown Ready Audio Play Bools
+	private bool basicAudPlayable = false;
+	private bool movementAudPlayable = false;
+	private bool ultimateAudPlayable = false;
+
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
-				anim = GetComponentInChildren<Animator>();
+		anim = GetComponentInChildren<Animator>();
+		audio = GetComponent<AudioSource>();
 
 		SetStats();
 	}
@@ -67,6 +84,7 @@ public class GunFreakController : MonoBehaviour
 
 			boomerang.GetComponent<BoomerangScript>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
 
+			basicAudPlayable = true;
 			myClass.basicATimer = myClass.basicACooldown;
 		}
 		else
@@ -124,6 +142,7 @@ public class GunFreakController : MonoBehaviour
 				}
 			}
 
+			movementAudPlayable = true;
 			myClass.moveATimer = myClass.moveACooldown;
 		}
 		else
@@ -140,7 +159,7 @@ public class GunFreakController : MonoBehaviour
 			GameObject minigun = Instantiate(minigunObj, transform.position, transform.rotation);
 			minigun.GetComponent<MinigunShooter>().myOwner = gameObject;
 
-
+			ultimateAudPlayable = true;
 			myClass.ultATimer = myClass.ultACooldown;
 		}
 		else
@@ -153,6 +172,7 @@ public class GunFreakController : MonoBehaviour
 	{
 		myClass.basicATimer = 0;
 		myClass.moveATimer = 0;
+		audio.PlayOneShot(acPassiveKill);
 	}
 
 	private void Inputer()
@@ -191,6 +211,24 @@ public class GunFreakController : MonoBehaviour
 		sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		sldMovementA.value = 1 - (myClass.moveATimer / myClass.moveACooldown);
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
+		if (myClass.basicATimer <= 0 && basicAudPlayable)
+		{
+			audio.PlayOneShot(acBasicReady);
+			basicAudPlayable = false;
+		}
+
+		if (myClass.moveATimer <= 0 && movementAudPlayable)
+		{
+			audio.PlayOneShot(acMovementReady);
+			movementAudPlayable = false;
+		}
+
+		if (myClass.ultATimer <= 0 && ultimateAudPlayable)
+		{
+			audio.PlayOneShot(acUltimateReady);
+			ultimateAudPlayable = false;
+		}
 	}
 
 
