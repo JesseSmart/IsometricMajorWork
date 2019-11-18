@@ -54,7 +54,7 @@ public class ThrowAxe : MonoBehaviour
 
 		//only run if not hit
         flightTimer -= Time.deltaTime;
-        if (flightTimer <= 0) //add a check to make sure the player is not currently flying ( && axeHasHit == false) or the existing stuckToXYZ
+        if (flightTimer <= 0 && (!stuckToTarget && !stuckToTerrain)) //add a check to make sure the player is not currently flying ( && axeHasHit == false) or the existing stuckToXYZ
         {
             Destroy(gameObject);
         }
