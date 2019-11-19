@@ -8,6 +8,9 @@ public class MidPointManager : MonoBehaviour
 	public GameObject[] scorePanels;
 	private int playerCount;
 	private MatchManager matchManager;
+
+	public int[] sceneBuildNumArray;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +57,8 @@ public class MidPointManager : MonoBehaviour
 
 		if (!loaded)
 		{
-			SceneManager.LoadScene("JesseTesting");
+			SceneManager.LoadScene(sceneBuildNumArray[Random.Range(0, sceneBuildNumArray.Length)]);
+			//could use corutine to generate number and check to make sure its not the same scene, then continue to generate. (use "while")
 		}
 
 	}
