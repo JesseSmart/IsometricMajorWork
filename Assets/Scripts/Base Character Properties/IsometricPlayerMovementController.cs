@@ -107,36 +107,44 @@ public class IsometricPlayerMovementController : MonoBehaviour
 			{
 				gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
 				gameObject.GetComponent<CharacterCommon>().RunInvins(invinsDur);
+
+
+
 				print("Dodge");
-				//Raycast
 				Vector3 dodgeResult = Vector3.zero;
 				Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
-				RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, lastDir, dodgeRange);
-				bool teleComplete = false;
 
-				if (!teleComplete && hits.Length > 1)
-				{
-					print(hits[1].collider.gameObject.name);
-					if (!hits[1].collider.gameObject.GetComponent<CharacterCommon>())
-					{
-						print("Interupted tele");
+				#region Old Tele
+				//RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, lastDir, dodgeRange);
+				//bool teleComplete = false;
 
-						dodgeResult = hits[1].transform.position;
-						teleComplete = true;
-					}
-				}
+				//if (!teleComplete && hits.Length > 1)
+				//{
+				//	print(hits[1].collider.gameObject.name);
+				//	if (!hits[1].collider.gameObject.GetComponent<CharacterCommon>())
+				//	{
+				//		print("Interupted tele");
 
-				
+				//		dodgeResult = hits[1].transform.position;
+				//		teleComplete = true;
+				//	}
+				//}
 
-				if (!teleComplete)
-				{
-					//print("No hit tele");
 
-					dodgeResult = transform.position + (tempVec.normalized * dodgeRange);
-					teleComplete = true;
-				}
-				//print(transform.position - dodgeResult);
-				//transform.position = dodgeResult;
+
+				//if (!teleComplete)
+				//{
+				//	//print("No hit tele");
+
+				//	dodgeResult = transform.position + (tempVec.normalized * dodgeRange);
+				//	teleComplete = true;
+				//}
+				////print(transform.position - dodgeResult);
+				////transform.position = dodgeResult;
+				///
+				#endregion
+				dodgeResult = transform.position + (tempVec.normalized * dodgeRange);
+
 				StartCoroutine(DodgeTo(dodgeResult));
 
 				dodgeTimer = dodgeCooldown;
@@ -178,9 +186,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	IEnumerator DodgeTo(Vector3 pos)
 	{
 		float dist = Vector3.Distance(transform.position, pos);
+		float timer = 0.5f;
 		canInput = false;
-		while (dist > 0.5)
+		while (dist > 0.5 && timer > 0)
 		{
+			timer -= Time.deltaTime;
 			dist = Vector3.Distance(transform.position, pos);
 			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 10);
 			yield return new WaitForEndOfFrame();

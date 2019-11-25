@@ -19,6 +19,8 @@ public class TimeFreakController : MonoBehaviour
 	private bool canCast = true;
 	private float castPauseDur = 0.4f;
 
+	private Rigidbody2D rbody;
+
 	//UI
 	public Slider sldBasicA;
 	public Slider sldMovementA;
@@ -32,6 +34,7 @@ public class TimeFreakController : MonoBehaviour
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		anim = GetComponentInChildren<Animator>();
+		rbody = GetComponent<Rigidbody2D>();
 
 		SetStats();
 	}
@@ -94,41 +97,57 @@ public class TimeFreakController : MonoBehaviour
 			Vector3 TelePosResult = transform.position;
 			PlayClip("Tele In");
 			Vector3 tempPos = transform.position;
+
+			//gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
+			//gameObject.GetComponent<CharacterCommon>().RunInvins(invinsDur);
+
+
+
+			print("Dodge");
+			Vector3 dodgeResult = Vector3.zero;
+			Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+
+			
+			dodgeResult = transform.position + (tempVec.normalized * teleRange);
+
+			StartCoroutine(TeleTo(0.55f, dodgeResult));
+
+			//*///
 			#region Teleportation Raycasting
-			//Raycast
-			RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir, teleRange);
-			bool teleComplete = false;
-			for (int i = 0; i < hits.Length; i++)
-			{
-				if (!teleComplete)
-				{
-					print(hits[i].collider.gameObject.name);
-					if (!hits[i].collider.gameObject.CompareTag("PlayerCharacter"))
-					{
-						print("Interupted tele");
+			////Raycast
+			//RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir, teleRange);
+			//bool teleComplete = false;
+			//for (int i = 0; i < hits.Length; i++)
+			//{
+			//	if (!teleComplete)
+			//	{
+			//		print(hits[i].collider.gameObject.name);
+			//		if (!hits[i].collider.gameObject.CompareTag("PlayerCharacter"))
+			//		{
+			//			print("Interupted tele");
 
-						//transform.position = hits[i].transform.position;
-						TelePosResult = hits[i].transform.position;
-						teleComplete = true;
-					}
-				}
+			//			//transform.position = hits[i].transform.position;
+			//			TelePosResult = hits[i].transform.position;
+			//			teleComplete = true;
+			//		}
+			//	}
 
-			}
+			//}
 
-			//if (hits.Length == 0 || !teleComplete) //can just be !telecomplete
-			if (!teleComplete) //can just be !telecomplete
-			{
-				print("No hit tele");
+			////if (hits.Length == 0 || !teleComplete) //can just be !telecomplete
+			//if (!teleComplete) //can just be !telecomplete
+			//{
+			//	print("No hit tele");
 
-				Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
-				//transform.position = transform.position + (tempVec.normalized * teleRange); 
-				TelePosResult = transform.position + (tempVec.normalized * teleRange); 
-				teleComplete = true;
-			}
+			//	Vector3 tempVec = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+			//	//transform.position = transform.position + (tempVec.normalized * teleRange); 
+			//	TelePosResult = transform.position + (tempVec.normalized * teleRange); 
+			//	teleComplete = true;
+			//}
 
-			StartCoroutine(TeleDelay(0.55f, TelePosResult));
+			//StartCoroutine(TeleDelay(0.55f, TelePosResult));
 			#endregion
-
+			/////*
 			GameObject teleDmgZone = Instantiate(teleDamageZoneObj, tempPos, transform.rotation);
 			teleDmgZone.GetComponent<TeleDamageZone>().myOwner = gameObject;
 
@@ -230,5 +249,26 @@ public class TimeFreakController : MonoBehaviour
 		canCast = true;
 	}
 
+	IEnumerator TeleTo(float dur, Vector3 pos)
+	{
+		rbody.constraints = RigidbodyConstraints2D.FreezeAll;
+		yield return new WaitForSeconds(dur);
+				
+		rbody.constraints = RigidbodyConstraints2D.None;
+		rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+		float dist = Vector3.Distance(transform.position, pos);
+		float timer = 0.2f;
+		gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
+		gameObject.GetComponent<CharacterCommon>().RunInvins(timer);
+		while (dist > 0.5 && timer > 0)
+		{
+			timer -= Time.deltaTime;
+			dist = Vector3.Distance(transform.position, pos);
+			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 100);
+			yield return new WaitForEndOfFrame();
+		}
+		yield return null;
+
+	}
 
 }

@@ -190,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 8002817974294327145, guid: c90301702d7fe374b9d940d3ccb13ee4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.1000061
+      value: 0.099975586
       objectReference: {fileID: 0}
     - target: {fileID: 8002817974294327145, guid: c90301702d7fe374b9d940d3ccb13ee4,
         type: 3}
@@ -1037,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: 8002817974294327145, guid: c90301702d7fe374b9d940d3ccb13ee4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.1000061
+      value: 0.099975586
       objectReference: {fileID: 0}
     - target: {fileID: 8002817974294327145, guid: c90301702d7fe374b9d940d3ccb13ee4,
         type: 3}
@@ -1966,6 +1966,7 @@ MonoBehaviour:
   - {fileID: 1096288995}
   - {fileID: 313127850}
   - {fileID: 1673857345}
+  sceneBuildNumArray: 03000000040000000500000006000000
 --- !u!4 &1595627745
 Transform:
   m_ObjectHideFlags: 0

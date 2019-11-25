@@ -27,6 +27,8 @@ public class PlayerJoinScreenMaster : MonoBehaviour
     public GameObject eventSystemObj;
     public Button onBackSelectedButton;
 
+
+	public int[] buildIndexArray;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,8 +74,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
 			FindObjectOfType<MatchManager>().totalPlayers = totalPlayers;
         }
 
-        SceneManager.LoadScene("JesseTesting");
-        print("LOAD SCENE");
+		SceneManager.LoadScene(buildIndexArray[Random.Range(0, buildIndexArray.Length)]);
         //load scene 
 
     }

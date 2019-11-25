@@ -616,6 +616,7 @@ MonoBehaviour:
   txtObjPressStart: {fileID: 96396762}
   eventSystemObj: {fileID: 545584450}
   onBackSelectedButton: {fileID: 1626124090}
+  buildIndexArray: 03000000040000000500000006000000
 --- !u!1 &378337734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1672,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.35
+  m_fontSize: 35.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2123,7 +2124,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35.7
+  m_fontSize: 36.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4051,6 +4052,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScores: 00000000000000000000000000000000
+  totalPlayers: 0
+  targetRounds: 0
+  currentRound: 0
 --- !u!4 &1719585823
 Transform:
   m_ObjectHideFlags: 0

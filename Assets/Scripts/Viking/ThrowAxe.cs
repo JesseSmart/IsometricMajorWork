@@ -112,13 +112,14 @@ public class ThrowAxe : MonoBehaviour
 				rbody.constraints = RigidbodyConstraints2D.FreezeAll;
                 //Freeze player movement on hit
                 myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+				myOwner.layer = 13; //layer stuff
 
 				//audio.PlayOneShot(acHitTarget);
 				//audio.clip = acChainYank;
 				//audio.PlayDelayed(acHitTarget.length);
 				//audio.loop = true;
 			}
-            else if (other.gameObject != myOwner)
+			else if (other.gameObject != myOwner)
             {
 
 				//terrain
@@ -127,6 +128,7 @@ public class ThrowAxe : MonoBehaviour
 
 				//Freeze player movement on hit
 				myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+				myOwner.layer = 13; //layer stuff
 
 				audio.PlayOneShot(acHitTerrain);
 				audio.clip = acChainYank;
@@ -165,7 +167,7 @@ public class ThrowAxe : MonoBehaviour
 			//Add force outwards for bounce off effect
 			myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 			myOwner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-
+			myOwner.layer =9; //layer stuff
 			Destroy(gameObject);
 		}
 		else
