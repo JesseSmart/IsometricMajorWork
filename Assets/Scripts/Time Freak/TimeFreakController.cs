@@ -26,6 +26,9 @@ public class TimeFreakController : MonoBehaviour
 	public Slider sldMovementA;
 	public Slider sldUltA;
 
+	private Image basicCooldown;
+	private Image moveCooldown;
+	private Image ultCooldown;
 
 	Animator anim;
 
@@ -35,6 +38,12 @@ public class TimeFreakController : MonoBehaviour
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		anim = GetComponentInChildren<Animator>();
 		rbody = GetComponent<Rigidbody2D>();
+
+		FindObjectOfType<InGameUIManager>().SetCharacterHud(pNum, 1); //number is freak type
+		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[pNum].GetComponent<PlayerHudManager>();
+		basicCooldown = phm.basicCooldown;
+		moveCooldown = phm.moveCooldown;
+		ultCooldown = phm.ultCooldown;
 
 		SetStats();
 	}
@@ -179,6 +188,7 @@ public class TimeFreakController : MonoBehaviour
 			}
 
 
+
 			myClass.ultATimer = myClass.ultACooldown;
 		}
 		else
@@ -228,6 +238,10 @@ public class TimeFreakController : MonoBehaviour
 		sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		sldMovementA.value = 1 - (myClass.moveATimer / myClass.moveACooldown);
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
+		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
+		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);
+		ultCooldown.fillAmount = 1 - (myClass.ultATimer / myClass.ultACooldown);
 	}
 
 	IEnumerator TeleDelay(float dur, Vector3 telePos)

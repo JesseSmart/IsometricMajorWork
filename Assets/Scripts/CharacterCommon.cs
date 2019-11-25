@@ -9,8 +9,8 @@ public class CharacterCommon : MonoBehaviour
     public CharacterStats characterStats;
     public CharacterClass myClass = new CharacterClass();
 
-    public Slider sldHealth;
-    public Slider sldBrinkHealth;
+    //public Slider sldHealth;
+    //public Slider sldBrinkHealth;
     public Slider sldDeathChance;
 
     private bool canUpdateHealth = true;
@@ -23,6 +23,13 @@ public class CharacterCommon : MonoBehaviour
 	public SpriteRenderer mySpriteRend;
 	public Color flashCol = Color.red;
 
+
+	private Image health;
+	private Image brinkHealth;
+	private Image redHeart;
+	private Image purpleHeart;
+
+
 	//AUDIO
 	private AudioSource audio;
 	public AudioClip[] acHurtAudios;
@@ -32,7 +39,14 @@ public class CharacterCommon : MonoBehaviour
 		audio = GetComponent<AudioSource>();
 		myClass.myHealth = characterStats.health;
 		pNumIndic.text = "P" +  (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
-    }
+		//FindObjectOfType<InGameUIManager>().SetCommonUI(gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber, dodgeCooldown, health, brinkHealth, redHeart, purpleHeart);
+
+		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber].GetComponent<PlayerHudManager>();
+		health = phm.health;
+		brinkHealth = phm.brinkHealth;
+		redHeart = phm.redHeart;
+		purpleHeart = phm.purpleHeart;
+	}
 
     // Update is called once per frame
     void Update()
@@ -49,27 +63,47 @@ public class CharacterCommon : MonoBehaviour
     {
         if (myClass.myHealth > 0)
         {
-            sldHealth.value = myClass.myHealth / characterStats.health;
+            //sldHealth.value = myClass.myHealth / characterStats.health;
 
-            if (!sldHealth.gameObject.active || sldBrinkHealth.gameObject.active)
-            {
-                sldHealth.gameObject.SetActive(true);
-                sldBrinkHealth.gameObject.SetActive(false);
-            }
-        }
+			health.fillAmount = myClass.myHealth / characterStats.health;
+
+			//if (!sldHealth.gameObject.active || sldBrinkHealth.gameObject.active)
+   //         {
+   //             sldHealth.gameObject.SetActive(true);
+   //             sldBrinkHealth.gameObject.SetActive(false);
+   //         }
+
+			if (!health.gameObject.active || brinkHealth.gameObject.active)
+			{
+				health.gameObject.SetActive(true);
+				redHeart.gameObject.SetActive(true);
+				brinkHealth.gameObject.SetActive(false);
+				purpleHeart.gameObject.SetActive(false);
+			}
+		}
         else
         {
             if (canUpdateHealth)
             {
-                sldBrinkHealth.value = Mathf.Abs(myClass.myHealth / characterStats.health);
+                brinkHealth.fillAmount = Mathf.Abs(myClass.myHealth / characterStats.health);
 
-                if (sldHealth.gameObject.active || !sldBrinkHealth.gameObject.active)
+                if (health.gameObject.active || !brinkHealth.gameObject.active)
                 {
-                    sldHealth.gameObject.SetActive(false);
-                    sldBrinkHealth.gameObject.SetActive(true);
+                    health.gameObject.SetActive(false);
+                    redHeart.gameObject.SetActive(false);
+                    brinkHealth.gameObject.SetActive(true);
+                    purpleHeart.gameObject.SetActive(true);
                 }
 
-            }
+				//sldBrinkHealth.value = Mathf.Abs(myClass.myHealth / characterStats.health);
+
+				//if (sldHealth.gameObject.active || !sldBrinkHealth.gameObject.active)
+				//{
+				//	sldHealth.gameObject.SetActive(false);
+				//	sldBrinkHealth.gameObject.SetActive(true);
+				//}
+
+			}
         }
     }
 

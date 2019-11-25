@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IsometricPlayerMovementController : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	private bool canAnimate = true;
 
 
-	public float dodgeCooldown = 1;
+	public float dodgeCooldown;
 	private float dodgeTimer;
 	private float dodgeRange = 3;
 	private float invinsDur = 0.5f;
@@ -35,6 +36,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 	private float frictionMod = 5f;
 	private Vector2 fricVel;
 
+	private Image dodgeCooldownImg;
 
     // Start is called before the first frame update
     //void Start()
@@ -51,10 +53,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         currentSpeed = baseMovementSpeed;
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
-		
-    }
 
-    void FixedUpdate()
+		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[playerNumber].GetComponent<PlayerHudManager>();
+		dodgeCooldownImg = phm.dodgeImgCooldown;
+	}
+
+	void FixedUpdate()
     {
 		if (canInput)
 		{
@@ -66,8 +70,16 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 		//dodge cooldown
 		dodgeTimer -= Time.deltaTime;
+		dodgeCooldownImg.fillAmount = 1 - (dodgeTimer / dodgeCooldown); //WHY DOES THIS NOT WORK
+
+		if (playerNumber == 0)
+		{
+			print(1 - (dodgeTimer / dodgeCooldown));
+
+		}
 
 	}
+
 
 	private void MovementFunction(int playerNum)
     {

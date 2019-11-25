@@ -40,7 +40,10 @@ public class VikingController : MonoBehaviour
 	private bool basicAudPlayable = false;
 	private bool movementAudPlayable = false;
 	private bool ultimateAudPlayable = false;
-	
+
+	private Image basicCooldown;
+	private Image moveCooldown;
+	private Image ultCooldown;
 
 
 	// Start is called before the first frame update
@@ -50,6 +53,12 @@ public class VikingController : MonoBehaviour
 		anim = GetComponentInChildren<Animator>();
 		audio = GetComponent<AudioSource>();
 
+		//FindObjectOfType<InGameUIManager>().SetUI(pNum, 0, basicCooldown, moveCooldown, ultCooldown); //change that number to fit character
+		FindObjectOfType<InGameUIManager>().SetCharacterHud(pNum, 0);
+		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[pNum].GetComponent<PlayerHudManager>();
+		basicCooldown = phm.basicCooldown;
+		moveCooldown = phm.moveCooldown;
+		ultCooldown = phm.ultCooldown;
 		SetStats();
     }
 
@@ -188,6 +197,12 @@ public class VikingController : MonoBehaviour
         sldMovementA.value = 1 -(myClass.moveATimer / myClass.moveACooldown);
         sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 
+		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
+		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);
+		ultCooldown.fillAmount = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
+		
+
 		if (myClass.basicATimer <= 0 && basicAudPlayable)
 		{
 			audio.PlayOneShot(acBasicReady);
@@ -222,4 +237,8 @@ public class VikingController : MonoBehaviour
 		canCast = true;
 	}
 
+	void UILinker()
+	{
+		
+	}
 }

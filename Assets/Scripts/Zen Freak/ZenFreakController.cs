@@ -27,11 +27,21 @@ public class ZenFreakController : MonoBehaviour
 
 	Animator anim;
 
+	private Image basicCooldown;
+	private Image moveCooldown;
+	private Image ultCooldown;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		anim = GetComponentInChildren<Animator>();
+
+		FindObjectOfType<InGameUIManager>().SetCharacterHud(pNum, 3); //number is freak type
+		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[pNum].GetComponent<PlayerHudManager>();
+		basicCooldown = phm.basicCooldown;
+		moveCooldown = phm.moveCooldown;
+		ultCooldown = phm.ultCooldown;
 
 		SetStats();
 		GetComponent<IsometricPlayerMovementController>().dodgeCooldown *= 0.5f;
@@ -171,6 +181,11 @@ public class ZenFreakController : MonoBehaviour
 		sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		sldMovementA.value = 1 - (myClass.moveATimer / myClass.moveACooldown);
 		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
+		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
+		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);
+		ultCooldown.fillAmount = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
 	}
 
 	void PlayClip(string clipName)
