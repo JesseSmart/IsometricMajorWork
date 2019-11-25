@@ -70,16 +70,34 @@ public class RecieverSpear : MonoBehaviour
 	{
 		print("Zap");
 
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, recieverScript.gameObject.transform.position);
+		RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, recieverScript.gameObject.transform.position, Vector3.Distance(transform.position, recieverScript.gameObject.transform.position));
+
+		if (hits.Length > 0)
+		{
+			for (int i = 0; i < hits.Length; i++)
+			{
+				GameObject hitObj = hits[i].collider.gameObject;
+
+				if (hitObj.GetComponent<CharacterCommon>())
+				{
+					hitObj.GetComponent<CharacterCommon>().TakeDamage(minLightningDamage, maxLightningDamage, myOwner);
+					print("ZAP");
+				}
+
+			}
+		}
+
+		/*
 		if (hit.collider != null) //error
 		{
 			
 
 			GameObject hitObj = hit.collider.gameObject;
 			print("hit esixtsts " + hitObj);
-			if (hitObj.CompareTag("PlayerCharacter"))
+			if (hitObj.GetComponent<CharacterCommon>())
 			{
 				print("Is player");
+				hitObj.GetComponent<CharacterCommon>().TakeDamage(minLightningDamage, maxLightningDamage, myOwner);
 
 				foreach (GameObject obj in alreadyHitObjs)
 				{
@@ -110,5 +128,6 @@ public class RecieverSpear : MonoBehaviour
 				}
 			}
 		}
+		*/
 	}
 }
