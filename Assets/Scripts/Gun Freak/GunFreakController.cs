@@ -120,15 +120,18 @@ public class GunFreakController : MonoBehaviour
 				if (myDir.y >= 0.5)
 				{
 					print("UP");
+					PlayClip("Move Ab N");
 				}
 				else if (myDir.y < -0.5)
 				{
 					print("Down");
+					PlayClip("Move Ab S");
 
 				}
 				else
 				{
 					print("RIGHT");
+					PlayClip("Move Ab E");
 
 				}
 			}
@@ -137,16 +140,19 @@ public class GunFreakController : MonoBehaviour
 				if (myDir.y >= 0.5)
 				{
 					print("UP");
+					PlayClip("Move Ab N");
 
 				}
 				else if (myDir.y < -0.5)
 				{
 					print("Down");
+					PlayClip("Move Ab S");
 
 				}
 				else
 				{
 					print("LEFT");
+					PlayClip("Move Ab W");
 
 				}
 			}
