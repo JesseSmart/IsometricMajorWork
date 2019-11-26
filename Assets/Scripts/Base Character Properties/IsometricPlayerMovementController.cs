@@ -48,7 +48,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     //{
     //}
 
-    private void Awake()
+    private void Start() //was awake
     {
         rbody = GetComponent<Rigidbody2D>();
         currentSpeed = baseMovementSpeed;
@@ -74,7 +74,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 		if (playerNumber == 0)
 		{
-			print(1 - (dodgeTimer / dodgeCooldown));
+			//print(1 - (dodgeTimer / dodgeCooldown));
 
 		}
 

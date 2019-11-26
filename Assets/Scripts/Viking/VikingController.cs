@@ -113,7 +113,15 @@ public class VikingController : MonoBehaviour
         if (myClass.moveATimer <= 0)
         {
 			//PlayClip("Move Ab");
-			
+			if (gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x > 0)
+			{
+				PlayClip("Move Ab E");
+			}
+			else
+			{
+				PlayClip("Move Ab W");
+			}
+
 
 			GameObject thrownAxe = Instantiate(throwAxeObject, transform.position, transform.rotation);
             thrownAxe.GetComponent<ThrowAxe>().myOwner = gameObject;

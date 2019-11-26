@@ -77,6 +77,52 @@ public class ZenFreakController : MonoBehaviour
 
 			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
 
+			if (myDir.x >= 0)
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+					PlayClip("Basic Ab N");
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+					PlayClip("Basic Ab S");
+
+
+				}
+				else
+				{
+					print("RIGHT");
+					PlayClip("Basic Ab E");
+
+
+				}
+			}
+			else
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+					PlayClip("Basic Ab N");
+
+
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+					PlayClip("Basic Ab S");
+
+				}
+				else
+				{
+					print("LEFT");
+					PlayClip("Basic Ab W");
+
+				}
+			}
+
+
 			Vector3 fakePos = transform.position + (myDir.normalized * stunOffset);
 			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
 			Quaternion myRot = Quaternion.Euler(0, 0, myAngle - 90);
@@ -97,6 +143,52 @@ public class ZenFreakController : MonoBehaviour
 		if (myClass.moveATimer <= 0)
 		{
 			Vector3 myDir = new Vector3(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x, gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.y, 0);
+
+
+			if (myDir.x >= 0)
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+					PlayClip("Move Ab N");
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+					PlayClip("Move Ab S");
+
+
+				}
+				else
+				{
+					print("RIGHT");
+					PlayClip("Move Ab E");
+
+
+				}
+			}
+			else
+			{
+				if (myDir.y >= 0.5)
+				{
+					print("UP");
+					PlayClip("Move Ab N");
+
+
+				}
+				else if (myDir.y < -0.5)
+				{
+					print("Down");
+					PlayClip("Move Ab S");
+
+				}
+				else
+				{
+					print("LEFT");
+					PlayClip("Move Ab W");
+
+				}
+			}
 
 			Vector3 fakePos = transform.position + (myDir.normalized * kickOffset);
 			float myAngle = Mathf.Atan2(fakePos.y - transform.position.y, fakePos.x - transform.position.x) * 180 / Mathf.PI;
