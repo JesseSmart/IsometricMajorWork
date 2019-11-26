@@ -1,34 +1,37 @@
 fileFormatVersion: 2
-guid: 3d774fc2d725a43438e7799312d976c8
+guid: 7a51e44e3428bd741a6573922297f8c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8470127870361229423
-    second: Zen Freak North  Kick 1_0
+      213: 8159509292344759539
+    second: 01-9 Numbers_0
   - first:
-      213: -7486273174860795663
-    second: Zen Freak North  Kick 1_1
+      213: -4000097108058515786
+    second: 01-9 Numbers_1
   - first:
-      213: 2956295309152756999
-    second: Zen Freak North  Kick 1_2
+      213: 7737135258399620380
+    second: 01-9 Numbers_2
   - first:
-      213: 3074840569378954387
-    second: Zen Freak North  Kick 1_3
+      213: -3710079085486162594
+    second: 01-9 Numbers_3
   - first:
-      213: -3329900164168684468
-    second: Zen Freak North  Kick 1_4
+      213: -2847912434590364050
+    second: 01-9 Numbers_4
   - first:
-      213: 1008147331467482053
-    second: Zen Freak North  Kick 1_5
+      213: -6411550569818891189
+    second: 01-9 Numbers_5
   - first:
-      213: 680278117356118495
-    second: Zen Freak North  Kick 1_6
+      213: 7041277834243550896
+    second: 01-9 Numbers_6
   - first:
-      213: -3097748363198923067
-    second: Zen Freak North  Kick 1_7
+      213: -1999534479578992944
+    second: 01-9 Numbers_7
   - first:
-      213: 2437908977595768884
-    second: Zen Freak North  Kick 1_8
+      213: -2371054877784034756
+    second: 01-9 Numbers_8
+  - first:
+      213: 3552916639598046181
+    second: 01-9 Numbers_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -111,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_0
+      name: 01-9 Numbers_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 44
-        height: 48
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +128,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a8094cbcb0be1045a07d828ce46d1b0
-      internalID: 8470127870361229423
+      spriteID: a82b62b51e9c57444ae34ac81ff1b69c
+      internalID: 8159509292344759539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_1
+      name: 01-9 Numbers_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd957ac6c08297428754b915227b91d
+      internalID: -4000097108058515786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-9 Numbers_2
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b607146926f02e24883924952e6d862e
+      internalID: 7737135258399620380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-9 Numbers_3
       rect:
         serializedVersion: 2
         x: 44
         y: 0
-        width: 44
-        height: 48
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00b3a5c5432e58c45bf51b4857755e94
-      internalID: -7486273174860795663
+      spriteID: d77eafe8b5e12fb43a42451b628ff261
+      internalID: -3710079085486162594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_2
+      name: 01-9 Numbers_4
       rect:
         serializedVersion: 2
-        x: 88
+        x: 61
         y: 0
-        width: 44
-        height: 48
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfd1796bba281884aa4681ffe51f0bd7
-      internalID: 2956295309152756999
+      spriteID: 67381fc18fcad3748a5349aefb929d2d
+      internalID: -2847912434590364050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_3
+      name: 01-9 Numbers_5
       rect:
         serializedVersion: 2
-        x: 132
+        x: 77
         y: 0
-        width: 44
-        height: 48
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7913c41eb4ba580438edeffd557e5832
-      internalID: 3074840569378954387
+      spriteID: 6b30f52b46201c144ad1909620ae9a63
+      internalID: -6411550569818891189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_4
+      name: 01-9 Numbers_6
       rect:
         serializedVersion: 2
-        x: 176
+        x: 93
         y: 0
-        width: 44
-        height: 48
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +254,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70dd6e5067ec6a4aa1d6eb045a70e95
-      internalID: -3329900164168684468
+      spriteID: b3fdb1e901ed9c94c97fe0b26f94dc0a
+      internalID: 7041277834243550896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_5
+      name: 01-9 Numbers_7
       rect:
         serializedVersion: 2
-        x: 220
+        x: 108
         y: 0
-        width: 44
-        height: 48
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fba227d39040774297ca8e2ad8952c7
-      internalID: 1008147331467482053
+      spriteID: 03157c7d9d2715d4d92a3a703bd923b7
+      internalID: -1999534479578992944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_6
+      name: 01-9 Numbers_8
       rect:
         serializedVersion: 2
-        x: 264
+        x: 125
         y: 0
-        width: 44
-        height: 48
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +296,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ccce18d9bf77949819404531331e00
-      internalID: 680278117356118495
+      spriteID: dd7698bbe2722ed4aa3e1419d160383a
+      internalID: -2371054877784034756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zen Freak North  Kick 1_7
+      name: 01-9 Numbers_9
       rect:
         serializedVersion: 2
-        x: 308
+        x: 142
         y: 0
-        width: 44
-        height: 48
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,29 +317,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5748380bd5e1a54fb26c03162c3211d
-      internalID: -3097748363198923067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zen Freak North  Kick 1_8
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 44
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 482c55ff5abff92499589c68d92aa708
-      internalID: 2437908977595768884
+      spriteID: 327a708cf6c20c64fbfeb9fc10f12ef3
+      internalID: 3552916639598046181
       vertices: []
       indices: 
       edges: []
@@ -302,7 +326,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c69eb43926e90f445b8b9735181a9e41
+    spriteID: f9f88cfcd3bb467498d9c7a78138b37c
     internalID: 0
     vertices: []
     indices: 
