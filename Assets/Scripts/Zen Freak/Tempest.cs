@@ -12,10 +12,15 @@ public class Tempest : MonoBehaviour
 
 	private bool damageHasRun;
 
+	private AudioSource audio;
+	public AudioClip acHit;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		StartCoroutine(SelfDestroy());
+		audio = GetComponent<AudioSource>();
+
 	}
 
 	// Update is called once per frame
@@ -57,7 +62,7 @@ public class Tempest : MonoBehaviour
 		print("damage pre");
 		targetObj.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 		//FindObjectOfType<CameraController>().FrameFreeze();
-
+		audio.PlayOneShot(acHit);
 		yield return new WaitForSeconds(damageIntervals);
 		damageHasRun = false;
 	}

@@ -23,9 +23,8 @@ public class OrbiterPassive : MonoBehaviour
 	{
 		if (other.GetComponent<ThrowSpear>())
 		{
-			Rigidbody2D otherRB = other.GetComponent<ThrowSpear>().rbody;
-			otherRB.velocity *= 2;
-			print("hit the orbit");
+			other.GetComponent<ThrowSpear>().Accelerated();
+
 		}
 	}
 }

@@ -38,6 +38,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 	private Image dodgeCooldownImg;
 
+	private AudioSource audio;
+	public AudioClip acDodge;
+	public AudioClip[] acFootsteps;
+
+	private float stepDelay = 0.5f;
+	private float stepTimer;
     // Start is called before the first frame update
     //void Start()
     //{
@@ -53,7 +59,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         currentSpeed = baseMovementSpeed;
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
+		audio = GetComponent<AudioSource>();
 
+		stepTimer = stepDelay;
 		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[playerNumber].GetComponent<PlayerHudManager>();
 		dodgeCooldownImg = phm.dodgeImgCooldown;
 	}
@@ -108,7 +116,20 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		if (newPos != currentPos)
 		{
 			rbody.MovePosition(newPos);
+
+			stepTimer -= Time.deltaTime;
+			if (stepTimer <= 0)
+			{
+				if (acFootsteps.Length > 0)
+				{
+					audio.PlayOneShot(acFootsteps[Random.Range(0, acFootsteps.Length)]);
+					stepTimer = stepDelay;
+				}
+				
+			}
+			//play walk audio
 		}
+		
     }
 
     public void Dodge(float pNum)
@@ -119,7 +140,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 			{
 				gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
 				gameObject.GetComponent<CharacterCommon>().RunInvins(invinsDur);
-
+				audio.PlayOneShot(acDodge);
 
 
 				print("Dodge");

@@ -18,12 +18,24 @@ public class ThrowSpear : MonoBehaviour
 
 	private Vector2 direction;
 
+	private AudioSource audio;
+	public AudioClip acHitTarget;
+	public AudioClip acHitTerrain;
+	public AudioClip acHitNothing;
+	public AudioClip acThrow;
+	public AudioClip acPowerUpSpear;
+
+	public GameObject baseSpear; //implement this
+	public GameObject powerSpear;
 
 	// Start is called before the first frame update
 	void Start()
     {
+		audio = GetComponent<AudioSource>();
 		rbody = GetComponent<Rigidbody2D>();
 		flightTimer = maxFlightDuration;
+
+		audio.PlayOneShot(acThrow);
 	}
 
     // Update is called once per frame
@@ -33,6 +45,8 @@ public class ThrowSpear : MonoBehaviour
 		if (flightTimer <= 0)
 		{
 			CreateReciever();
+			//audio.PlayOneShot(acHitNothing);
+
 			Destroy(gameObject);
 		}
 	}
@@ -56,16 +70,20 @@ public class ThrowSpear : MonoBehaviour
 			print("Throw Damage");
 			other.gameObject.GetComponent<CharacterCommon>().TakeDamage(minDamage, maxDamage, myOwner);
 			FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
-			Destroy(gameObject);
+			
 
+
+			Destroy(gameObject);
+			
 		}
 		else if (other.gameObject != myOwner && !other.gameObject.GetComponent<OrbiterPassive>() && !other.gameObject.GetComponent<ThrowSpear>() && !gameObject.GetComponent<RecieverSpear>())
 		{
 			//terrain
 			print("TERRION");
 			CreateReciever();
-			Destroy(gameObject);
 
+			Destroy(gameObject);
+			
 		}
 	}
 
@@ -74,5 +92,13 @@ public class ThrowSpear : MonoBehaviour
 		//Instantiate(recievingSpearObj, transform.position, transform.rotation);
 		GameObject recieverObj = Instantiate(recievingSpearObj, transform.position, Quaternion.identity);
 		recieverObj.GetComponent<RecieverSpear>().myOwner = myOwner;
+	}
+
+	public void Accelerated()
+	{
+		audio.PlayOneShot(acPowerUpSpear);
+		//SWAP SPRITE
+		rbody.velocity *= 2;
+		print("hit the orbit");
 	}
 }

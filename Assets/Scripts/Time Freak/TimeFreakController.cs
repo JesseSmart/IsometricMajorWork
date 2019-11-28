@@ -32,12 +32,31 @@ public class TimeFreakController : MonoBehaviour
 
 	Animator anim;
 
+	//AUDIO
+	private AudioSource audio;
+	// Ability Use
+	// ppub basic
+	//public AudioClip acAxeThrow;
+	public AudioClip acOctSpear;
+	public AudioClip acTeleIn;
+	public AudioClip acTeleOut;
+	//Cooldown Ready
+	public AudioClip acBasicReady;
+	public AudioClip acMovementReady;
+	public AudioClip acUltimateReady;
+	//Cooldown Ready Audio Play Bools
+	private bool basicAudPlayable = false;
+	private bool movementAudPlayable = false;
+	private bool ultimateAudPlayable = false;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		pNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
+		audio = GetComponent<AudioSource>();
 		anim = GetComponentInChildren<Animator>();
 		rbody = GetComponent<Rigidbody2D>();
+
 
 		FindObjectOfType<InGameUIManager>().SetCharacterHud(pNum, 1); //number is freak type
 		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[pNum].GetComponent<PlayerHudManager>();
@@ -90,6 +109,8 @@ public class TimeFreakController : MonoBehaviour
 			thrownSpear.GetComponent<ThrowSpear>().Throw(gameObject.GetComponent<IsometricPlayerMovementController>().lastDir);
 			print(gameObject.GetComponent<IsometricPlayerMovementController>().currentDir);
 
+
+			basicAudPlayable = true;
 			myClass.basicATimer = myClass.basicACooldown;
 		}
 		else
@@ -118,7 +139,7 @@ public class TimeFreakController : MonoBehaviour
 
 			
 			dodgeResult = transform.position + (tempVec.normalized * teleRange);
-
+			audio.PlayOneShot(acTeleIn);
 			StartCoroutine(TeleTo(0.55f, dodgeResult));
 
 			//*///
@@ -160,6 +181,7 @@ public class TimeFreakController : MonoBehaviour
 			GameObject teleDmgZone = Instantiate(teleDamageZoneObj, tempPos, transform.rotation);
 			teleDmgZone.GetComponent<TeleDamageZone>().myOwner = gameObject;
 
+			movementAudPlayable = true;
 			myClass.moveATimer = myClass.moveACooldown;
 		}
 		else
@@ -185,10 +207,13 @@ public class TimeFreakController : MonoBehaviour
 				GameObject thrownSpear = Instantiate(throwSpearObj, transform.position, myRot);
 				thrownSpear.GetComponent<ThrowSpear>().myOwner = gameObject;
 				thrownSpear.GetComponent<ThrowSpear>().Throw(thrownSpear.transform.up);
+
 			}
 
+			audio.PlayOneShot(acOctSpear);
 
 
+			ultimateAudPlayable = true;
 			myClass.ultATimer = myClass.ultACooldown;
 		}
 		else
@@ -242,6 +267,24 @@ public class TimeFreakController : MonoBehaviour
 		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);
 		ultCooldown.fillAmount = 1 - (myClass.ultATimer / myClass.ultACooldown);
+
+		if (myClass.basicATimer <= 0 && basicAudPlayable)
+		{
+			audio.PlayOneShot(acBasicReady);
+			basicAudPlayable = false;
+		}
+
+		if (myClass.moveATimer <= 0 && movementAudPlayable)
+		{
+			audio.PlayOneShot(acMovementReady);
+			movementAudPlayable = false;
+		}
+
+		if (myClass.ultATimer <= 0 && ultimateAudPlayable)
+		{
+			audio.PlayOneShot(acUltimateReady);
+			ultimateAudPlayable = false;
+		}
 	}
 
 	IEnumerator TeleDelay(float dur, Vector3 telePos)
@@ -267,7 +310,9 @@ public class TimeFreakController : MonoBehaviour
 	{
 		rbody.constraints = RigidbodyConstraints2D.FreezeAll;
 		yield return new WaitForSeconds(dur);
-				
+		audio.PlayOneShot(acTeleOut);
+		PlayClip("Tele Out");
+
 		rbody.constraints = RigidbodyConstraints2D.None;
 		rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
 		float dist = Vector3.Distance(transform.position, pos);

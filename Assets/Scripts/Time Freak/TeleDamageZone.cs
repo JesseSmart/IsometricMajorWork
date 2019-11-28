@@ -12,6 +12,11 @@ public class TeleDamageZone : MonoBehaviour
 
 	private bool damageHasRun;
 
+
+	private AudioSource audio;
+	public AudioClip acZoneStart;
+	public AudioClip acLoopZap;
+	public AudioClip STILLNEEDIMPLEMENTATION;
     // Start is called before the first frame update
     void Start()
     {

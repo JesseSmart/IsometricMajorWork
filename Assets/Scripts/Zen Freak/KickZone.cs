@@ -14,13 +14,19 @@ public class KickZone : MonoBehaviour
 
 	public float minDamage;
 	public float maxDamage;
+
+	private AudioSource audio;
+	public AudioClip acKick;
+	public AudioClip acSelfLaunch;
+	public AudioClip acEnemyLaunch;
 	// Start is called before the first frame update
 	void Start()
 	{
 		//Destroy(gameObject, canKnockbackDuration + 0.2f);
 		StartCoroutine(CanKnockTimer());
 		//effected.GetComponent<IsometricPlayerMovementController>().canInput = false;
-
+		audio = GetComponent<AudioSource>();
+		audio.PlayOneShot(acKick);
 	}
 
 	// Update is called once per frame
@@ -29,7 +35,7 @@ public class KickZone : MonoBehaviour
 		if (!canKnockback)
 		{
 			SelfKnockBack();
-			Destroy(gameObject);
+			canKnockback = true;
 		}
 	}
 
@@ -49,12 +55,14 @@ public class KickZone : MonoBehaviour
 	void SelfKnockBack()
 	{
 		print("Knock me back = " + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * -knockBackModifier);
+		audio.PlayOneShot(acSelfLaunch);
 		StartCoroutine(KnockBack(myOwner, -1));
 	}
 
 	void TargetKnockBack(GameObject opponent)
 	{
 		print("Knock enemy back = " + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * knockBackModifier);
+		audio.PlayOneShot(acEnemyLaunch);
 		StartCoroutine(KnockBack(opponent, 1));
 		FindObjectOfType<CameraController>().FrameFreeze();
 
@@ -70,6 +78,8 @@ public class KickZone : MonoBehaviour
 	{
 		Rigidbody2D rb = effected.GetComponent<Rigidbody2D>();
 		rb.AddForce(myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized * knockBackModifier * dir, ForceMode2D.Impulse);
+		effected.GetComponent<IsometricPlayerMovementController>().canInput = false;
+
 		yield return new WaitForSeconds(launchDuration);
 		effected.GetComponent<IsometricPlayerMovementController>().canInput = true;
 
