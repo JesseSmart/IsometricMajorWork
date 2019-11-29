@@ -25,8 +25,8 @@ public class ThrowSpear : MonoBehaviour
 	public AudioClip acThrow;
 	public AudioClip acPowerUpSpear;
 
-	public GameObject baseSpear; //implement this
-	public GameObject powerSpear;
+	public SpriteRenderer baseSpear; //implement this
+	public SpriteRenderer powerSpear;
 
 	// Start is called before the first frame update
 	void Start()
@@ -98,6 +98,8 @@ public class ThrowSpear : MonoBehaviour
 	{
 		audio.PlayOneShot(acPowerUpSpear);
 		//SWAP SPRITE
+		baseSpear.enabled = false;
+		powerSpear.enabled = true;
 		rbody.velocity *= 2;
 		print("hit the orbit");
 	}

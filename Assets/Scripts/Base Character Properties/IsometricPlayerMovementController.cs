@@ -225,7 +225,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		{
 			timer -= Time.deltaTime;
 			dist = Vector3.Distance(transform.position, pos);
-			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 10);
+			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 20);
 			yield return new WaitForEndOfFrame();
 		}
 		canInput = true;

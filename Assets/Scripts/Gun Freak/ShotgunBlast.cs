@@ -15,8 +15,8 @@ public class ShotgunBlast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		StartCoroutine(MovementStopper(myOwner, duration));
 		SelfKnockBack();
-		Destroy(gameObject, duration);
 
     }
 
@@ -52,4 +52,15 @@ public class ShotgunBlast : MonoBehaviour
 		FindObjectOfType<CameraController>().CamShake(0.1f, 0.1f);
 	}
 
+	IEnumerator MovementStopper(GameObject effected, float dur)
+	{
+		effected.GetComponent<IsometricPlayerMovementController>().canInput = false;
+
+		yield return new WaitForSeconds(dur);
+
+		effected.GetComponent<IsometricPlayerMovementController>().canInput = true;
+		Destroy(gameObject);
+
+
+	}
 }

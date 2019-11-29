@@ -238,6 +238,7 @@ MonoBehaviour:
   pNumIndic: {fileID: 6762679356030195291}
   mySpriteRend: {fileID: 5750027383698018159}
   flashCol: {r: 1, g: 0, b: 0, a: 1}
+  DeathObj: {fileID: 459021888809250127, guid: 2877020ebed6b3b47b9588603d4cf6b6, type: 3}
   acHurtAudios:
   - {fileID: 8300000, guid: 743996f42b8d5ce4d979f28f7e60bf6c, type: 3}
   - {fileID: 8300000, guid: 130c088d6dd75d94eb380796b015ae1b, type: 3}

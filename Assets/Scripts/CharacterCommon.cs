@@ -22,7 +22,7 @@ public class CharacterCommon : MonoBehaviour
 
 	public SpriteRenderer mySpriteRend;
 	public Color flashCol = Color.red;
-
+	public GameObject DeathObj;
 
 	private Image health;
 	private Image brinkHealth;
@@ -161,7 +161,9 @@ public class CharacterCommon : MonoBehaviour
 			killer.GetComponent<GunFreakController>().PassiveAbility();
 		}
 
-		Destroy(gameObject, 1f);
+		Instantiate(DeathObj, transform.position, transform.rotation);
+		gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+		Destroy(gameObject, 0.1f);
 		FindObjectOfType<CameraController>().PlayerDeath(transform);
     }
 
