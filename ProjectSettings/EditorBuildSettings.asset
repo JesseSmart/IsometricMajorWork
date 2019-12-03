@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Snow.unity
     guid: 75c0da86158d85449ad2a8891032484d
+  - enabled: 1
+    path: Assets/Scenes/Main/Victory.unity
+    guid: 3237784be71ab574d96784de977666e1
   m_configObjects: {}

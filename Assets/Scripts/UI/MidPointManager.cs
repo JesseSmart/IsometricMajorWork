@@ -47,10 +47,12 @@ public class MidPointManager : MonoBehaviour
 		bool loaded = false;
 		for (int i = 0; i < matchManager.playerScores.Length; i++)
 		{
-			if (matchManager.playerScores[i] >= matchManager.targetRounds)
+			if (matchManager.playerScores[i] >= matchManager.targetRounds) //&& loaded = false;
 			{
 				loaded = true;
-				SceneManager.LoadScene("Menu");
+				PlayerPrefs.SetInt("WinnerNum", i);
+				PlayerPrefs.SetInt("WinnerChar", i);
+				SceneManager.LoadScene("Victory");
 			}
 
 		}

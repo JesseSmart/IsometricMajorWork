@@ -6,14 +6,15 @@ using TMPro;
 
 public class CharacterCommon : MonoBehaviour
 {
-    public CharacterStats characterStats;
-    public CharacterClass myClass = new CharacterClass();
+	public CharacterStats characterStats;
+	public CharacterClass myClass = new CharacterClass();
 
-    //public Slider sldHealth;
-    //public Slider sldBrinkHealth;
-    public Slider sldDeathChance;
+	private int playerNum;
+	//public Slider sldHealth;
+	//public Slider sldBrinkHealth;
+	public Slider sldDeathChance;
 
-    private bool canUpdateHealth = true;
+	private bool canUpdateHealth = true;
 
 	public TextMeshProUGUI pNumIndic;
 
@@ -35,14 +36,14 @@ public class CharacterCommon : MonoBehaviour
 	//AUDIO
 	private AudioSource audio;
 	public AudioClip[] acHurtAudios;
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 		audio = GetComponent<AudioSource>();
 		myClass.myHealth = characterStats.health;
-		pNumIndic.text = "P" +  (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
+		pNumIndic.text = "P" + (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
 		//FindObjectOfType<InGameUIManager>().SetCommonUI(gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber, dodgeCooldown, health, brinkHealth, redHeart, purpleHeart);
-
+		playerNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber].GetComponent<PlayerHudManager>();
 		health = phm.health;
 		brinkHealth = phm.brinkHealth;
@@ -51,32 +52,32 @@ public class CharacterCommon : MonoBehaviour
 		brinkSld = phm.brinkSld;
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        UISetter();
+	// Update is called once per frame
+	void Update()
+	{
+		UISetter();
 
 		if (isInvincible)
 		{
 			FlashEffect(flashCol);
 		}
 
-		
-    }
+		PausePressCheck();
+	}
 
-    void UISetter()
-    {
-        if (myClass.myHealth > 0)
-        {
-            //sldHealth.value = myClass.myHealth / characterStats.health;
+	void UISetter()
+	{
+		if (myClass.myHealth > 0)
+		{
+			//sldHealth.value = myClass.myHealth / characterStats.health;
 
 			health.fillAmount = myClass.myHealth / characterStats.health;
 
 			//if (!sldHealth.gameObject.active || sldBrinkHealth.gameObject.active)
-   //         {
-   //             sldHealth.gameObject.SetActive(true);
-   //             sldBrinkHealth.gameObject.SetActive(false);
-   //         }
+			//         {
+			//             sldHealth.gameObject.SetActive(true);
+			//             sldBrinkHealth.gameObject.SetActive(false);
+			//         }
 
 			if (!health.gameObject.active || brinkHealth.gameObject.active)
 			{
@@ -86,19 +87,20 @@ public class CharacterCommon : MonoBehaviour
 				purpleHeart.gameObject.SetActive(false);
 			}
 		}
-        else
-        {
-            if (canUpdateHealth)
-            {
-                brinkHealth.fillAmount = Mathf.Abs(myClass.myHealth / characterStats.health);
+		else
+		{
+			if (canUpdateHealth)
+			{
+				brinkHealth.fillAmount = Mathf.Abs(myClass.myHealth / characterStats.health);
 
 				if (health.gameObject.active || !brinkHealth.gameObject.active)
-                {
-                    health.gameObject.SetActive(false);
-                    redHeart.gameObject.SetActive(false);
-                    brinkHealth.gameObject.SetActive(true);
-                    purpleHeart.gameObject.SetActive(true);
-                }
+				{
+					health.gameObject.SetActive(false);
+					redHeart.gameObject.SetActive(false);
+					brinkHealth.gameObject.SetActive(true);
+					purpleHeart.gameObject.SetActive(true);
+					brinkSld.gameObject.SetActive(true);
+				}
 
 
 				conSldFloat += Time.deltaTime * 2f;
@@ -117,10 +119,10 @@ public class CharacterCommon : MonoBehaviour
 
 
 		}
-    }
+	}
 
-    public void TakeDamage(float minDamage, float maxDamage, GameObject dealerOwner)
-    {
+	public void TakeDamage(float minDamage, float maxDamage, GameObject dealerOwner)
+	{
 		float damage = Random.Range(minDamage, maxDamage);
 		if (!isInvincible)
 		{
@@ -163,10 +165,10 @@ public class CharacterCommon : MonoBehaviour
 
 
 
-    }
+	}
 
-    void Death(GameObject killer)
-    {
+	void Death(GameObject killer)
+	{
 		if (killer.GetComponent<GunFreakController>())
 		{
 			killer.GetComponent<GunFreakController>().PassiveAbility();
@@ -176,17 +178,17 @@ public class CharacterCommon : MonoBehaviour
 		gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 		Destroy(gameObject, 0.1f);
 		FindObjectOfType<CameraController>().PlayerDeath(transform);
-    }
+	}
 
-    private IEnumerator disbableUIDelay(GameObject obj)
-    {
-        //obj.SetActive(true);
-        canUpdateHealth = false;
-        yield return new WaitForSecondsRealtime(1f);
-        canUpdateHealth = true;
-        //obj.SetActive(false);
-        
-    }
+	private IEnumerator disbableUIDelay(GameObject obj)
+	{
+		//obj.SetActive(true);
+		canUpdateHealth = false;
+		yield return new WaitForSecondsRealtime(1f);
+		canUpdateHealth = true;
+		//obj.SetActive(false);
+
+	}
 
 	public void RunInvins(float dur)
 	{
@@ -216,6 +218,14 @@ public class CharacterCommon : MonoBehaviour
 	void HurtAudio()
 	{
 		audio.PlayOneShot(acHurtAudios[Random.Range(0, acHurtAudios.Length)]);
+	}
+
+	public void PausePressCheck()
+	{
+		if (Input.GetKeyDown("joystick " + (playerNum + 1) + " button " + 7))
+		{
+			FindObjectOfType<Pauser>().Paused();
+		}
 	}
 
 }

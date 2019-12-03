@@ -17,10 +17,15 @@ public class RoundManager : MonoBehaviour
 	private int roundWinner;
 	private bool hasEnded;
 
-	public TextMeshProUGUI countdownString;
+	//public TextMeshProUGUI countdownString;
 	private int countInd;
 
 	public GameObject[] InGameUis;
+
+	public Image CountdownImage;
+	public Image readyImage;
+	public Image beginImage;
+	public Sprite[] CountdownSprites;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -89,18 +94,27 @@ public class RoundManager : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		if (countInd < 4)
 		{
-			countdownString.text = (4 - countInd).ToString();
+			readyImage.enabled = false;
+			CountdownImage.enabled = true;
+
+			CountdownImage.sprite = CountdownSprites[3 - countInd];
 			StartCoroutine(StartCountdown());
 		}
 		else if (countInd == 4)
 		{
-			countdownString.text = "BEGIN";
+			beginImage.enabled = true;
+			CountdownImage.enabled = false;
+
 			StartCoroutine(StartCountdown());
 		}
 		else
 		{
-			countdownString.enabled = false;
+			CountdownImage.enabled = false;
+			beginImage.enabled = false;
 			Spawn();
 		}
 	}
+
+
+
 }
