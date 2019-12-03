@@ -20,6 +20,7 @@ public class RoundManager : MonoBehaviour
 	public TextMeshProUGUI countdownString;
 	private int countInd;
 
+	public GameObject[] InGameUis;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -50,6 +51,8 @@ public class RoundManager : MonoBehaviour
 	void Spawn()
 	{
 		int total = PlayerPrefs.GetInt("TotalPlayers");
+		InGameUis[total - 2].SetActive(true);
+
 		print("Spawn a total of " + total);
 		for (int i = 0; i < total; i++) //could be totsl - 1
 		{

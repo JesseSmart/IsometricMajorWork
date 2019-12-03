@@ -46237,7 +46237,7 @@ GameObject:
   - component: {fileID: 2032293575}
   - component: {fileID: 2032293574}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: cnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46422,6 +46422,7 @@ MonoBehaviour:
   - {fileID: 5750027382957577677, guid: 2d6d9cfc5d4f2a94bb10855a34ce6a2e, type: 3}
   - {fileID: 5750027382957577677, guid: b6a74adc0ad1ed14791ed1f905669735, type: 3}
   countdownString: {fileID: 2032293574}
+  InGameUis: []
 --- !u!4 &2069868308
 Transform:
   m_ObjectHideFlags: 0
