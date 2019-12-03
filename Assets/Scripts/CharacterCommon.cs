@@ -92,13 +92,18 @@ public class CharacterCommon : MonoBehaviour
             {
                 brinkHealth.fillAmount = Mathf.Abs(myClass.myHealth / characterStats.health);
 
-                if (health.gameObject.active || !brinkHealth.gameObject.active)
+				if (health.gameObject.active || !brinkHealth.gameObject.active)
                 {
                     health.gameObject.SetActive(false);
                     redHeart.gameObject.SetActive(false);
                     brinkHealth.gameObject.SetActive(true);
                     purpleHeart.gameObject.SetActive(true);
                 }
+
+
+				conSldFloat += Time.deltaTime * 2f;
+				brinkSld.value = Mathf.PingPong(conSldFloat, 1);
+
 
 				//sldBrinkHealth.value = Mathf.Abs(myClass.myHealth / characterStats.health);
 
@@ -110,9 +115,8 @@ public class CharacterCommon : MonoBehaviour
 
 			}
 
-			conSldFloat += Time.deltaTime * 4f;
-			brinkSld.value = Mathf.PingPong(conSldFloat, 1);
-        }
+
+		}
     }
 
     public void TakeDamage(float minDamage, float maxDamage, GameObject dealerOwner)
@@ -135,14 +139,13 @@ public class CharacterCommon : MonoBehaviour
 				//sldDeathChance.gameObject.SetActive(true);
 				//sldDeathChance.value = rndChance / 100f;
 				//FindObjectOfType<CameraController>().BrinkZoom(transform);
-				StartCoroutine(disbableUIDelay(sldDeathChance.gameObject));
-				if (sldDeathChance.value >= Mathf.Abs(myClass.myHealth))
+				StartCoroutine(disbableUIDelay(brinkSld.gameObject));
+				if (brinkSld.value * 100 >= Mathf.Abs(myClass.myHealth))
 				{
 					//alive
 					print("Alive");
 					myClass.myHealth -= damage;
 					HurtAudio();
-
 				}
 				else
 				{
@@ -177,11 +180,11 @@ public class CharacterCommon : MonoBehaviour
 
     private IEnumerator disbableUIDelay(GameObject obj)
     {
-        obj.SetActive(true);
+        //obj.SetActive(true);
         canUpdateHealth = false;
         yield return new WaitForSecondsRealtime(1f);
         canUpdateHealth = true;
-        obj.SetActive(false);
+        //obj.SetActive(false);
         
     }
 
