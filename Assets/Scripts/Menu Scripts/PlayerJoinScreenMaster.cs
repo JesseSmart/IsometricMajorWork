@@ -21,8 +21,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
 
     public GameObject[] joinUIObjects;
 
-    public GameObject txtObjPressStart;
-
+	public GameObject imgPressStart;
 
     public GameObject eventSystemObj;
     public Button onBackSelectedButton;
@@ -44,7 +43,7 @@ public class PlayerJoinScreenMaster : MonoBehaviour
 
         if (totalPlayers >= 2)
         {
-            txtObjPressStart.SetActive(true);
+			imgPressStart.SetActive(true);
 
             if (Input.GetButtonDown(startButtonArray[0]))
             {
@@ -53,10 +52,10 @@ public class PlayerJoinScreenMaster : MonoBehaviour
         }
         else
         {
-            txtObjPressStart.SetActive(false);
+			imgPressStart.SetActive(false);
 
-        }
-    }
+		}
+	}
 
     public void OnBackClick()
     {

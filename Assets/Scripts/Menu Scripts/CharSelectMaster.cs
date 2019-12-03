@@ -30,7 +30,10 @@ public class CharSelectMaster : MonoBehaviour
     public CharacterStats[] characterStats;
 
 	public Sprite[] FullCharSelSprite;
+	public Sprite[] ReadySprites;
+
 	public Image FullCharSelImage;
+	public Image ReadyImage;
 
     public GameObject panelCharSelect;
     public GameObject panelPressToJoin;
@@ -140,7 +143,7 @@ public class CharSelectMaster : MonoBehaviour
 
                 if (Input.GetButtonDown(bButtonArray[pNum]))
                 {
-                    DeselectProcesses(pNum);
+                    DeselectProcesses(pNum, currentChar); //<--- currentChar pass though might be unneeded as thing few lines bellow
                     myState= SelectState.Selecting;
 
                 }
@@ -222,6 +225,10 @@ public class CharSelectMaster : MonoBehaviour
     {
         PlayerPrefs.SetInt("CharacterPlayer" + pNum, charNum);
         txtObjPlayerReady.SetActive(true);
+
+		ReadyImage.gameObject.SetActive(true);
+		FullCharSelImage.gameObject.SetActive(false);
+		ReadyImage.sprite = ReadySprites[charNum];
         GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers++;
     }
 
@@ -236,10 +243,16 @@ public class CharSelectMaster : MonoBehaviour
         }
     }
 
-    private void DeselectProcesses(int playerNum)
+    private void DeselectProcesses(int playerNum, int charNum)
     {
         txtObjPlayerReady.SetActive(false);
-        GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers--;
+
+		ReadyImage.gameObject.SetActive(false);
+		FullCharSelImage.gameObject.SetActive(true);
+
+		FullCharSelImage.sprite = FullCharSelSprite[charNum]; //<---might be unneeded as the item a bit above
+		//MAKE SURE THAT IT ACTUALLY IS STILL SELECTING THE RIGHT CHAR AS IMAGE WHEN YOU DESELECT
+		GetComponentInParent<PlayerJoinScreenMaster>().totalPlayers--;
     }
 
     void SetUIFromStats(int pNum, int myChar)

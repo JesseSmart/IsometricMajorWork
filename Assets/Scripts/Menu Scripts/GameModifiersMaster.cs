@@ -14,8 +14,10 @@ public class GameModifiersMaster : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject playerJoinPanel;
 
-    public TextMeshProUGUI txtRoundTotal;
-    public TextMeshProUGUI txtRoundDuration;
+	public Image imgRoundTotal;
+	public Image imgRoundDur;
+	public Sprite[] numSprites;
+	public Sprite[] durSprites;
 
     public Button btnNext;
 
@@ -27,8 +29,10 @@ public class GameModifiersMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //set duration to what is on screen
-    }
+		//set duration to what is on screen
+		roundDuration = 1;
+		winPointTarget = 1;
+	}
 
     // Update is called once per frame
     void Update()
@@ -38,31 +42,31 @@ public class GameModifiersMaster : MonoBehaviour
             btnNext.interactable = true;
         }
 
-        if (winPointTarget <= 0)
-        {
-            winPointTarget = 1;
-            txtRoundTotal.text = winPointTarget.ToString();
+        //if (winPointTarget <= 0)
+        //{
+        //    winPointTarget = 1;
+        //    txtRoundTotal.text = winPointTarget.ToString();
 
-        }
-        else if (winPointTarget >= 10)
-        {
-            winPointTarget = 9;
-            txtRoundTotal.text = winPointTarget.ToString();
+        //}
+        //else if (winPointTarget >= 10)
+        //{
+        //    winPointTarget = 9;
+        //    txtRoundTotal.text = winPointTarget.ToString();
 
-        }
+        //}
 
-        if (roundDuration <= 0)
-        {
-            roundDuration = 10;
-            txtRoundDuration.text = roundDuration.ToString();
+        //if (roundDuration <= 0)
+        //{
+        //    roundDuration = 10;
+        //    txtRoundDuration.text = roundDuration.ToString();
 
-        }
-        else if (roundDuration > 60)
-        {
-            roundDuration = 60;
-            txtRoundDuration.text = roundDuration.ToString();
+        //}
+        //else if (roundDuration > 60)
+        //{
+        //    roundDuration = 60;
+        //    txtRoundDuration.text = roundDuration.ToString();
 
-        }
+        //}
     }
 
     public void OnBackClick()
@@ -84,47 +88,75 @@ public class GameModifiersMaster : MonoBehaviour
 
     public void OnRoundInc()
     {
-        //if isnt at maximum or minimum
-        if (winPointTarget > 0 && winPointTarget < 10) //<-- make maximum
-        {
-            winPointTarget ++;
-            PlayerPrefs.SetInt("winPointTarget", winPointTarget);
-            txtRoundTotal.text = winPointTarget.ToString();
-        }
-    }
+		//if isnt at maximum or minimum
+		if (winPointTarget < 9) //<-- make maximum
+		{
+			winPointTarget++;
+			PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+			imgRoundTotal.sprite = numSprites[winPointTarget- 1];
+
+		}
+		else
+		{
+			winPointTarget = 1;
+			PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+			imgRoundTotal.sprite = numSprites[winPointTarget - 1];
+
+		}
+	}
 
     public void OnRoundDec()
     {
-        //if isnt at maximum or minimum
-        if (winPointTarget > 0 && winPointTarget < 10) //<-- make maximum
-        {
-            winPointTarget--;
-            PlayerPrefs.SetInt("winPointTarget", winPointTarget);
-            txtRoundTotal.text = winPointTarget.ToString();
-        }
+		//if isnt at maximum or minimum
+		if (winPointTarget > 1) //<-- make maximum
+		{
+			winPointTarget--;
+			PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+			imgRoundTotal.sprite = numSprites[winPointTarget - 1];
 
-    }
+		}
+		else
+		{
+			winPointTarget = 9;
+			PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+			imgRoundTotal.sprite = numSprites[winPointTarget - 1];
+
+		}
+
+	}
 
     public void OnTimerInc()
     {
-        //if isnt at maximum or minimum
-        if (roundDuration > 0 && roundDuration <= 60)
-        {
-            roundDuration += 10;
-            PlayerPrefs.SetInt("RoundDuration", roundDuration);
-            txtRoundDuration.text = roundDuration.ToString();
-        }
+		//if isnt at maximum or minimum
+		if (roundDuration < 3)
+		{
+			roundDuration++;
+			imgRoundDur.sprite = durSprites[roundDuration - 1];
+			PlayerPrefs.SetInt("RoundDuration", roundDuration * 15);
+		}
+		else
+		{
+			roundDuration = 1;
+			imgRoundDur.sprite = durSprites[roundDuration - 1];
+			PlayerPrefs.SetInt("RoundDuration", roundDuration * 15);
+		}
 
     }
 
     public void OnTimerDec()
     {
-        if (roundDuration > 0 && roundDuration <= 60)
-        {
-            roundDuration -= 10;
-            PlayerPrefs.SetInt("RoundDuration", roundDuration);
-            txtRoundDuration.text = roundDuration.ToString();
-        }
+		if (roundDuration > 1)
+		{
+			roundDuration--;
+			imgRoundDur.sprite = durSprites[roundDuration - 1];
+			PlayerPrefs.SetInt("RoundDuration", roundDuration * 15);
+		}
+		else
+		{
+			roundDuration = 3;
+			imgRoundDur.sprite = durSprites[roundDuration - 1];
+			PlayerPrefs.SetInt("RoundDuration", roundDuration * 15);
+		}
 
     }
 }
