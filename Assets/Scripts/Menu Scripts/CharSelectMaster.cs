@@ -29,6 +29,9 @@ public class CharSelectMaster : MonoBehaviour
 
     public CharacterStats[] characterStats;
 
+	public Sprite[] FullCharSelSprite;
+	public Image FullCharSelImage;
+
     public GameObject panelCharSelect;
     public GameObject panelPressToJoin;
 
@@ -46,12 +49,14 @@ public class CharSelectMaster : MonoBehaviour
 
 
     //UI Objects
-    public TextMeshProUGUI nameTextObj;
-    public Image displayImageObj;
-    public TextMeshProUGUI basicAbilityDescriptionObj;
-    public TextMeshProUGUI movementAbilityDescriptionObj;
-    public TextMeshProUGUI ultimateAbilityDescriptionObj;
-    public TextMeshProUGUI passiveAbilityDescriptionObj;
+    //public TextMeshProUGUI nameTextObj;
+    //public Image displayImageObj;
+    //public TextMeshProUGUI basicAbilityDescriptionObj;
+    //public TextMeshProUGUI movementAbilityDescriptionObj;
+    //public TextMeshProUGUI ultimateAbilityDescriptionObj;
+    //public TextMeshProUGUI passiveAbilityDescriptionObj;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -239,11 +244,15 @@ public class CharSelectMaster : MonoBehaviour
 
     void SetUIFromStats(int pNum, int myChar)
     {
-        nameTextObj.text = characterStats[myChar].myName;
-        basicAbilityDescriptionObj.text = characterStats[myChar].basicAbilityDescription;
-        movementAbilityDescriptionObj.text = characterStats[myChar].movementAbilityDescription;
-        ultimateAbilityDescriptionObj.text = characterStats[myChar].ultimateAbilityDescription;
-        passiveAbilityDescriptionObj.text = characterStats[myChar].passiveAbilityDescription;
-        displayImageObj.sprite = characterStats[myChar].displayImage;
+		//SET STUFF HERE
+		FullCharSelImage.sprite = FullCharSelSprite[myChar];
+
+
+		//nameTextObj.text = characterStats[myChar].myName;
+  //      basicAbilityDescriptionObj.text = characterStats[myChar].basicAbilityDescription;
+  //      movementAbilityDescriptionObj.text = characterStats[myChar].movementAbilityDescription;
+  //      ultimateAbilityDescriptionObj.text = characterStats[myChar].ultimateAbilityDescription;
+  //      passiveAbilityDescriptionObj.text = characterStats[myChar].passiveAbilityDescription;
+  //      displayImageObj.sprite = characterStats[myChar].displayImage;
     }
 }

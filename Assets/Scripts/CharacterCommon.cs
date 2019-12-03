@@ -28,7 +28,9 @@ public class CharacterCommon : MonoBehaviour
 	private Image brinkHealth;
 	private Image redHeart;
 	private Image purpleHeart;
+	private Slider brinkSld;
 
+	private float conSldFloat;
 
 	//AUDIO
 	private AudioSource audio;
@@ -46,6 +48,7 @@ public class CharacterCommon : MonoBehaviour
 		brinkHealth = phm.brinkHealth;
 		redHeart = phm.redHeart;
 		purpleHeart = phm.purpleHeart;
+		brinkSld = phm.brinkSld;
 	}
 
     // Update is called once per frame
@@ -57,6 +60,8 @@ public class CharacterCommon : MonoBehaviour
 		{
 			FlashEffect(flashCol);
 		}
+
+		
     }
 
     void UISetter()
@@ -104,6 +109,9 @@ public class CharacterCommon : MonoBehaviour
 				//}
 
 			}
+
+			conSldFloat += Time.deltaTime * 4f;
+			brinkSld.value = Mathf.PingPong(conSldFloat, 1);
         }
     }
 
@@ -122,13 +130,13 @@ public class CharacterCommon : MonoBehaviour
 			{
 
 
-				int rndChance = Random.Range(0, 100);
+				//int rndChance = Random.Range(0, 100);
 
 				//sldDeathChance.gameObject.SetActive(true);
-				sldDeathChance.value = rndChance / 100f;
+				//sldDeathChance.value = rndChance / 100f;
 				//FindObjectOfType<CameraController>().BrinkZoom(transform);
 				StartCoroutine(disbableUIDelay(sldDeathChance.gameObject));
-				if (rndChance >= Mathf.Abs(myClass.myHealth))
+				if (sldDeathChance.value >= Mathf.Abs(myClass.myHealth))
 				{
 					//alive
 					print("Alive");
