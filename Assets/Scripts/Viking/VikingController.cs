@@ -18,10 +18,8 @@ public class VikingController : MonoBehaviour
 	private bool canCast = true;
 	private float castPauseDur = 0.4f;
 
-    //UI
-    public Slider sldBasicA;
-    public Slider sldMovementA;
-    public Slider sldUltA;
+	public Image imgRageAura;
+
 
 	Animator anim;
 
@@ -164,6 +162,7 @@ public class VikingController : MonoBehaviour
 		{
 			GetComponent<IsometricPlayerMovementController>().currentSpeed *= 2;
 			audio.PlayOneShot(acBrinkYell);
+			imgRageAura.enabled = true;
 			passiveHasRun = true;
 		}
     }
@@ -201,9 +200,9 @@ public class VikingController : MonoBehaviour
         myClass.moveATimer -= Time.deltaTime;
         myClass.ultATimer -= Time.deltaTime;
 
-        sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
-        sldMovementA.value = 1 -(myClass.moveATimer / myClass.moveACooldown);
-        sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
+        //sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
+        //sldMovementA.value = 1 -(myClass.moveATimer / myClass.moveACooldown);
+        //sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 
 		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);

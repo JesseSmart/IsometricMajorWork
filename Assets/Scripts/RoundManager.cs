@@ -65,6 +65,7 @@ public class RoundManager : MonoBehaviour
 			
 			GameObject character = Instantiate(characterObjs[PlayerPrefs.GetInt("CharacterPlayer" + i)], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
 			character.GetComponent<IsometricPlayerMovementController>().playerNumber = i;
+			FindObjectOfType<MatchManager>().playerNumtoChars[i] = PlayerPrefs.GetInt("CharacterPlayer" + i);
 			print("spawn");
 		}
 
@@ -82,6 +83,33 @@ public class RoundManager : MonoBehaviour
 		}
 		else
 		{
+			if (FindObjectOfType<VikingController>())
+			{
+				FindObjectOfType<MatchManager>().lastWinnerCharNum = 0;
+				FindObjectOfType<MatchManager>().lastWinnerPlayerNum = FindObjectOfType<VikingController>().pNum;
+			}
+			else if (FindObjectOfType<TimeFreakController>())
+			{
+				FindObjectOfType<MatchManager>().lastWinnerCharNum = 1;
+				FindObjectOfType<MatchManager>().lastWinnerPlayerNum = FindObjectOfType<TimeFreakController>().pNum;
+
+			}
+			else if (FindObjectOfType<GunFreakController>())
+			{
+				FindObjectOfType<MatchManager>().lastWinnerCharNum = 2;
+				FindObjectOfType<MatchManager>().lastWinnerPlayerNum = FindObjectOfType<GunFreakController>().pNum;
+
+			}
+			else if (FindObjectOfType<ZenFreakController>())
+			{
+				FindObjectOfType<MatchManager>().lastWinnerCharNum = 3;
+				FindObjectOfType<MatchManager>().lastWinnerPlayerNum = FindObjectOfType<ZenFreakController>().pNum;
+
+			}
+			else
+			{
+				print("VIC ERROR");
+			}
 			SceneManager.LoadScene("MidScoresScreen");
 
 		}

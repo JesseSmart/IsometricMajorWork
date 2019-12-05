@@ -51,7 +51,7 @@ public class MidPointManager : MonoBehaviour
 			{
 				loaded = true;
 				PlayerPrefs.SetInt("WinnerNum", i);
-				PlayerPrefs.SetInt("WinnerChar", i);
+				PlayerPrefs.SetInt("WinnerChar", FindObjectOfType<MatchManager>().lastWinnerCharNum);
 				SceneManager.LoadScene("Victory");
 			}
 

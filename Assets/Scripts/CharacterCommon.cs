@@ -12,11 +12,9 @@ public class CharacterCommon : MonoBehaviour
 	private int playerNum;
 	//public Slider sldHealth;
 	//public Slider sldBrinkHealth;
-	public Slider sldDeathChance;
 
 	private bool canUpdateHealth = true;
 
-	public TextMeshProUGUI pNumIndic;
 
 	private float invinsDur = 1;
 	private bool isInvincible;
@@ -33,6 +31,9 @@ public class CharacterCommon : MonoBehaviour
 
 	private float conSldFloat;
 
+	public Image pNumIdentifierImg;
+	public Sprite[] playerNumberSprites;
+
 	//AUDIO
 	private AudioSource audio;
 	public AudioClip[] acHurtAudios;
@@ -41,7 +42,7 @@ public class CharacterCommon : MonoBehaviour
 	{
 		audio = GetComponent<AudioSource>();
 		myClass.myHealth = characterStats.health;
-		pNumIndic.text = "P" + (gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber + 1);
+		pNumIdentifierImg.sprite = playerNumberSprites[gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber];
 		//FindObjectOfType<InGameUIManager>().SetCommonUI(gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber, dodgeCooldown, health, brinkHealth, redHeart, purpleHeart);
 		playerNum = gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber;
 		PlayerHudManager phm = FindObjectOfType<InGameUIManager>().playerHudImages[gameObject.GetComponent<IsometricPlayerMovementController>().playerNumber].GetComponent<PlayerHudManager>();

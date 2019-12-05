@@ -10,7 +10,10 @@ public class MatchManager : MonoBehaviour
 	public int totalPlayers;
 	public int targetRounds;
 	public int currentRound;
+	public int lastWinnerPlayerNum;
+	public int lastWinnerCharNum;
 
+	public int[] playerNumtoChars = new int[4];
     // Start is called before the first frame update
     void Start()
     {

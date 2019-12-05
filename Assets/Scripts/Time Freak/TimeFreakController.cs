@@ -21,10 +21,7 @@ public class TimeFreakController : MonoBehaviour
 
 	private Rigidbody2D rbody;
 
-	//UI
-	public Slider sldBasicA;
-	public Slider sldMovementA;
-	public Slider sldUltA;
+
 
 	private Image basicCooldown;
 	private Image moveCooldown;
@@ -40,6 +37,7 @@ public class TimeFreakController : MonoBehaviour
 	public AudioClip acOctSpear;
 	public AudioClip acTeleIn;
 	public AudioClip acTeleOut;
+	
 	//Cooldown Ready
 	public AudioClip acBasicReady;
 	public AudioClip acMovementReady;
@@ -207,6 +205,8 @@ public class TimeFreakController : MonoBehaviour
 				GameObject thrownSpear = Instantiate(throwSpearObj, transform.position, myRot);
 				thrownSpear.GetComponent<ThrowSpear>().myOwner = gameObject;
 				thrownSpear.GetComponent<ThrowSpear>().Throw(thrownSpear.transform.up);
+				
+				//PlayClip("Ult Ab"); <---
 
 			}
 
@@ -260,9 +260,6 @@ public class TimeFreakController : MonoBehaviour
 		myClass.moveATimer -= Time.deltaTime;
 		myClass.ultATimer -= Time.deltaTime;
 
-		sldBasicA.value = 1 - (myClass.basicATimer / myClass.basicACooldown);
-		sldMovementA.value = 1 - (myClass.moveATimer / myClass.moveACooldown);
-		sldUltA.value = 1 - (myClass.ultATimer / myClass.ultACooldown);
 
 		basicCooldown.fillAmount = 1 - (myClass.basicATimer / myClass.basicACooldown);
 		moveCooldown.fillAmount = 1 - (myClass.moveATimer / myClass.moveACooldown);
