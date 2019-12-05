@@ -388,7 +388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00011444092, y: 0.000017166138}
+  m_AnchoredPosition: {x: -0.00011444092, y: 0.000019073486}
   m_SizeDelta: {x: -42, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220372269
@@ -916,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000045776367, y: 0.00018882751}
+  m_AnchoredPosition: {x: -0.000045776367, y: 0.00018692017}
   m_SizeDelta: {x: -44, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689297061
@@ -1147,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62782687, y: 0.42622676}
   m_AnchorMax: {x: 0.7673692, y: 0.5292268}
-  m_AnchoredPosition: {x: -0.18800354, y: 0.4694996}
+  m_AnchoredPosition: {x: -0.18798828, y: 0.46949768}
   m_SizeDelta: {x: -3, y: -0.9389992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &835756234
@@ -2603,6 +2603,9 @@ MonoBehaviour:
   totalPlayers: 0
   targetRounds: 0
   currentRound: 0
+  lastWinnerPlayerNum: 0
+  lastWinnerCharNum: 0
+  playerNumtoChars: 00000000000000000000000000000000
 --- !u!4 &1719585823
 Transform:
   m_ObjectHideFlags: 0
@@ -2651,7 +2654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.091000006, y: 0.6236134}
   m_AnchorMax: {x: 0.45225373, y: 0.6946134}
-  m_AnchoredPosition: {x: 1.8500061, y: -1.3669968}
+  m_AnchoredPosition: {x: 1.8500366, y: -1.3669968}
   m_SizeDelta: {x: -2.980011, y: -3.2200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741561660
@@ -2725,7 +2728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.091000006, y: 0.446}
   m_AnchorMax: {x: 0.45225373, y: 0.51438665}
-  m_AnchoredPosition: {x: 2.2799988, y: -1.6819992}
+  m_AnchoredPosition: {x: 2.2799683, y: -1.6819992}
   m_SizeDelta: {x: -1.980011, y: -1.2200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762680113
@@ -4408,6 +4411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.17001343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923777340732928371, guid: 2bc1207355fec1441b468dae1f1c6f6c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.1375122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc1207355fec1441b468dae1f1c6f6c, type: 3}

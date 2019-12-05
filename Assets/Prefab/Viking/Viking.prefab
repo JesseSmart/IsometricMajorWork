@@ -142,7 +142,7 @@ MonoBehaviour:
     type: 3}
   ultimateAxeObj: {fileID: 5282191754134349807, guid: 52e55692425265c4ab660ae86de230e6,
     type: 3}
-  imgRageAura: {fileID: 0}
+  imgRageAura: {fileID: 7122610945501639769}
   acAxeSpin: {fileID: 8300000, guid: 4aab4e10299db7f42acb697a4d7061b8, type: 3}
   acBasicReady: {fileID: 8300000, guid: 6eca141d92b224640aee7f3d99d59854, type: 3}
   acMovementReady: {fileID: 8300000, guid: 9ef2aba338d3fe542831e72c09b8632b, type: 3}

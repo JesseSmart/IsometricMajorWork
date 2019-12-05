@@ -18,7 +18,7 @@ public class VikingController : MonoBehaviour
 	private bool canCast = true;
 	private float castPauseDur = 0.4f;
 
-	public Image imgRageAura;
+	public GameObject imgRageAura;
 
 
 	Animator anim;
@@ -162,7 +162,7 @@ public class VikingController : MonoBehaviour
 		{
 			GetComponent<IsometricPlayerMovementController>().currentSpeed *= 2;
 			audio.PlayOneShot(acBrinkYell);
-			imgRageAura.enabled = true;
+			imgRageAura.SetActive(true);
 			passiveHasRun = true;
 		}
     }
