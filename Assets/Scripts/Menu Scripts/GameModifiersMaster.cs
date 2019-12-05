@@ -32,10 +32,14 @@ public class GameModifiersMaster : MonoBehaviour
 		//set duration to what is on screen
 		roundDuration = 1;
 		winPointTarget = 1;
+
+		PlayerPrefs.SetInt("winPointTarget", winPointTarget);
+		PlayerPrefs.SetInt("RoundDuration", roundDuration * 15);
+
 	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         if (winPointTarget >= 0 && roundDuration >= 0)
         {
