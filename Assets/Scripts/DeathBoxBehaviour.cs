@@ -44,7 +44,7 @@ public class DeathBoxBehaviour : MonoBehaviour
     {
 
 
-		if (master.roundTimer / master.duration > 0.6f)
+		if (master.roundTimer / master.duration > 0.7f)
 		{
 			transform.localPosition = Vector3.Slerp(master.gameObject.transform.position, startPos , master.roundTimer / master.duration);
 

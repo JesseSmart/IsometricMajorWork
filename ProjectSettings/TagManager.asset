@@ -22,7 +22,7 @@ TagManager:
   - Half Terrain
   - NonCollidable
   - Cover Terrain
-  - 
+  - Death Zone
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Abilities
     uniqueID: 2188555019
+    locked: 0
+  - name: Death Zone
+    uniqueID: 2601528367
     locked: 0

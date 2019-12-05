@@ -206,10 +206,10 @@ public class TimeFreakController : MonoBehaviour
 				thrownSpear.GetComponent<ThrowSpear>().myOwner = gameObject;
 				thrownSpear.GetComponent<ThrowSpear>().Throw(thrownSpear.transform.up);
 				
-				//PlayClip("Ult Ab"); <---
 
 			}
 
+			PlayClip("Ult Ab"); 
 			audio.PlayOneShot(acOctSpear);
 
 

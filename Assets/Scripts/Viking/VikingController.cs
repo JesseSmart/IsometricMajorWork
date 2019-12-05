@@ -113,11 +113,13 @@ public class VikingController : MonoBehaviour
 			//PlayClip("Move Ab");
 			if (gameObject.GetComponent<IsometricPlayerMovementController>().lastDir.x > 0)
 			{
-				PlayClip("Move Ab E");
+				PlayClip("Move Ab W");
+
 			}
 			else
 			{
-				PlayClip("Move Ab W");
+				PlayClip("Move Ab E");
+
 			}
 
 

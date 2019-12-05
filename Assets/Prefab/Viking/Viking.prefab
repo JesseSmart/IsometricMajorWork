@@ -410,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7122610945501639769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5750027382957577670}
@@ -475,7 +475,7 @@ Animator:
   m_GameObject: {fileID: 7122610945501639769}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3763bb8cd05208849b3914ac80cecf70, type: 2}
+  m_Controller: {fileID: 9100000, guid: d20cc772328d18948bd59de1ec296d5a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -606,6 +606,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1504029152253594358, guid: 045ac1fb1e3c56b459868c2caf18dceb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8074204843441618764, guid: 045ac1fb1e3c56b459868c2caf18dceb,
         type: 3}
       propertyPath: m_Layer
@@ -677,11 +682,6 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2850640625867983191, guid: 045ac1fb1e3c56b459868c2caf18dceb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504029152253594358, guid: 045ac1fb1e3c56b459868c2caf18dceb,
         type: 3}
       propertyPath: m_Layer
       value: 9
