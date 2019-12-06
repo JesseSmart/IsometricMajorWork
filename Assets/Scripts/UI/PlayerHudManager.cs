@@ -12,6 +12,7 @@ public class PlayerHudManager : MonoBehaviour
 	public Image brinkHealth;
 	public Image redHeart;
 	public Image purpleHeart;
+	public Image brinkImg;
 	public Slider brinkSld;
     // Start is called before the first frame update
     void Start()

@@ -27,6 +27,7 @@ public class CharacterCommon : MonoBehaviour
 	private Image brinkHealth;
 	private Image redHeart;
 	private Image purpleHeart;
+	private Image brinkImg;
 	private Slider brinkSld;
 
 	private float conSldFloat;
@@ -50,6 +51,7 @@ public class CharacterCommon : MonoBehaviour
 		brinkHealth = phm.brinkHealth;
 		redHeart = phm.redHeart;
 		purpleHeart = phm.purpleHeart;
+		brinkImg = phm.brinkImg;
 		brinkSld = phm.brinkSld;
 	}
 
@@ -101,12 +103,14 @@ public class CharacterCommon : MonoBehaviour
 					brinkHealth.gameObject.SetActive(true);
 					purpleHeart.gameObject.SetActive(true);
 					brinkSld.gameObject.SetActive(true);
+					brinkImg.enabled = true;
 				}
 
 
 				conSldFloat += Time.deltaTime * 2f;
 				brinkSld.value = Mathf.PingPong(conSldFloat, 1);
 
+				brinkImg.fillAmount = Mathf.PingPong(conSldFloat, 1);
 
 				//sldBrinkHealth.value = Mathf.Abs(myClass.myHealth / characterStats.health);
 
