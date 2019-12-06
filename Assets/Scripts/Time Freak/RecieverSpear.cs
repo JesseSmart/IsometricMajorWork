@@ -20,7 +20,7 @@ public class RecieverSpear : MonoBehaviour
 	void Start()
     {
 		lineR = GetComponent<LineRenderer>();
-
+		lineR.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -53,7 +53,7 @@ public class RecieverSpear : MonoBehaviour
 
 	IEnumerator ZapClock(RecieverSpear recieverScript)
 	{
-		lineR.enabled = true;
+		//lineR.enabled = true;
 		lineR.SetPosition(0, transform.position);
 		lineR.SetPosition(1, recieverScript.gameObject.transform.position);
 		ZapRayCollision(recieverScript);

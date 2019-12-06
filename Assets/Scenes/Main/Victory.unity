@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 685827808}
   - component: {fileID: 685827811}
   - component: {fileID: 685827810}
-  - component: {fileID: 685827809}
   m_Layer: 5
   m_Name: charImg
   m_TagString: Untagged
@@ -158,25 +157,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2, y: 1}
   m_SizeDelta: {x: 1.5, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &685827809
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685827807}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6df9a357b62f23b4bbddd417e8cdfe20, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &685827810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +205,6 @@ GameObject:
   - component: {fileID: 765368874}
   - component: {fileID: 765368877}
   - component: {fileID: 765368876}
-  - component: {fileID: 765368875}
   m_Layer: 5
   m_Name: pNumImg
   m_TagString: Untagged
@@ -252,25 +231,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.5, y: -1}
   m_SizeDelta: {x: -2, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &765368875
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765368873}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6df9a357b62f23b4bbddd417e8cdfe20, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &765368876
 MonoBehaviour:
   m_ObjectHideFlags: 0
