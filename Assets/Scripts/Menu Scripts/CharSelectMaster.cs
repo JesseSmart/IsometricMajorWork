@@ -51,6 +51,7 @@ public class CharSelectMaster : MonoBehaviour
     public Button focusSelectedButton;
 
 
+
     //UI Objects
     //public TextMeshProUGUI nameTextObj;
     //public Image displayImageObj;
@@ -92,7 +93,9 @@ public class CharSelectMaster : MonoBehaviour
                 {
                     panelCharSelect.SetActive(true);
                     panelPressToJoin.SetActive(false);
-                    myState = SelectState.Selecting;
+					GetComponentInParent<PlayerJoinScreenMaster>().totatJoiningPlayers++;
+
+					myState = SelectState.Selecting;
                 }
                 break;
             case SelectState.Selecting:
@@ -236,8 +239,9 @@ public class CharSelectMaster : MonoBehaviour
     {
         panelCharSelect.SetActive(false);
         panelPressToJoin.SetActive(true);
+		GetComponentInParent<PlayerJoinScreenMaster>().totatJoiningPlayers--;
 
-        if (pNum == 0)
+		if (pNum == 0)
         {
             eventSystemObj.GetComponent<EventSystem>().SetSelectedGameObject(focusSelectedButton.gameObject);
         }

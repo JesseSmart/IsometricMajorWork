@@ -181,7 +181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37845343, y: 0.512}
   m_AnchorMax: {x: 0.62100005, y: 0.6243846}
-  m_AnchoredPosition: {x: 0.5, y: 0.02245903}
+  m_AnchoredPosition: {x: 0.5, y: 0.022460938}
   m_SizeDelta: {x: -3.7699966, y: -6.950001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6849988440856326744
@@ -522,6 +522,7 @@ MonoBehaviour:
   btnNext: {fileID: 6420657519908481626}
   btnBack: {fileID: 6420657521741699082}
   totalPlayers: 0
+  totatJoiningPlayers: 0
   joinUIObjects:
   - {fileID: 4741198328318315117}
   - {fileID: 3674116352279767817}
@@ -530,7 +531,14 @@ MonoBehaviour:
   imgPressStart: {fileID: 850897032887232330}
   eventSystemObj: {fileID: 0}
   onBackSelectedButton: {fileID: 0}
+  charSelScreens:
+  - {fileID: 4741198328318315117}
+  - {fileID: 3674116352279767817}
+  - {fileID: 3674116351792404747}
+  - {fileID: 3674116352580362881}
   buildIndexArray: 03000000040000000500000006000000
+  totalPlayersAllowed: 00000000
+  legalGame: 0
 --- !u!1 &6420657521145924822
 GameObject:
   m_ObjectHideFlags: 0
