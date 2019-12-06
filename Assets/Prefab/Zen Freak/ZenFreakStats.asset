@@ -22,5 +22,5 @@ MonoBehaviour:
   health: 100
   basicAbilityCooldown: 2
   movementAbilityCooldown: 2
-  ultimateAbilityCooldown: 10
+  ultimateAbilityCooldown: 11
   dodgeCooldown: 1
