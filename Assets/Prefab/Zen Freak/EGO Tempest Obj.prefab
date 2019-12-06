@@ -128,7 +128,7 @@ MonoBehaviour:
   minDamage: 10
   maxDamage: 20
   damageIntervals: 0.4
-  zoneDuration: 5
+  zoneDuration: 2.5
   myOwner: {fileID: 0}
   acHit: {fileID: 8300000, guid: 903a8638fa8d4ba499e363ab569fe42a, type: 3}
 --- !u!61 &9178875846923798944
