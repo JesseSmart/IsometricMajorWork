@@ -13,6 +13,9 @@ public class DeathBoxBehaviour : MonoBehaviour
 		master = FindObjectOfType<DamageZoneMaster>();
 		startPos = transform.position;
 
+		GetComponent<SpriteRenderer>().enabled = false;
+
+		StartCoroutine(ReDisplay());
 		//if (transform.position.x > 0)
 		//{
 		//	dirMod = 1;
@@ -74,6 +77,12 @@ public class DeathBoxBehaviour : MonoBehaviour
 
 	}
 
+	IEnumerator ReDisplay()
+	{
+		yield return new WaitForSeconds(5f);
+		GetComponent<SpriteRenderer>().enabled = true;
+
+	}
 
 
 
