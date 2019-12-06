@@ -93,9 +93,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHudImages:
   - {fileID: 8385098594539537594}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9176048677287300721}
+  - {fileID: 1447375009867639711}
+  - {fileID: 8919109353446698544}
   playerHudSprites:
   - {fileID: 21300000, guid: 08dfd94a579c8634a8efdee970160cb2, type: 3}
   - {fileID: 21300000, guid: af3b03f4d9035a54caff007ae7aeab78, type: 3}
@@ -112,6 +112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterHudImage (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948747985354326793, guid: 25e928388df13ba489c6191535b42ef8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0073051453
       objectReference: {fileID: 0}
     - target: {fileID: 5387193540134676716, guid: 25e928388df13ba489c6191535b42ef8,
         type: 3}
@@ -231,6 +236,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3531997798868993759}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8919109353446698544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5387193540134676719, guid: 25e928388df13ba489c6191535b42ef8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3531997798868993759}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3860983857996539550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterHudImage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948747985354326793, guid: 25e928388df13ba489c6191535b42ef8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0073051453
       objectReference: {fileID: 0}
     - target: {fileID: 5387193540134676716, guid: 25e928388df13ba489c6191535b42ef8,
         type: 3}
@@ -361,6 +383,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3860983857996539550}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9176048677287300721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5387193540134676719, guid: 25e928388df13ba489c6191535b42ef8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3860983857996539550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4512322352388353109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372,6 +406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterHudImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948747985354326793, guid: 25e928388df13ba489c6191535b42ef8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0073051453
       objectReference: {fileID: 0}
     - target: {fileID: 5387193540134676716, guid: 25e928388df13ba489c6191535b42ef8,
         type: 3}
@@ -515,6 +554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterHudImage (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5948747985354326793, guid: 25e928388df13ba489c6191535b42ef8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0073051453
+      objectReference: {fileID: 0}
     - target: {fileID: 5387193540134676716, guid: 25e928388df13ba489c6191535b42ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,3 +677,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6833434102036792176}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1447375009867639711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5387193540134676719, guid: 25e928388df13ba489c6191535b42ef8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6833434102036792176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

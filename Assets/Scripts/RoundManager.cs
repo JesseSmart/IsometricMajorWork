@@ -56,6 +56,7 @@ public class RoundManager : MonoBehaviour
 	void Spawn()
 	{
 		int total = PlayerPrefs.GetInt("TotalPlayers");
+		print("TOTAL ===================" + total);
 		InGameUis[total - 2].SetActive(true);
 
 		print("Spawn a total of " + total);
