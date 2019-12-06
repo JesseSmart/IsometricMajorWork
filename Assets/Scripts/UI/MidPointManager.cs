@@ -11,6 +11,7 @@ public class MidPointManager : MonoBehaviour
 
 	public int[] sceneBuildNumArray;
 
+	private int nextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,9 +60,29 @@ public class MidPointManager : MonoBehaviour
 
 		if (!loaded)
 		{
-			SceneManager.LoadScene(sceneBuildNumArray[Random.Range(0, sceneBuildNumArray.Length)]);
+			//SceneManager.LoadScene(sceneBuildNumArray[Random.Range(0, sceneBuildNumArray.Length)]);
+
+			StartCoroutine(LoadNext());
+			loaded = true;
 			//could use corutine to generate number and check to make sure its not the same scene, then continue to generate. (use "while")
 		}
+
+	}
+
+	IEnumerator LoadNext()
+	{
+		int rndScene = Random.Range(0, sceneBuildNumArray.Length);
+		while (sceneBuildNumArray[rndScene] == matchManager.lastFightScene)
+		{
+
+			rndScene = Random.Range(0, sceneBuildNumArray.Length);
+			yield return new WaitForEndOfFrame();
+
+		}
+
+
+		SceneManager.LoadScene(sceneBuildNumArray[rndScene]);
+
 
 	}
 }

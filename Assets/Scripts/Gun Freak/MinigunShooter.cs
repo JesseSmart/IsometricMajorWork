@@ -20,6 +20,7 @@ public class MinigunShooter : MonoBehaviour
 
 	private Vector2 vel;
 
+	public SpriteRenderer miniRenderer;
 	//AUDIO
 	private AudioSource audio;
 	public AudioClip acFiring;
@@ -32,6 +33,7 @@ public class MinigunShooter : MonoBehaviour
 		canFire = true;
 		StartCoroutine(FireBullet());
 		StartCoroutine(DurationTimer());
+		StartCoroutine(WaitSpriteDisplay());
 		//myOwner.GetComponent<IsometricPlayerMovementController>().DisableMove(duration);
     }
 
@@ -82,5 +84,10 @@ public class MinigunShooter : MonoBehaviour
 
 	}
 
+	IEnumerator WaitSpriteDisplay()
+	{
+		yield return new WaitForSeconds(0.5f);
+		miniRenderer.enabled = true;
+	}
 
 }
