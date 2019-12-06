@@ -36,6 +36,7 @@ public class VictoryScreenManager : MonoBehaviour
 		if (!loaded && !audio.isPlaying)
 		{
 			loaded = true;
+			Destroy(FindObjectOfType<MatchManager>().gameObject);
 			SceneManager.LoadScene("Menu");
 		}
     }

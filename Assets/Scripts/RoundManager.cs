@@ -80,6 +80,8 @@ public class RoundManager : MonoBehaviour
 		{
 			//SceneManager.LoadScene("Menu");
 			print("LOADERRORRR");
+			print("scores" + matchManager.playerScores[roundWinner]);
+			print("targetrounds" + matchManager.targetRounds);
 		}
 		else
 		{

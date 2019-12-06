@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MatchManager : MonoBehaviour
 {
 
@@ -18,6 +18,23 @@ public class MatchManager : MonoBehaviour
     void Start()
     {
 		DontDestroyOnLoad(gameObject);
+
+		Scene scene = SceneManager.GetActiveScene();
+		if (scene.name == "Menu")
+		{
+			print("IS MENU");
+
+			playerScores[0] = 0;
+			playerScores[1] = 0;
+			playerScores[2] = 0;
+			playerScores[3] = 0;
+			totalPlayers = 0;
+			targetRounds = 0;
+			currentRound = 0;
+			lastWinnerPlayerNum = 0;
+			lastWinnerCharNum = 0;
+
+		}
 
 	}
 

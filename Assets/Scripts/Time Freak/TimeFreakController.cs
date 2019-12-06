@@ -231,20 +231,20 @@ public class TimeFreakController : MonoBehaviour
 	{
 		if (canCast)
 		{
-			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0) || Input.GetKeyDown(KeyCode.E))
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 0))
 			{
 				BasicAbility();
 				StartCoroutine(castDelay(castPauseDur));
 			}
 
-			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2) || Input.GetKeyDown(KeyCode.F))
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 2))
 			{
 				MovementAbility();
 				StartCoroutine(castDelay(castPauseDur));
 
 			}
 
-			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3) || Input.GetKeyDown(KeyCode.R))
+			if (Input.GetKeyDown("joystick " + (pNum + 1) + " button " + 3))
 			{
 				UltimateAbility();
 				StartCoroutine(castDelay(castPauseDur));
