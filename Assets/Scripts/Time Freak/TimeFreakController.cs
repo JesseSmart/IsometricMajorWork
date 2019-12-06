@@ -21,7 +21,7 @@ public class TimeFreakController : MonoBehaviour
 
 	private Rigidbody2D rbody;
 
-
+	private bool stopDodge;
 
 	private Image basicCooldown;
 	private Image moveCooldown;
@@ -46,6 +46,8 @@ public class TimeFreakController : MonoBehaviour
 	private bool basicAudPlayable = false;
 	private bool movementAudPlayable = false;
 	private bool ultimateAudPlayable = false;
+
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -316,15 +318,33 @@ public class TimeFreakController : MonoBehaviour
 		float timer = 0.2f;
 		gameObject.GetComponent<CharacterCommon>().flashCol = Color.black;
 		gameObject.GetComponent<CharacterCommon>().RunInvins(timer);
-		while (dist > 0.5 && timer > 0)
+		while (dist > 0.5 && timer > 0 && !stopDodge)
 		{
 			timer -= Time.deltaTime;
 			dist = Vector3.Distance(transform.position, pos);
 			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 100);
 			yield return new WaitForEndOfFrame();
 		}
+
+		stopDodge = false;
+
 		yield return null;
 
 	}
 
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 15)
+		{
+			stopDodge = true;
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 15)
+		{
+			stopDodge = false;
+		}
+	}
 }

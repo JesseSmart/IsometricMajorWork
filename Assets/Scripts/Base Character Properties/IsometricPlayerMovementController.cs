@@ -30,7 +30,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 	public float dodgeCooldown;
 	private float dodgeTimer;
-	private float dodgeRange = 3;
+	private float dodgeRange = 2.5f;
 	private float invinsDur = 0.5f;
 
 	private float frictionMod = 5f;
@@ -44,6 +44,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 	private float stepDelay = 0.5f;
 	private float stepTimer;
+
+	private bool stopDodge;
     // Start is called before the first frame update
     //void Start()
     //{
@@ -132,7 +134,24 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		
     }
 
-    public void Dodge(float pNum)
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 15)
+		{
+			stopDodge = true;
+		}
+	}
+
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 15)
+		{
+			stopDodge = false;
+		}
+	}
+
+	public void Dodge(float pNum)
     {
 		if (dodgeTimer <= 0)
 		{
@@ -221,14 +240,16 @@ public class IsometricPlayerMovementController : MonoBehaviour
 		float dist = Vector3.Distance(transform.position, pos);
 		float timer = 0.5f;
 		canInput = false;
-		while (dist > 0.5 && timer > 0)
+		while (dist > 0.5 && timer > 0 && !stopDodge)
 		{
 			timer -= Time.deltaTime;
 			dist = Vector3.Distance(transform.position, pos);
 			transform.position = Vector2.MoveTowards(transform.position, pos, Time.deltaTime * 20);
 			yield return new WaitForEndOfFrame();
+			
 		}
 		canInput = true;
+		stopDodge = false;
 		yield return null;
 		
 	}
