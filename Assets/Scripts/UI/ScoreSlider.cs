@@ -10,6 +10,7 @@ public class ScoreSlider : MonoBehaviour
 	public Image pNumImg;
 	public Sprite[] pNumSprites;
 
+	
 	public Image pCharImg;
 	public Sprite[] pCharSprites;
 	private MatchManager matchManager;
@@ -20,17 +21,18 @@ public class ScoreSlider : MonoBehaviour
     void Start()
     {
 		matchManager = FindObjectOfType<MatchManager>();
-		slider = GetComponent<Slider>();
+		//slider = GetComponent<Slider>();
 		float tr = matchManager.targetRounds;
 		float scr = matchManager.playerScores[sliderNum];
 		float val = scr / tr;
 		print("bruh"+ val);
 		print("pscore"+ matchManager.playerScores[sliderNum]);
 		print("tgrnd"+ matchManager.targetRounds);
-		slider.value = val;
-		pNumImg.sprite = pNumSprites[sliderNum];
-		pCharImg.sprite = pCharSprites[FindObjectOfType<MatchManager>().playerNumtoChars[sliderNum]];
-		barCol.sprite = barSprites[sliderNum];
+		//slider.value = val;
+		//pNumImg.sprite = pNumSprites[sliderNum];
+		//pCharImg.sprite = pCharSprites[FindObjectOfType<MatchManager>().playerNumtoChars[sliderNum]];
+		//barCol.sprite = barSprites[sliderNum];
+		GetComponent<Image>().fillAmount = val;
 		//myText.text = "P" + (sliderNum + 1);
     }
 
