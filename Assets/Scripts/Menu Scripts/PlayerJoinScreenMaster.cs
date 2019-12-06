@@ -141,10 +141,11 @@ public class PlayerJoinScreenMaster : MonoBehaviour
         {
             PlayerPrefs.SetInt("TotalPlayers", totalPlayers);
 			FindObjectOfType<MatchManager>().totalPlayers = totalPlayers;
+			SceneManager.LoadScene(buildIndexArray[Random.Range(0, buildIndexArray.Length)]); /////////////
         }
 
-		SceneManager.LoadScene(buildIndexArray[Random.Range(0, buildIndexArray.Length)]);
         //load scene 
 
     }
+
 }

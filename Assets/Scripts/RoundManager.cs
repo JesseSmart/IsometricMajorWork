@@ -113,6 +113,8 @@ public class RoundManager : MonoBehaviour
 			{
 				print("VIC ERROR");
 			}
+
+			matchManager.lastFightScene = SceneManager.GetActiveScene().buildIndex;
 			SceneManager.LoadScene("MidScoresScreen");
 
 		}
