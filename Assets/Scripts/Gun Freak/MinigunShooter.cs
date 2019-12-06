@@ -47,6 +47,7 @@ public class MinigunShooter : MonoBehaviour
 
 		transform.up = tempVec - (Vector2)transform.position;
 
+
 		//try make slow turn
 		//Vector2 tempVec = Vector2.SmoothDamp((Vector2)transform.position, ((Vector2)transform.position + myOwner.GetComponent<IsometricPlayerMovementController>().lastDir.normalized), ref vel, 10f);
 		//transform.up = Vector2.Lerp((Vector2)transform.up, tempVec - (Vector2)transform.position, Time.deltaTime * 0.2f);
