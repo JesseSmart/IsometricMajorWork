@@ -101,6 +101,8 @@ public class ThrowSpear : MonoBehaviour
 		baseSpear.enabled = false;
 		powerSpear.enabled = true;
 		rbody.velocity *= 2;
+		minDamage *= 2f;
+		maxDamage *= 2f;
 		print("hit the orbit");
 	}
 }

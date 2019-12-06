@@ -16,7 +16,7 @@ public class CharacterCommon : MonoBehaviour
 	private bool canUpdateHealth = true;
 
 
-	private float invinsDur = 1;
+	private float invinsDur = 0.5f;
 	private bool isInvincible;
 
 	public SpriteRenderer mySpriteRend;
@@ -147,7 +147,7 @@ public class CharacterCommon : MonoBehaviour
 				//sldDeathChance.value = rndChance / 100f;
 				//FindObjectOfType<CameraController>().BrinkZoom(transform);
 				StartCoroutine(disbableUIDelay(brinkSld.gameObject));
-				if (brinkSld.value * 100 >= Mathf.Abs(myClass.myHealth))
+				if (((brinkImg.fillAmount* 100) + Mathf.Abs(myClass.myHealth)) < 100)
 				{
 					//alive
 					print("Alive");
