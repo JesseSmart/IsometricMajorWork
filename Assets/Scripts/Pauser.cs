@@ -44,6 +44,8 @@ public class Pauser : MonoBehaviour
 
 	public void QuitToMenu()
 	{
+		Time.timeScale = 1f;
+		PauseScreen.SetActive(false);
 		SceneManager.LoadScene("Menu");
 	}
 }
